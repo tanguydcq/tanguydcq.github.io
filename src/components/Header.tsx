@@ -11,11 +11,11 @@ export function Header() {
         <img src="/images/identite.jpg" alt="Identité" className="w-16 h-16 rounded-full object-cover" />
         <h1 className="text-2xl font-bold">Tanguy Ducrocq</h1>
       </div>
-      <nav className="space-x-4">
+      {/* <nav className="space-x-4">
         <a href="#presentation" className="hover:text-blue-400">{t('header.presentation')}</a>
         <a href="#parcours" className="hover:text-blue-400">{t('header.parcours')}</a>
         <a href="#contact" className="hover:text-blue-400">{t('header.contact')}</a>
-      </nav>
+      </nav> */}
       <div className="flex justify-end mb-4">
         <button
           onClick={() => i18n.changeLanguage('fr')}

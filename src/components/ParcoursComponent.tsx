@@ -6,6 +6,9 @@ import SchoolIcon from '@mui/icons-material/School';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
 import React from 'react';
 
+import { useTranslation } from "react-i18next";
+import "../i18n";
+
 // Typage des props pour TimelineItem
 interface TimelineItemProps {
     date: string;
@@ -42,31 +45,32 @@ function TimelineItem({
 
 
 function ParcoursAcademiqueSection() {
+    const { t } = useTranslation();
     return (
         <section className="flex flex-col p-6 rounded-2xl w-full text-left">
             <VerticalTimeline>
                 <TimelineItem
-                    date="2023 - present"
+                    date={t('parcours.academicJourney.items.0.date')}
                     icon={<SchoolIcon />}
-                    title="EPITA"
-                    subtitle="Paris"
-                    description="Cycle ingénieur – Promotion 2026 Majeure SCIA-G : Data Science, Intelligence Artificielle et Graphes"
+                    title={t('parcours.academicJourney.items.0.title')}
+                    subtitle={t('parcours.academicJourney.items.0.subtitle')}
+                    description={t('parcours.academicJourney.items.0.description')}
                     bgColor="rgb(156, 39, 176)"
                 />
                 <TimelineItem
-                    date="2021-2023"
+                    date={t('parcours.academicJourney.items.1.date')}
                     icon={<SchoolIcon />}
-                    title="Prepa CPGE"
-                    subtitle="Sainte Marie Antony"
-                    description="Filière suivie : MPSI/MP"
+                    title={t('parcours.academicJourney.items.1.title')}
+                    subtitle={t('parcours.academicJourney.items.1.subtitle')}
+                    description={t('parcours.academicJourney.items.1.description')}
                     bgColor="rgb(33, 150, 243)"
                 />
                 <TimelineItem
-                    date="2020-2021"
+                    date={t('parcours.academicJourney.items.2.date')}
                     icon={<SchoolIcon />}
-                    title="Baccalauréat"
-                    subtitle="Lakanal Sceaux"
-                    description="Spécialités suivies : mathématiques et physique-chimie Options choisies : mathématiques expertes et sport"
+                    title={t('parcours.academicJourney.items.2.title')}
+                    subtitle={t('parcours.academicJourney.items.2.subtitle')}
+                    description={t('parcours.academicJourney.items.2.description')}
                     bgColor="rgb(255, 87, 34)"
                 />
                 <VerticalTimelineElement
@@ -80,47 +84,45 @@ function ParcoursAcademiqueSection() {
 
 
 function ParcoursProSection() {
+    const { t } = useTranslation();
     return (
         <section className="flex flex-col p-6 rounded-2xl w-full text-left">
             <VerticalTimeline>
                 <TimelineItem
-                    date="Septembre 2024 - janvier 2025"
+                    date={t('parcours.professionalJourney.items.0.date')}
                     icon={<SchoolIcon />}
-                    title="Stage mi- étude"
-                    subtitle="DiliTrust La Défense"
-                    description="Développement d’un agent intelligent en Python intégrant l’API ChatGPT pour automatiser la génération de documentation technique, avec interface Slack et scraping de données multi-sources Classification de contrats via LLM interne à l’aide de prompts multi-étapes optimisés, pour généraliser les types de documents non vus lors de l’entraînement initial"
+                    title={t('parcours.professionalJourney.items.0.title')}
+                    subtitle={t('parcours.professionalJourney.items.0.subtitle')}
+                    description={t('parcours.professionalJourney.items.0.description')}
                     bgColor="rgb(156, 39, 176)"
                 />
                 <TimelineItem
-                    date="Depuis avril 2023"
+                    date={t('parcours.professionalJourney.items.1.date')}
                     icon={<WorkIcon />}
-                    title="Co-créateur Sterenova"
-                    subtitle="Paris"
-                    description="Fondateur de Sterenova évènementiel et location de matériel planification d'évènement gestion d'entreprise"
+                    title={t('parcours.professionalJourney.items.1.title')}
+                    subtitle={t('parcours.professionalJourney.items.1.subtitle')}
+                    description={t('parcours.professionalJourney.items.1.description')}
                     bgColor="rgb(33, 150, 243)"
                 />
                 <TimelineItem
-                    date="Août 2022"
+                    date={t('parcours.professionalJourney.items.2.date')}
                     icon={<WorkIcon />}
-                    title="Serveur/Barman"
-                    subtitle="Marius Café Pornic"
-                    description=""
+                    title={t('parcours.professionalJourney.items.2.title')}
+                    subtitle={t('parcours.professionalJourney.items.2.subtitle')}
                     bgColor="rgb(33, 150, 243)"
                 />
                 <TimelineItem
-                    date="Mars 2021"
+                    date={t('parcours.professionalJourney.items.3.date')}
                     icon={<WorkIcon />}
-                    title="Manutentionnaire"
-                    subtitle="PSL France M.I.N Rungis"
-                    description=""
+                    title={t('parcours.professionalJourney.items.3.title')}
+                    subtitle={t('parcours.professionalJourney.items.3.subtitle')}
                     bgColor="rgb(33, 150, 243)"
                 />
                 <TimelineItem
-                    date="Août 2020"
+                    date={t('parcours.professionalJourney.items.4.date')}
                     icon={<WorkIcon />}
-                    title="Magasinier au service Pièces de Rechange"
-                    subtitle="Renault Retail Group Paris"
-                    description=""
+                    title={t('parcours.professionalJourney.items.4.title')}
+                    subtitle={t('parcours.professionalJourney.items.4.subtitle')}
                     bgColor="rgb(33, 150, 243)"
                 />
                 <VerticalTimelineElement
@@ -134,9 +136,10 @@ function ParcoursProSection() {
 
 
 export function ParcoursComponent() {
+    const { t } = useTranslation();
     return (
         <div id="parcours" className="mb-8 mt-4 flex flex-col w-full justify-center">
-            <h2 className="text-2xl text-cyan-400 font-semibold mb-2 pb-4 pl-5">Parcours</h2>
+            <h2 className="text-2xl text-cyan-400 font-semibold mb-2 pb-4 pl-5">{t('parcours.title')}</h2>
             <Tabs defaultValue="academique" className="w-full">
                 <div className="flex justify-center w-full">
                     <TabsList className="grid w-96 grid-cols-2 gap-2">
@@ -144,13 +147,13 @@ export function ParcoursComponent() {
                             value="academique"
                             className="px-2 py-1 text-sm data-[state=active]:bg-gray-800 data-[state=active]:text-white data-[state=active]:shadow-lg"
                         >
-                            Académique
+                            {t('parcours.academicJourney.title')}
                         </TabsTrigger>
                         <TabsTrigger 
                             value="pro"
                             className="px-2 py-1 text-sm data-[state=active]:bg-gray-800 data-[state=active]:text-white data-[state=active]:shadow-lg"
                         >
-                            Professionnel
+                            {t('parcours.professionalJourney.title')}
                         </TabsTrigger>
                     </TabsList>
                 </div>
