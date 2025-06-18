@@ -25,7 +25,7 @@ function TimelineItem({
     title,
     subtitle,
     description,
-    bgColor = 'rgb(33, 150, 243)',
+    bgColor = 'rgb(33,150,243)',
 }: TimelineItemProps) {
     return (
         <VerticalTimelineElement
@@ -55,7 +55,7 @@ function ParcoursAcademiqueSection() {
                     title={t('parcours.academicJourney.items.0.title')}
                     subtitle={t('parcours.academicJourney.items.0.subtitle')}
                     description={t('parcours.academicJourney.items.0.description')}
-                    bgColor="rgb(156, 39, 176)"
+                    bgColor="rgb(33,150,243)"
                 />
                 <TimelineItem
                     date={t('parcours.academicJourney.items.1.date')}
@@ -63,7 +63,7 @@ function ParcoursAcademiqueSection() {
                     title={t('parcours.academicJourney.items.1.title')}
                     subtitle={t('parcours.academicJourney.items.1.subtitle')}
                     description={t('parcours.academicJourney.items.1.description')}
-                    bgColor="rgb(33, 150, 243)"
+                    bgColor="rgb(33,150,243)"
                 />
                 <TimelineItem
                     date={t('parcours.academicJourney.items.2.date')}
@@ -71,7 +71,7 @@ function ParcoursAcademiqueSection() {
                     title={t('parcours.academicJourney.items.2.title')}
                     subtitle={t('parcours.academicJourney.items.2.subtitle')}
                     description={t('parcours.academicJourney.items.2.description')}
-                    bgColor="rgb(255, 87, 34)"
+                    bgColor="rgb(33,150,243)"
                 />
                 <VerticalTimelineElement
                     iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}
@@ -94,7 +94,7 @@ function ParcoursProSection() {
                     title={t('parcours.professionalJourney.items.0.title')}
                     subtitle={t('parcours.professionalJourney.items.0.subtitle')}
                     description={t('parcours.professionalJourney.items.0.description')}
-                    bgColor="rgb(156, 39, 176)"
+                    bgColor="rgb(33,150,243)"
                 />
                 <TimelineItem
                     date={t('parcours.professionalJourney.items.1.date')}
@@ -102,28 +102,28 @@ function ParcoursProSection() {
                     title={t('parcours.professionalJourney.items.1.title')}
                     subtitle={t('parcours.professionalJourney.items.1.subtitle')}
                     description={t('parcours.professionalJourney.items.1.description')}
-                    bgColor="rgb(33, 150, 243)"
+                    bgColor="rgb(33,150,243)"
                 />
                 <TimelineItem
                     date={t('parcours.professionalJourney.items.2.date')}
                     icon={<WorkIcon />}
                     title={t('parcours.professionalJourney.items.2.title')}
                     subtitle={t('parcours.professionalJourney.items.2.subtitle')}
-                    bgColor="rgb(33, 150, 243)"
+                    bgColor="rgb(33,150,243)"
                 />
                 <TimelineItem
                     date={t('parcours.professionalJourney.items.3.date')}
                     icon={<WorkIcon />}
                     title={t('parcours.professionalJourney.items.3.title')}
                     subtitle={t('parcours.professionalJourney.items.3.subtitle')}
-                    bgColor="rgb(33, 150, 243)"
+                    bgColor="rgb(33,150,243)"
                 />
                 <TimelineItem
                     date={t('parcours.professionalJourney.items.4.date')}
                     icon={<WorkIcon />}
                     title={t('parcours.professionalJourney.items.4.title')}
                     subtitle={t('parcours.professionalJourney.items.4.subtitle')}
-                    bgColor="rgb(33, 150, 243)"
+                    bgColor="rgb(33,150,243)"
                 />
                 <VerticalTimelineElement
                     iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}
