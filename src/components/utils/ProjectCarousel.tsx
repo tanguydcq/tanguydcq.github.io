@@ -9,33 +9,33 @@ const projects = [
 		title: "Sterenova",
 		description:
 			"Boîte d’événementiel : organisation, logistique, location de matériel",
-		image: "/images/sterenova.jpg",
+		image: `${import.meta.env.BASE_URL}images/sterenova.jpg`,
 		tech: ["Gestion", "Communication", "Évènementiel"],
 	},
 	{
 		title: "Site Sterenova",
 		description: "Developpement du site Sternova",
-		image: "/images/sterenova-site.jpg",
+		image: `${import.meta.env.BASE_URL}images/sterenova-site.jpg`,
 		tech: ["Next.js", "Tailwind CSS", "TypeScript", "React"],
 	},
 	{
 		title: "Agent IA ChatGPT",
 		description:
 			"Génération automatique de documentation technique avec Slack + scraping",
-		image: "/images/agentia.jpg",
+		image: `${import.meta.env.BASE_URL}images/agentia.jpg`,
 		tech: ["Python", "OpenAI API", "LLM", "Slack"],
 	},
 	{
 		title: "Classification de Contrats",
 		description: "LLM internes pour reconnaître des documents juridiques",
-		image: "/images/contracts.jpg",
+		image: `${import.meta.env.BASE_URL}images/contracts.jpg`,
 		tech: ["NLP", "LLM", "Prompting", "Data Science"],
 	},
 	{
 		title: "Portfolio Personnel",
 		description:
 			"Site web personnel pour présenter mes projets et compétences",
-		image: "/images/portfolio.jpg",
+		image: `${import.meta.env.BASE_URL}images/portfolio.jpg`,
 		tech: ["React", "Next.js", "Tailwind CSS", "TypeScript"],
 	}
 ]
@@ -44,19 +44,19 @@ const courseProjects = [
 	{
 		title: "Generateur de musique",
 		description: "Utilisation de BERT pour générer de la musique dans le cadre d'un projet de cours NLP",
-		image: "/images/music-generator.jpg",
+		image: `${import.meta.env.BASE_URL}images/music-generator.jpg`,
 		tech: ["Python", "BERT", "NLP"],
 	},
 	{
 		title: "Classification d'images",
 		description: "Utilisation de CNN pour classifier des images de galaxy selon leur label",
-		image: "/images/image-classification.jpg",
+		image: `${import.meta.env.BASE_URL}images/image-classification.jpg`,
 		tech: ["Python", "TensorFlow", "CNN", "Machine Learning"],
 	},
 	{
 		title: "Exploration de données",
 		description: "Analyse de données d'accidents de la route pour en extraire des insights avec differents modele et analyse. Le dataset etait volumineux pour nous mettre dans un cadre d'entreprise, le sujet assez flou pour avoir une liberte totale",
-		image: "/images/image-accident.jpg",
+		image: `${import.meta.env.BASE_URL}images/image-accident.jpg`,
 		tech: ["Python", "Spark", "Machine Learning", "Big Data"],
 	},
 	// mettre d'autres...

@@ -7,7 +7,7 @@ export function Header() {
   return (
     <header className="mx-4 p-4 sm:py-6 flex flex-col sm:flex-row justify-between items-center border-b border-gray-700 gap-4 sm:gap-0">
       <div className="flex flex-row items-center space-x-4">
-        <img src="/images/identite.jpg" alt="Identité" className="w-16 h-16 sm:w-16 sm:h-16 rounded-full object-cover aspect-square" />
+        <img src={`${import.meta.env.BASE_URL}images/identite.jpg`} alt="Identité" className="w-16 h-16 sm:w-16 sm:h-16 rounded-full object-cover aspect-square" />
         <h1 className="text-xl sm:text-2xl font-bold">Tanguy Ducrocq</h1>
       </div>
       {/* <nav className="space-x-4">
