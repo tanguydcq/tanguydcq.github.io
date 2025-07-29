@@ -23,7 +23,7 @@ export function Header() {
           FR
         </button>
         <button
-          onClick={() => i18n.changeLanguage('fr')}
+          onClick={() => i18n.changeLanguage('en')}
           className="px-3 py-1 rounded transition-colors duration-200 hover:bg-cyan-400 hover:text-white border border-cyan-400"
         >
           EN

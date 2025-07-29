@@ -1,9 +1,13 @@
-import LandingPage from "./pages/landing-page";
+// App.tsx
+import { Routes, Route } from "react-router-dom"
+import LandingPage from "./pages/landing-page"
+import ProjectDetail from "./pages/ProjectDetail"
 
-const App = () => {
+export default function App() {
   return (
-    <LandingPage />
-  );
-};
-
-export default App;
+    <Routes>
+      <Route path="/" element={<LandingPage />} />
+      <Route path="/project/:slug" element={<ProjectDetail />} />
+    </Routes>
+  )
+}
