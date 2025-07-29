@@ -8,7 +8,9 @@ const projects = [
 	{
 		title: "Sterenova",
 		description:
-			"Boîte d’événementiel : organisation, logistique, location de matériel",
+			`Sterenova vise à fournir des services d'événementiel complets ainsi que des solutions de location de matériel de qualité, répondant aux besoins divers et spécifiques de nos clients.
+			Ce projet a pour le but de simplifier l'organisation d'événements en offrant un guichet unique pour toutes les nécessités, de la planification à la mise en œuvre, en passant par la location de matériel nécessaire.
+			À l'avenir, notre objectif est de continuer à élargir notre gamme de services, à consolider notre présence sur le marché local et à développer notre clientèle en offrant des solutions innovantes et sur mesure pour chaque événement.`,
 		image: `${import.meta.env.BASE_URL}images/sterenova.jpg`,
 		tech: ["Gestion", "Communication", "Évènementiel"],
 	},

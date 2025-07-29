@@ -54,7 +54,7 @@ const resources = {
                             description: "Founder of Sterenova events and equipment rental event planning corporate management",
                         },
                         2: {
-                            title: "Server/Bartender",
+                            title: "Waiter/Bartender",
                             date: "August 2022",
                             subtitle: "Marius Café Pornic",
                         },
@@ -82,7 +82,7 @@ const resources = {
             },
             about: {
                 title: "À propos de moi",
-                description: `Salut ! Moi c’est Tanguy, étudiant à EPITA en majeure SCIA-G (Data Science, IA & Graphes). Ce site, c’est un peu mon labo perso : j’y partage ce que j’apprends, ce que je construis, et ce qui m’inspire`
+                description: `Bonjour! Moi c’est Tanguy, étudiant à EPITA en majeure SCIA-G (Data Science, IA & Graphes). Ce site, c’est un peu mon labo perso : j’y partage ce que j’apprends, ce que je construis, et ce qui m’inspire`
             },
             parcours: {
                 title: "Mon parcours",
@@ -150,8 +150,8 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    lng: 'fr', // Default language
-    fallbackLng: 'en',
+    lng: 'en',
+    fallbackLng: 'fr',
     interpolation: {
       escapeValue: false,
     },
