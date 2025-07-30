@@ -16,13 +16,13 @@ function slugify(str: string) {
 }
 
 export const projects: Project[] = [
-  {
-    slug: slugify("Sterenova"),
-    image: `${import.meta.env.BASE_URL}images/sterenova.jpg`,
-    tags: ["Gestion", "Communication", "Évènementiel"],
-    date: "2023-06-01",
-    translationKey: "projects.sterenova"
-  },
+  // {
+  //   slug: slugify("Sterenova"),
+  //   image: `${import.meta.env.BASE_URL}images/sterenova.jpg`,
+  //   tags: ["Gestion", "Communication", "Évènementiel"],
+  //   date: "2023-06-01",
+  //   translationKey: "projects.sterenova"
+  // },
   {
     slug: slugify("Site Sterenova"),
     image: `${import.meta.env.BASE_URL}images/sterenova-site.jpg`,

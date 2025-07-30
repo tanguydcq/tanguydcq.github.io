@@ -4,77 +4,7 @@ import { motion } from "framer-motion"
 import { ProjectCard } from "./ProjectCard"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import { projects, courseProjects } from "@/data/project"
-// import type { Project } from "@/data/project"
 
-
-
-
-// const projects = [
-// 	{
-// 		title: "Sterenova",
-// 		slug: slugify("Sterenova"),
-// 		description:
-// 			`Sterenova vise à fournir des services d'événementiel complets ainsi que des solutions de location de matériel de qualité, répondant aux besoins divers et spécifiques de nos clients.
-// 			Ce projet a pour le but de simplifier l'organisation d'événements en offrant un guichet unique pour toutes les nécessités, de la planification à la mise en œuvre, en passant par la location de matériel nécessaire.
-// 			À l'avenir, notre objectif est de continuer à élargir notre gamme de services, à consolider notre présence sur le marché local et à développer notre clientèle en offrant des solutions innovantes et sur mesure pour chaque événement.`,
-// 		image: `${import.meta.env.BASE_URL}images/sterenova.jpg`,
-// 		tech: ["Gestion", "Communication", "Évènementiel"],
-// 	},
-// 	{
-// 		title: "Site Sterenova",
-// 		slug: slugify("Site Sterenova"),
-// 		description: "Developpement du site Sternova",
-// 		image: `${import.meta.env.BASE_URL}images/sterenova-site.jpg`,
-// 		tech: ["Next.js", "Tailwind CSS", "TypeScript", "React"],
-// 	},
-// 	{
-// 		title: "Agent IA ChatGPT",
-// 		slug: slugify("Agent IA ChatGPT"),
-// 		description:
-// 			"Génération automatique de documentation technique avec Slack + scraping",
-// 		image: `${import.meta.env.BASE_URL}images/agentia.jpg`,
-// 		tech: ["Python", "OpenAI API", "LLM", "Slack"],
-// 	},
-// 	{
-// 		title: "Classification de Contrats",
-// 		slug: slugify("Classification de Contrats"),
-// 		description: "LLM internes pour reconnaître des documents juridiques",
-// 		image: `${import.meta.env.BASE_URL}images/contracts.jpg`,
-// 		tech: ["NLP", "LLM", "Prompting", "Data Science"],
-// 	},
-// 	{
-// 		title: "Portfolio Personnel",
-// 		slug: slugify("Portfolio Personnel"),
-// 		description:
-// 			"Site web personnel pour présenter mes projets et compétences",
-// 		image: `${import.meta.env.BASE_URL}images/portfolio.jpg`,
-// 		tech: ["React", "Next.js", "Tailwind CSS", "TypeScript"],
-// 	}
-// ]
-
-// const courseProjects = [
-// 	{
-// 		title: "Generateur de musique",
-// 		slug: slugify("Generateur de musique"),
-// 		description: "Utilisation de BERT pour générer de la musique dans le cadre d'un projet de cours NLP",
-// 		image: `${import.meta.env.BASE_URL}images/music-generator.jpg`,
-// 		tech: ["Python", "BERT", "NLP"],
-// 	},
-// 	{
-// 		title: "Classification d'images",
-// 		slug: slugify("Classification d'images"),
-// 		description: "Utilisation de CNN pour classifier des images de galaxy selon leur label",
-// 		image: `${import.meta.env.BASE_URL}images/image-classification.jpg`,
-// 		tech: ["Python", "TensorFlow", "CNN", "Machine Learning"],
-// 	},
-// 	{
-// 		title: "Exploration de données",
-// 		slug: slugify("Exploration de données"),
-// 		description: "Analyse de données d'accidents de la route pour en extraire des insights avec differents modele et analyse. Le dataset etait volumineux pour nous mettre dans un cadre d'entreprise, le sujet assez flou pour avoir une liberte totale",
-// 		image: `${import.meta.env.BASE_URL}images/image-accident.jpg`,
-// 		tech: ["Python", "Spark", "Machine Learning", "Big Data"],
-// 	},
-// ]
 
 function CarouselSection({ title, projects }: { title: string; projects: any[] }) {
 	const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
@@ -116,13 +46,13 @@ function CarouselSection({ title, projects }: { title: string; projects: any[] }
 				</div>
 				<button
 					onClick={scrollPrev}
-					className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-gray-800 hover:bg-gray-700 text-white p-2 rounded-full shadow-md"
+					className="absolute left-[-2rem]  lg:left-[-3rem] top-1/2 -translate-y-1/2 z-10 bg-gray-800 hover:bg-gray-700 text-white p-2 rounded-full shadow-md"
 				>
 					<ChevronLeft size={20} />
 				</button>
 				<button
 					onClick={scrollNext}
-					className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-gray-800 hover:bg-gray-700 text-white p-2 rounded-full shadow-md"
+					className="absolute right-[-2rem] lg:right-[-3rem] top-1/2 -translate-y-1/2 z-10 bg-gray-800 hover:bg-gray-700 text-white p-2 rounded-full shadow-md"
 				>
 					<ChevronRight size={20} />
 				</button>

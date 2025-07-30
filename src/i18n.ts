@@ -72,10 +72,10 @@ const resources = {
                 }
             },
             projects: {
-                sterenova: {
-                    title: "Sterenova",
-                    description: `Sterenova aims to provide comprehensive event services as well as quality equipment rental solutions, meeting the diverse and specific needs of our clients. This project aims to simplify event organization by offering a one-stop shop for all necessities, from planning to implementation, including the rental of necessary equipment.`
-                },
+                // sterenova: {
+                //     title: "Sterenova",
+                //     description: `Sterenova aims to provide comprehensive event services as well as quality equipment rental solutions, meeting the diverse and specific needs of our clients. This project aims to simplify event organization by offering a one-stop shop for all necessities, from planning to implementation, including the rental of necessary equipment.`
+                // },
                 sterenovaSite: {
                     title: "Sterenova Site",
                     description: "Development of the website for Sterenova"
@@ -184,10 +184,10 @@ const resources = {
                 }
             },
             projects: {
-                sterenova: {
-                    title: "Sterenova",
-                    description: `Sterenova vise à fournir des services d'événementiel complets ainsi que des solutions de location de matériel de qualité, répondant aux besoins divers et spécifiques de nos clients. Ce projet a pour le but de simplifier l'organisation d'événements en offrant un guichet unique pour toutes les nécessités, de la planification à la mise en œuvre, en passant par la location de matériel nécessaire.`,
-                },
+                // sterenova: {
+                //     title: "Sterenova",
+                //     description: `Sterenova vise à fournir des services d'événementiel complets ainsi que des solutions de location de matériel de qualité, répondant aux besoins divers et spécifiques de nos clients. Ce projet a pour le but de simplifier l'organisation d'événements en offrant un guichet unique pour toutes les nécessités, de la planification à la mise en œuvre, en passant par la location de matériel nécessaire.`,
+                // },
                 sterenovaSite: {
                     title: "Site Sterenova",
                     description: "Développement du site web pour Sterenova"

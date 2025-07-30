@@ -7,7 +7,13 @@ export function Header() {
   return (
     <header className="mx-4 p-4 sm:py-6 flex flex-col sm:flex-row justify-between items-center border-b border-gray-700 gap-4 sm:gap-0">
       <div className="flex flex-row items-center space-x-4">
-        <img src={`${import.meta.env.BASE_URL}images/identite.jpg`} alt="Identité" className="w-16 h-16 sm:w-16 sm:h-16 rounded-full object-cover aspect-square" />
+        <a href="/">
+          <img
+            src={`${import.meta.env.BASE_URL}images/identite.jpg`}
+            alt="Identité"
+            className="w-16 h-16 sm:w-16 sm:h-16 rounded-full object-cover aspect-square cursor-pointer"
+          />
+        </a>
         <h1 className="text-xl sm:text-2xl font-bold">Tanguy Ducrocq</h1>
       </div>
       {/* <nav className="space-x-4">
@@ -18,14 +24,16 @@ export function Header() {
       <div className="flex justify-end">
         <button
           onClick={() => i18n.changeLanguage('fr')}
-          className="mr-2 px-3 py-1 rounded transition-colors duration-200 hover:bg-cyan-400 hover:text-white border border-cyan-400"
+          className="mr-2 px-3 py-1 rounded flex items-center gap-1 transition-colors duration-200 hover:bg-cyan-400 hover:text-white border border-cyan-400"
         >
+          <img src={`${import.meta.env.BASE_URL}images/fr.png`} alt="FR" className="w-8 h-5" />
           FR
         </button>
         <button
           onClick={() => i18n.changeLanguage('en')}
-          className="px-3 py-1 rounded transition-colors duration-200 hover:bg-cyan-400 hover:text-white border border-cyan-400"
+          className="px-3 py-1 rounded flex items-center gap-1 transition-colors duration-200 hover:bg-cyan-400 hover:text-white border border-cyan-400"
         >
+          <img src={`${import.meta.env.BASE_URL}images/en.png`} alt="EN" className="w-8 h-5" />
           EN
         </button>
       </div>
