@@ -137,34 +137,40 @@ function ParcoursProSection() {
 
 export function ParcoursComponent() {
     const { t } = useTranslation();
+  
     return (
-        <div id="parcours" className="mb-8 mt-4 flex flex-col w-full justify-center">
-            <h2 className="text-2xl text-cyan-400 font-semibold mb-2 pb-4 pl-5">{t('parcours.title')}</h2>
-            <Tabs defaultValue="academique" className="w-full">
-                <div className="flex justify-center w-full">
-                    <TabsList className="grid w-96 grid-cols-2 gap-2">
-                        <TabsTrigger 
-                            value="academique"
-                            className="px-2 py-1 text-sm data-[state=active]:bg-gray-800 data-[state=active]:text-white data-[state=active]:shadow-lg"
-                        >
-                            {t('parcours.academicJourney.title')}
-                        </TabsTrigger>
-                        <TabsTrigger 
-                            value="pro"
-                            className="px-2 py-1 text-sm data-[state=active]:bg-gray-800 data-[state=active]:text-white data-[state=active]:shadow-lg"
-                        >
-                            {t('parcours.professionalJourney.title')}
-                        </TabsTrigger>
-                    </TabsList>
-                </div>
-                <TabsContent value="academique">
-                    <ParcoursAcademiqueSection />
-                </TabsContent>
-                <TabsContent value="pro">
-                    <ParcoursProSection />
-                </TabsContent>
-            </Tabs>
-        </div>
-    )
-}
+      <div id="parcours" className="mb-8 mt-4 flex flex-col w-full items-center text-center">
+        <h1 className="py-10 text-3xl sm:text-4xl text-cyan-400 font-bold mb-6">
+          {t('parcours.title')}
+        </h1>
+  
+        <Tabs defaultValue="academique" className="w-full">
+          <div className="flex justify-center w-full">
+            <TabsList className="grid w-96 grid-cols-2 gap-2">
+              <TabsTrigger
+                value="academique"
+                className="px-2 py-1 text-sm data-[state=active]:bg-gray-800 data-[state=active]:text-white data-[state=active]:shadow-lg"
+              >
+                {t('parcours.academicJourney.title')}
+              </TabsTrigger>
+              <TabsTrigger
+                value="pro"
+                className="px-2 py-1 text-sm data-[state=active]:bg-gray-800 data-[state=active]:text-white data-[state=active]:shadow-lg"
+              >
+                {t('parcours.professionalJourney.title')}
+              </TabsTrigger>
+            </TabsList>
+          </div>
+  
+          <TabsContent value="academique">
+            <ParcoursAcademiqueSection />
+          </TabsContent>
+          <TabsContent value="pro">
+            <ParcoursProSection />
+          </TabsContent>
+        </Tabs>
+      </div>
+    );
+  }
+  
 

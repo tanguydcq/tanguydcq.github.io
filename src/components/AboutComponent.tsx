@@ -6,14 +6,17 @@ export function AboutComponent() {
   const { t } = useTranslation();
 
   return (
-    <section id="presentation" className="my-20 px-4 sm:px-6 text-center flex flex-col items-center">
-      <h1 className="text-3xl sm:text-4xl font-bold text-cyan-400 mb-4">
-        {t("about.title") || "About Me"}
+    <section id="presentation" className="mt-20 mb-10 px-4 sm:px-6 text-center flex flex-col items-center">
+      <h1 className="py-10 text-3xl sm:text-4xl font-bold text-cyan-400 mb-4">
+        Tanguy Ducrocq
       </h1>
       <p className="text-gray-400 max-w-2xl text-base sm:text-lg leading-relaxed mb-6">
-        {t("about.description") || `I'm looking for a full-time opportunity or internship in web development, AI or UX. I'm based in Paris, open to relocation or remote work. Fluent in French and English.`}
+        {t("about.description")}
       </p>
 
+      <p className="text-gray-400 max-w-2xl text-base sm:text-lg leading-relaxed mb-6">
+        {t("about.additionalInfo")}
+      </p>
       <div className="flex flex-wrap justify-center items-center gap-4 text-sm text-gray-400">
         <div className="flex items-center gap-2">
           <MapPin size={18} />
