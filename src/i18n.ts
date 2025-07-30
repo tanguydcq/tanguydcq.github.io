@@ -5,12 +5,13 @@ const resources = {
     en: {
         translation: {
             header: {
-                presentation: "About Me",
+                presentation: "Home",
                 parcours: "My Journey",
+                projects: "My Projects",
                 contact: "Contact Me"
             },
             about: {
-                title: "About Me",
+                title: "Home",
                 description: `Hi! I'm Tanguy, a student at EPITA majoring in SCIA-G (Data Science, AI & Graphs). This site is kind of my personal lab: I share what I learn, what I build, and what inspires me here.`
             },
             parcours: {
@@ -117,12 +118,13 @@ const resources = {
     fr: {
         translation: {
             header: {
-                presentation: "À propos de moi",
+                presentation: "Acceuil",
                 parcours: "Mon parcours",
+                projects: "Mes projets",
                 contact: "Me contacter"
             },
             about: {
-                title: "À propos de moi",
+                title: "Acceuil",
                 description: `Bonjour! Moi c’est Tanguy, étudiant à EPITA en majeure SCIA-G (Data Science, IA & Graphes). Ce site, c’est un peu mon labo perso : j’y partage ce que j’apprends, ce que je construis, et ce qui m’inspire`
             },
             parcours: {
