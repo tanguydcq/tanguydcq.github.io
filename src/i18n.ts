@@ -70,7 +70,48 @@ const resources = {
                         }
                     }
                 }
+            },
+            projects: {
+                sterenova: {
+                    title: "Sterenova",
+                    description: `Sterenova aims to provide comprehensive event services as well as quality equipment rental solutions, meeting the diverse and specific needs of our clients. This project aims to simplify event organization by offering a one-stop shop for all necessities, from planning to implementation, including the rental of necessary equipment.`
+                },
+                sterenovaSite: {
+                    title: "Sterenova Site",
+                    description: "Development of the website for Sterenova"
+                },
+                agentIA: {
+                    title: "AI Agent ChatGPT",
+                    description: "Automatic generation of technical documentation with Slack + scraping"
+                },
+                classificationContrats: {
+                    title: "Contract Classification",
+                    description: "Internal LLMs to recognize legal documents"
+                },
+                portfolio: {
+                    title: "My Portfolio",
+                    description: "Personal website to showcase my projects and skills"
+                },
+            },
+            courseProjects: {
+                musicGenerator: {
+                    title: "Music Generator",
+                    description: "Using BERT to generate music as part of a NLP course project"
+                },
+                imageClassification: {
+                    title: "Image Classification",
+                    description: "Using CNNs to classify images as part of an image classification course project"
+                },
+                dataExploration: {
+                    title: "Data Exploration",
+                    description: "Data analysis for a data science course project"
+                },
+                dataScience: {
+                    title: "Data Science",
+                    description: "Data science project using advanced data analysis techniques"
+                }
             }
+            
         }
     },
     fr: {
@@ -140,6 +181,46 @@ const resources = {
                             subtitle: "Renault Retail Group Paris"
                         }
                     }
+                }
+            },
+            projects: {
+                sterenova: {
+                    title: "Sterenova",
+                    description: `Sterenova vise à fournir des services d'événementiel complets ainsi que des solutions de location de matériel de qualité, répondant aux besoins divers et spécifiques de nos clients. Ce projet a pour le but de simplifier l'organisation d'événements en offrant un guichet unique pour toutes les nécessités, de la planification à la mise en œuvre, en passant par la location de matériel nécessaire.`,
+                },
+                sterenovaSite: {
+                    title: "Site Sterenova",
+                    description: "Développement du site web pour Sterenova"
+                },
+                agentIA: {
+                    title: "Agent IA ChatGPT",
+                    description: "Génération automatique de documentation technique avec Slack + scraping"
+                },
+                classificationContrats: {
+                    title: "Classification de Contrats",
+                    description: "LLM internes pour reconnaître des documents juridiques"
+                },
+                portfolio: {
+                    title: "Mon Portfolio",
+                    description: "Site web personnel pour présenter mes projets et compétences"
+                },
+            },
+            courseProjects: {
+                musicGenerator: {
+                    title: "Générateur de musique",
+                    description: "Utilisation de BERT pour générer de la musique dans le cadre d'un projet de cours NLP"
+                },
+                imageClassification: {
+                    title: "Classification d'images",
+                    description: "Utilisation de CNN pour classifier des images dans le cadre d'un projet de cours de classification d'images"
+                },
+                dataExploration: {
+                    title: "Exploration de données",
+                    description: "Analyse de données pour un projet de cours de data science"
+                },
+                dataScience: {
+                    title: "Data Science",
+                    description: "Projet de data science utilisant des techniques avancées d'analyse de données"
                 }
             }
         }
