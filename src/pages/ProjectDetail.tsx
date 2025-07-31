@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom"
 import { useTranslation } from "react-i18next"
 import { projects, courseProjects } from "../data/project"
-import HomeLayout from "@/layout/HomeLayout"
+import ProjectLayout from "@/layout/ProjectLayout"
 
 export default function ProjectDetail() {
   const { slug } = useParams()
@@ -13,7 +13,7 @@ export default function ProjectDetail() {
   if (!project) return <div>{t("projects.notFound", "Projet introuvable")}</div>
 
   return (
-    <HomeLayout>
+    <ProjectLayout>
       <div className="p-6 max-w-4xl mx-auto">
         <h1 className="text-3xl font-bold mb-4">{t(`${project.translationKey}.title`)}</h1>
         <img src={project.image} alt={t(`${project.translationKey}.title`)} className="w-full rounded mb-4" />
@@ -26,7 +26,7 @@ export default function ProjectDetail() {
           ))}
         </div>
       </div>
-    </HomeLayout>
+    </ProjectLayout>
   )
 }
 

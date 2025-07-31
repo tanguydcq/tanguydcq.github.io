@@ -8,7 +8,8 @@ const resources = {
                 presentation: "Home",
                 parcours: "My Journey",
                 projects: "My Projects",
-                contact: "Contact Me"
+                contact: "Contact Me",
+                backhome: "Back to Home"
             },
             about: {
                 title: "Home",
@@ -46,7 +47,7 @@ const resources = {
                             title: "Internship",
                             date: "September 2024 - January 2025",
                             subtitle: "DiliTrust La Défense",
-                            description: "Development of an intelligent agent in Python integrating the ChatGPT API to automate the generation of technical documentation, with Slack interface and multi-source data scraping Classification of contracts via internal LLM using optimized multi-step prompts, to generalize unseen document types during initial training",
+                            description: "Part of the ML team at DiliTrust, working on intelligent agents and automation of document-related tasks.",
                         },
                         1: {
                             title: "Co-founder",
@@ -121,7 +122,8 @@ const resources = {
                 presentation: "Acceuil",
                 parcours: "Mon parcours",
                 projects: "Mes projets",
-                contact: "Me contacter"
+                contact: "Me contacter",
+                backhome: "Retour à l'accueil"
             },
             about: {
                 title: "Acceuil",
@@ -159,7 +161,7 @@ const resources = {
                             date: "Septembre 2024 - janvier 2025",
                             title: "Stage mi- étude",
                             subtitle: "DiliTrust La Défense",
-                            description: "Développement d’un agent intelligent en Python intégrant l’API ChatGPT pour automatiser la génération de documentation technique, avec interface Slack et scraping de données multi-sources Classification de contrats via LLM interne à l’aide de prompts multi-étapes optimisés, pour généraliser les types de documents non vus lors de l’entraînement initial",
+                            description: "Membre de l’équipe ML chez DiliTrust, impliqué dans le développement d’agents intelligents et l’automatisation de tâches liées au traitement de documents.",
                         },
                         1: {
                             date: "Depuis avril 2023",

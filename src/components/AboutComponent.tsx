@@ -13,11 +13,7 @@ export function AboutComponent() {
       <p className="text-gray-400 max-w-2xl text-base sm:text-lg leading-relaxed mb-6">
         {t("about.description")}
       </p>
-
-      <p className="text-gray-400 max-w-2xl text-base sm:text-lg leading-relaxed mb-6">
-        {t("about.additionalInfo")}
-      </p>
-      <div className="flex flex-wrap justify-center items-center gap-4 text-sm text-gray-400">
+      <div className="flex flex-col sm:flex-row justify-center items-center gap-4 text-sm text-gray-400">
         <div className="flex items-center gap-2">
           <MapPin size={18} />
           <span>Paris, France</span>
@@ -41,6 +37,7 @@ export function AboutComponent() {
           </a>
         </div>
       </div>
+
     </section>
   );
 }

@@ -9,7 +9,7 @@ export function ProjectCard({ slug, image, tags, translationKey }: Project) {
 
   return (
     <div className="bg-gray-800 rounded-xl p-4 shadow-md min-h-[340px] flex flex-col justify-between w-full h-full">
-      <div className="h-40 w-full mb-4 overflow-hidden rounded-md">
+      <div className="w-full mb-4 rounded-md overflow-hidden relative aspect-[16/9]">
         <img
           src={image}
           alt={t(`${translationKey}.title`)}
