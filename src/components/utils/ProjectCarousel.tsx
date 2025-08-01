@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import { ProjectCard } from "./ProjectCard"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import { projects, courseProjects } from "@/data/project"
+import { useTranslation } from "react-i18next";
 
 
 function CarouselSection({ title, projects }: { title: string; projects: any[] }) {
@@ -14,10 +15,10 @@ function CarouselSection({ title, projects }: { title: string; projects: any[] }
 		},
 		breakpoints: {
 			"(min-width: 640px)": {
-				slides: { perView: 1.5, spacing: 20 },
+				slides: { perView: 1.5, spacing: 0 },
 			},
 			"(min-width: 1024px)": {
-				slides: { perView: 2.5, spacing: 24 },
+				slides: { perView: 2.5, spacing: 0 },
 			},
 		},
 	})
@@ -62,10 +63,11 @@ function CarouselSection({ title, projects }: { title: string; projects: any[] }
 }
 
 export function ProjectsCarousel() {
+	const { t } = useTranslation();
 	return (
 		<div>
-			<CarouselSection title="Projets personnels & entreprise" projects={projects} />
-			<CarouselSection title="Projets de cours" projects={courseProjects} />
+			<CarouselSection title={t("header.persoProjects")} projects={projects} />
+			<CarouselSection title={t("header.courseProjects")} projects={courseProjects} />
 		</div>
 	)
 }

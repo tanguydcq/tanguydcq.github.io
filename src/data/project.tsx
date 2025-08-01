@@ -5,6 +5,7 @@ export interface Project {
   date?: string;
   link?: string;
   translationKey: string;
+  readonly reportUrl?: string;
 }
 
 function slugify(str: string) {
@@ -35,7 +36,8 @@ export const projects: Project[] = [
     image: `${import.meta.env.BASE_URL}images/project/generateur_doc.png`,
     tags: ["Python", "OpenAI API", "LLM", "Slack"],
     date: "2024-01-15",
-    translationKey: "projects.agentIA"
+    translationKey: "projects.agentIA",
+    reportUrl: `${import.meta.env.BASE_URL}images/reports/agentia_doc.pdf`
   },
   {
     slug: slugify("Mon Portfolio"),

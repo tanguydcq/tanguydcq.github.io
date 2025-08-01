@@ -9,7 +9,10 @@ const resources = {
                 parcours: "My Journey",
                 projects: "My Projects",
                 contact: "Contact Me",
-                backhome: "Back to Home"
+                backhome: "Back to Home",
+                persoProjects: "Personal Projects",
+                courseProjects: "Course Projects",
+                viewReport: "View Report"
             },
             about: {
                 title: "Home",
@@ -80,19 +83,23 @@ const resources = {
                 // },
                 sterenovaSite: {
                     title: "Sterenova Site",
-                    description: "Development of the website for Sterenova"
+                    description: "Development of the website for Sterenova",
+                    longDescription: "The Sterenova site is designed to provide users with a comprehensive overview of the services offered by Sterenova, including event planning and equipment rental."
                 },
                 agentIA: {
                     title: "AI Agent ChatGPT",
-                    description: "Automatic generation of technical documentation with Slack + scraping"
+                    description: "Automatic generation of technical documentation with Slack + scraping",
+                    longDescription: "This project involves the use of AI to automatically generate technical documentation by integrating with Slack and utilizing web scraping techniques."
                 },
                 classificationContrats: {
                     title: "Contract Classification",
-                    description: "Internal LLMs to recognize legal documents"
+                    description: "Internal LLMs to recognize legal documents",
+                    longDescription: "This project focuses on using internal large language models (LLMs) to accurately identify and classify legal documents." 
                 },
                 portfolio: {
                     title: "My Portfolio",
-                    description: "Personal website to showcase my projects and skills"
+                    description: "Personal website to showcase my projects and skills",
+                    longDescription: "This portfolio website serves as a showcase for my projects and skills, highlighting my work and achievements in the field."
                 },
             },
             courseProjects: {
@@ -123,7 +130,10 @@ const resources = {
                 parcours: "Mon parcours",
                 projects: "Mes projets",
                 contact: "Me contacter",
-                backhome: "Retour à l'accueil"
+                backhome: "Retour à l'accueil",
+                persoProjects: "Projets personnels",
+                courseProjects: "Projets de cours",
+                viewReport: "Voir le rapport"
             },
             about: {
                 title: "Acceuil",
@@ -194,19 +204,23 @@ const resources = {
                 // },
                 sterenovaSite: {
                     title: "Site Sterenova",
-                    description: "Développement du site web pour Sterenova"
+                    description: "Développement du site web pour Sterenova",
+                    longDescription: "Le site Sterenova est conçu pour fournir aux utilisateurs un aperçu complet des services offerts par Sterenova, y compris la planification d'événements et la location de matériel."
                 },
                 agentIA: {
                     title: "Agent IA ChatGPT",
-                    description: "Génération automatique de documentation technique avec Slack + scraping"
+                    description: "Génération automatique de documentation technique avec Slack + scraping",
+                    longDescription: "Ce projet implique l'utilisation de l'IA pour générer automatiquement de la documentation technique en intégrant Slack et en utilisant des techniques de scraping web."
                 },
                 classificationContrats: {
                     title: "Classification de Contrats",
-                    description: "LLM internes pour reconnaître des documents juridiques"
+                    description: "LLM internes pour reconnaître des documents juridiques",
+                    longDescription: "Ce projet se concentre sur l'utilisation de modèles de langage de grande taille (LLM) internes pour identifier et classer avec précision des documents juridiques."
                 },
                 portfolio: {
                     title: "Mon Portfolio",
-                    description: "Site web personnel pour présenter mes projets et compétences"
+                    description: "Site web personnel pour présenter mes projets et compétences",
+                    longDescription: "Ce site web portfolio sert de vitrine pour mes projets et compétences, mettant en avant mon travail et mes réalisations dans le domaine."
                 },
             },
             courseProjects: {
