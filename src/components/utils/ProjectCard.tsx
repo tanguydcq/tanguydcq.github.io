@@ -31,7 +31,7 @@ export function ProjectCard({ slug, image, tags, translationKey }: Project) {
       </div>
       <div className="flex justify-center my-3">
         <Link to={`/project/${slug}`}>
-          <Button variant="link" className="text-gray-400">Voir Plus</Button>
+          <Button variant="link" className="text-gray-400">{t(`header.seeMore`)}</Button>
         </Link>
       </div>
     </div>

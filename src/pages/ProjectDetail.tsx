@@ -26,14 +26,13 @@ export default function ProjectDetail() {
         </h1>
 
         {/* Image */}
-        <div className="w-full max-w-2xl aspect-video mb-6 overflow-hidden rounded-lg shadow mx-auto">
+        <div className="w-full max-w-xl aspect-video mb-6 overflow-hidden rounded-lg shadow mx-auto">
           <img
             src={project.image}
             alt={t(`${project.translationKey}.title`)}
             className="w-full h-full object-cover"
           />
         </div>
-
 
         {/* Description */}
         <p className="text-gray-300 text-base sm:text-lg leading-relaxed whitespace-pre-line mb-6 text-center">
@@ -53,17 +52,17 @@ export default function ProjectDetail() {
         </div>
 
         {/* Rapport PDF s'il existe */}
-        {project.reportUrl && (
-          <div className="mt-8 flex justify-center">
+        {project.link && (
+            <div className="mt-8 flex justify-center">
             <a
-              href={project.reportUrl}
+              href={project.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-cyan-400 underline hover:text-cyan-200 transition border border-cyan-400 rounded-lg px-4 py-2 bg-gray-800"
+              className="text-cyan-400 underline hover:text-cyan-200 transition border border-cyan-400 rounded-lg px-8 py-3 bg-gray-800 min-w-52 text-center font-semibold"
             >
-              {t("header.viewReport")}
+              {t("header.link")}
             </a>
-          </div>
+            </div>
         )}
       </div>
     </ProjectLayout>
