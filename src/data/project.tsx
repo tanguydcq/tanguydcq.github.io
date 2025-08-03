@@ -73,6 +73,19 @@ export const projects: Project[] = [
 
 export const courseProjects: Project[] = [
   {
+    slug: slugify("PFEE"),
+    image: `${import.meta.env.BASE_URL}images/project/pfee.jpeg`,
+    tags: [
+      "Computer Vision",
+      "YOLOv11",
+      "Object Tracking",
+      "Re-identification",
+      "Sports Analytics",
+      "SoccerNet"
+    ],
+    translationKey: "courseProjects.pfee"
+  },
+  {
     slug: slugify("Classification d'images"),
     image: `${import.meta.env.BASE_URL}images/project/cnn.jpg`,
     tags: [

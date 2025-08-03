@@ -128,6 +128,21 @@ This project laid the foundation for an internal tool capable of automating a ty
         },
       },
       courseProjects: {
+        pfee : {
+          title: "PFEE",
+          description:
+            "AI-based football match analysis tool with player detection, ID tracking, and statistics generation from videos for amateur clubs.",
+          longDescription: `In this ongoing project, we are developing an AI-based tool to automatically analyze football matches from videos, with a clear goal: to provide detailed statistics to amateur clubs, which often lack advanced technological means.
+The first phase focuses on player tracking. We are using YOLOv11, the latest version of the well-known object detection model. Player tracking is done in three main steps:
+Initial object detection (players, ball, referees) on each frame using YOLO.
+Inter-frame tracking based on spatial proximity: if two detected objects in consecutive frames are close, we consider them to be the same player. This step relies on the "classic" tracking integrated into YOLO.
+Re-identification (Re-ID): to handle cases where a player leaves and returns to the camera view, we generate a unique embedding for each player to assign a constant ID throughout the match, even after temporary disappearance.
+We are using the SoccerNet dataset, which provides a large number of annotated videos, allowing us to evaluate our tracking system in a supervised manner.
+In addition to tracking, we have applied clustering techniques to:
+Identify referees,
+Determine which team each player belongs to.
+These initial steps will lay the groundwork for the next phases of the project, which will aim to detect match events (passes, shots, fouls, etc.) and automatically generate statistics that can be used by coaches and clubs.`, 
+        },
         musicGenerator: {
           title: "Music Generator",
           description:
@@ -314,6 +329,22 @@ Ce projet a permis de poser les bases d’un outil interne capable d’automatis
         },
       },
       courseProjects: {
+        pfee: {
+          title: "PFEE",
+          description:
+            "Outil d’analyse automatique de matchs de football basé sur l’IA, avec détection des joueurs, suivi par ID et génération de statistiques à partir de vidéos, destiné aux clubs amateurs.",
+          longDescription: `Dans ce projet toujours en cours, nous développons un outil basé sur l’intelligence artificielle pour analyser automatiquement les matchs de football à partir de vidéos, avec un objectif clair : fournir des statistiques détaillées aux clubs amateurs, souvent dépourvus de moyens technologiques avancés.
+La première phase du projet se concentre sur le tracking des joueurs. Pour cela, nous utilisons YOLOv11, la dernière version du célèbre modèle de détection d’objets. Le suivi des joueurs se fait en trois étapes principales :
+Détection initiale des objets (joueurs, ballon, arbitres) sur chaque frame grâce à YOLO.
+Tracking inter-frames basé sur la proximité spatiale : si deux objets détectés sur des images consécutives sont proches, on considère qu’il s’agit du même joueur. Cette étape repose sur le tracking "classique" intégré à YOLO.
+Re-identification (Re-ID) : pour gérer les cas où un joueur quitte et revient dans le champ de la caméra, nous générons un embedding unique pour chaque joueur afin de lui attribuer un ID constant tout au long du match, même après disparition temporaire.
+
+Nous utilisons le dataset SoccerNet, qui propose un grand nombre de vidéos annotées, ce qui nous permet d’évaluer notre système de tracking de façon supervisée.
+En complément du tracking, nous avons appliqué des techniques de clustering pour :
+Identifier les arbitres,
+Déterminer à quelle équipe appartient chaque joueur.
+Ces premières étapes poseront les bases pour les phases suivantes du projet, qui viseront à détecter des événements de match (passes, tirs, fautes, etc.) et à générer automatiquement des statistiques exploitables pour les entraîneurs et clubs.`,
+        },
         musicGenerator: {
           title: "Générateur de musique",
           description:
