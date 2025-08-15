@@ -8,7 +8,7 @@ export function ProjectCard({ slug, image, tags, translationKey }: Project) {
   const { t } = useTranslation()
 
   return (
-    <div className="bg-gray-800 rounded-xl p-4 shadow-md min-h-[340px] flex flex-col justify-between w-full h-full">
+    <div className="bg-gray-700 rounded-xl p-4 shadow-md min-h-[340px] flex flex-col justify-between w-full h-full">
       <div className="w-full mb-4 rounded-md overflow-hidden relative aspect-[16/9]">
         <img
           src={image}

@@ -36,18 +36,19 @@ function TimelineItem({
             iconStyle={{ background: bgColor, color: '#fff' }}
             icon={icon}
         >
-            <h3 className="vertical-timeline-element-title">{title}</h3>
-            {subtitle && <h4 className="vertical-timeline-element-subtitle">{subtitle}</h4>}
+            <h3 className="vertical-timeline-element-title font-bold ">{title}</h3>
+            {subtitle && <h4 className="vertical-timeline-element-subtitle italic ">{subtitle}</h4>}
             {description && <p>{description}</p>}
         </VerticalTimelineElement>
     );
 }
 
 
+
 function ParcoursAcademiqueSection() {
     const { t } = useTranslation();
     return (
-        <section className="flex flex-col p-6 rounded-2xl w-full text-left">
+        <section className="flex flex-col p-6 rounded-2xl w-full text-left whitespace-pre-line">
             <VerticalTimeline>
                 <TimelineItem
                     date={t('parcours.academicJourney.items.0.date')}
@@ -86,7 +87,7 @@ function ParcoursAcademiqueSection() {
 function ParcoursProSection() {
     const { t } = useTranslation();
     return (
-        <section className="flex flex-col p-6 rounded-2xl w-full text-left">
+        <section className="flex flex-col p-6 rounded-2xl w-full text-left whitespace-pre-line">
             <VerticalTimeline>
                 <TimelineItem
                     date={t('parcours.professionalJourney.items.0.date')}

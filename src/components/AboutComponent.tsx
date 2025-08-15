@@ -10,7 +10,7 @@ export function AboutComponent() {
       <h1 className="py-10 text-3xl sm:text-4xl font-bold text-cyan-400 mb-4">
         Tanguy Ducrocq
       </h1>
-      <p className="text-gray-400 max-w-2xl text-base sm:text-lg leading-relaxed mb-6">
+      <p className="text-gray-400 max-w-2xl text-base sm:text-lg leading-relaxed mb-6 whitespace-pre-line">
         {t("about.description")}
       </p>
       <div className="flex flex-col sm:flex-row justify-center items-center gap-4 text-sm text-gray-400">

@@ -35,7 +35,7 @@ export default function ProjectDetail() {
         </div>
 
         {/* Description */}
-        <p className="text-gray-300 text-base sm:text-lg leading-relaxed whitespace-pre-line mb-6 text-center">
+        <p className="text-gray-300 text-base sm:text-lg leading-relaxed whitespace-pre-line mb-6 text-justify">
           {t(`${project.translationKey}.longDescription`)}
         </p>
 

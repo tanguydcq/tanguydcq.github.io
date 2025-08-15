@@ -17,7 +17,9 @@ const resources = {
       },
       about: {
         title: "Home",
-        description: `Hi! I'm Tanguy, a student at EPITA majoring in SCIA-G (Data Science, AI & Graphs). This site is kind of my personal lab: I share what I learn, what I build, and what inspires me here.`,
+        description: `Hi! I'm Tanguy, a student at EPITA majoring in SCIA-G (Data Science, AI & Graphs).
+        This site is kind of my personal lab:
+        I share what I learn, what I build, and what inspires me here.`,
       },
       parcours: {
         title: "My Journey",
@@ -29,7 +31,8 @@ const resources = {
               date: "2023 - present",
               subtitle: "Paris",
               description:
-                "Engineering cycle – Class of 2026 Major SCIA-G: Data Science, Artificial Intelligence and Graphs",
+                `Engineering cycle – Class of 2026
+                Major SCIA-G: Data Science, Artificial Intelligence and Graphs`,
             },
             1: {
               title: "CPGE Prep",
@@ -42,7 +45,8 @@ const resources = {
               date: "2020-2021",
               subtitle: "Lakanal Sceaux",
               description:
-                "Specializations: mathematics and physics-chemistry Options: expert mathematics and sport",
+                `Specializations: mathematics and physics-chemistry
+                Options: expert mathematics and sport`,
             },
           },
         },
@@ -54,7 +58,8 @@ const resources = {
               date: "September 2024 - January 2025",
               subtitle: "DiliTrust La Défense",
               description:
-                "Part of the ML team at DiliTrust, working on intelligent agents and automation of document-related tasks.",
+                `Part of the ML team at DiliTrust
+                Working on intelligent agents and automation of document-related tasks.`,
             },
             1: {
               title: "Co-founder",
@@ -82,10 +87,6 @@ const resources = {
         },
       },
       projects: {
-        // sterenova: {
-        //     title: "Sterenova",
-        //     description: `Sterenova aims to provide comprehensive event services as well as quality equipment rental solutions, meeting the diverse and specific needs of our clients. This project aims to simplify event organization by offering a one-stop shop for all necessities, from planning to implementation, including the rental of necessary equipment.`
-        // },
         sterenovaSite: {
           title: "Sterenova WebSite",
           description: "Development of the website for Sterenova",
@@ -128,7 +129,7 @@ This project laid the foundation for an internal tool capable of automating a ty
         },
       },
       courseProjects: {
-        pfee : {
+        pfee: {
           title: "PFEE",
           description:
             "AI-based football match analysis tool with player detection, ID tracking, and statistics generation from videos for amateur clubs.",
@@ -141,7 +142,7 @@ We are using the SoccerNet dataset, which provides a large number of annotated v
 In addition to tracking, we have applied clustering techniques to:
 Identify referees,
 Determine which team each player belongs to.
-These initial steps will lay the groundwork for the next phases of the project, which will aim to detect match events (passes, shots, fouls, etc.) and automatically generate statistics that can be used by coaches and clubs.`, 
+These initial steps will lay the groundwork for the next phases of the project, which will aim to detect match events (passes, shots, fouls, etc.) and automatically generate statistics that can be used by coaches and clubs.`,
         },
         musicGenerator: {
           title: "Music Generator",
@@ -204,6 +205,14 @@ You can find all the details of the analysis and results in the following report
 `,
         },
       },
+      sterenova: {
+        title: "Sterenova – Custom Events",
+        intro: `We’re three friends with a shared passion: music, lights, and mixing.
+At first, we only had a bit of gear and a lot of enthusiasm. But gig after gig, we upgraded our setup, learned along the way, and watched our project grow with us.
+Today, we bring all of that to your events—birthdays, weddings, rally nights, or just a get-together with friends. We handle the music, the lighting, and all the technical stuff so you can just enjoy the moment without worrying about anything.
+Basically, we make sure your night feels the way we’d want ours to be: simple, smooth, and unforgettable.`,
+button: "Our Website"
+      },
     },
   },
   fr: {
@@ -221,7 +230,9 @@ You can find all the details of the analysis and results in the following report
       },
       about: {
         title: "Acceuil",
-        description: `Bonjour! Moi c’est Tanguy, étudiant à EPITA en majeure SCIA-G (Data Science, IA & Graphes). Ce site, c’est un peu mon labo perso : j’y partage ce que j’apprends, ce que je construis, et ce qui m’inspire`,
+        description: `Bonjour! Moi c’est Tanguy, étudiant à EPITA en majeure SCIA-G (Data Science, IA & Graphes).
+        Ce site, c’est un peu mon labo perso :
+        J’y partage ce que j’apprends, ce que je construis, et ce qui m’inspire.`,
       },
       parcours: {
         title: "Mon parcours",
@@ -233,7 +244,8 @@ You can find all the details of the analysis and results in the following report
               date: "2023 - présent",
               subtitle: "Paris",
               description:
-                "Cycle ingénieur – Promotion 2026 Majeure SCIA-G : Data Science, Intelligence Artificielle et Graphes",
+                `Cycle ingénieur – Promotion 2026
+                Majeure SCIA-G : Data Science, Intelligence Artificielle et Graphes`,
             },
             1: {
               title: "Prépa CPGE",
@@ -406,6 +418,14 @@ Plusieurs modèles ont été testés, comparés et évalués à l’aide de mét
 Ce projet combine des compétences en traitement de données, machine learning, et visualisation pour tirer des enseignements concrets à partir de données réelles.
 Vous pouvez retrouver tous les détails de l’analyse et des résultats dans le rapport suivant :`,
         },
+      },
+      sterenova: {
+        title: "Sterenova – Événements sur mesure",
+        intro: `On est trois amis avec une passion commune : le son, les lumières et les platines.
+Au début, on avait juste un peu de matériel et beaucoup d’envie. Puis, de soirée en soirée, on s’est équipés, on a appris, et on a vu notre projet grandir avec nous.
+Aujourd’hui, on met tout ça au service de vos événements : anniversaires, mariages, soirées rallye ou juste des moments entre proches. On s’occupe de la musique, des lumières et de toute la technique pour que vous puissiez profiter sans vous soucier de rien.
+En gros, on fait en sorte que votre soirée se passe comme on aimerait vivre les nôtres : simple, fluide et mémorable.`,
+        button: "Notre site"
       },
     },
   },
