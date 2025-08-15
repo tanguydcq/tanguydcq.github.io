@@ -5,7 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { useRef } from "react";
-import { Play } from "lucide-react"; // icône play
+import { Play } from "lucide-react";
 
 export default function SterenovaSection() {
     const { t } = useTranslation();
@@ -22,7 +22,7 @@ export default function SterenovaSection() {
     ];
 
     return (
-        <section className="px-4 sm:px-6 md:px-10 py-8 w-full max-w-7xl mx-auto text-center">
+        <section id="sterenova" className="px-4 sm:px-6 md:px-10 py-8 w-full max-w-7xl mx-auto text-center">
             <h1 className="py-10 text-3xl sm:text-4xl text-cyan-400 font-bold mb-6">
                 {t('sterenova.title')}
             </h1>
@@ -36,43 +36,56 @@ export default function SterenovaSection() {
                 {t('sterenova.intro')}
             </motion.p>
 
-            {/* Slider pour mobile */}
+            {/* Slider mobile */}
             <div className="flex md:hidden overflow-x-auto gap-4 pb-4">
                 {gallery.map((item, i) => (
-                    <div key={i} className="min-w-[200px] flex-shrink-0">
+                    <div key={i} className="min-w-[200px] flex-shrink-0 h-48 rounded-2xl overflow-hidden">
                         {item.type === "image" ? (
-                            <img src={item.src} alt={item.alt} className="rounded-2xl h-48 w-full object-cover" />
+                            <img
+                                src={item.src}
+                                alt={item.alt}
+                                className="w-full h-full object-cover"
+                            />
                         ) : (
-                            <VideoHover src={item.src} alt={item.alt} />
+                            <VideoHover src={item.src} />
                         )}
                     </div>
                 ))}
             </div>
 
-            {/* Grille pour tablette et desktop */}
+            {/* Grille desktop/tablette */}
             <div className="hidden md:grid grid-cols-2 lg:grid-cols-4 gap-4">
                 {gallery.map((item, i) => (
-                    <Card key={i} className="overflow-hidden rounded-2xl shadow-lg bg-gray-900 relative group p-0">
-                        <CardContent className="p-0 relative h-64">
-                            {item.type === "image" ? (
-                                <div className="relative w-full h-full">
+                    <motion.div
+                        key={i}
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        transition={{ delay: i * 0.1 }}
+                    >
+                        <Card className="overflow-hidden rounded-2xl shadow-lg bg-gray-900 relative group p-0">
+                            <CardContent className="p-0 relative h-64">
+                                {item.type === "image" ? (
                                     <img
                                         src={item.src}
                                         alt={item.alt}
                                         className="absolute inset-0 w-full h-full object-cover"
                                     />
-                                </div>
-                            ) : (
-                                <VideoHover src={item.src} alt={item.alt} />
-                            )}
-                        </CardContent>
-                    </Card>
+                                ) : (
+                                    <VideoHover src={item.src} />
+                                )}
+                            </CardContent>
+                        </Card>
+                    </motion.div>
                 ))}
             </div>
 
             {/* Bouton */}
             <div className="text-center mt-12">
-                <a href="https://sterenova.fr/" target="_blank" rel="noopener noreferrer">
+                <a
+                    href="https://sterenova.fr/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
                     <Button
                         size="lg"
                         className="bg-gray-700 hover:bg-gray-600 text-white rounded-full px-8 py-3 text-lg"
@@ -85,7 +98,7 @@ export default function SterenovaSection() {
     );
 }
 
-function VideoHover({ src }: { src: string; alt: string }) {
+function VideoHover({ src }: { src: string }) {
     const videoRef = useRef<HTMLVideoElement>(null);
 
     const handleMouseEnter = () => {
@@ -101,7 +114,7 @@ function VideoHover({ src }: { src: string; alt: string }) {
 
     return (
         <div
-            className="relative w-full h-48 cursor-pointer rounded-2xl overflow-hidden"
+            className="relative w-full h-full cursor-pointer"
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
         >
