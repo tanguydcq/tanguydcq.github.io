@@ -39,15 +39,18 @@ export default function SterenovaComponent() {
             {/* Slider mobile */}
             <div className="flex md:hidden overflow-x-auto gap-4 pb-4 snap-x snap-mandatory scrollbar-none">
                 {gallery.map((item, i) => (
-                    <div
-                        key={i}
-                        className="min-w-[200px] flex-shrink-0 h-48 rounded-2xl overflow-hidden snap-start"
-                    >
-                        {item.type === "image" ? (
-                            <img src={item.src} alt={item.alt} className="w-full h-full object-cover" />
-                        ) : (
-                            <VideoHover src={item.src} />
-                        )}
+                    <div key={i} className="flex-shrink-0 w-64 rounded-2xl overflow-hidden snap-start">
+                        <div className="relative aspect-[1/1]">
+                            {item.type === "image" ? (
+                                <img
+                                    src={item.src}
+                                    alt={item.alt}
+                                    className="absolute inset-0 w-full h-full object-cover"
+                                />
+                            ) : (
+                                <VideoHover src={item.src} />
+                            )}
+                        </div>
                     </div>
                 ))}
             </div>
