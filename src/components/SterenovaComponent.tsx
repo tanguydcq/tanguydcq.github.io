@@ -4,7 +4,7 @@ import "../i18n";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { useRef } from "react";
+import React, { useRef } from "react";
 import { Play } from "lucide-react";
 
 export default function SterenovaComponent() {
@@ -37,15 +37,14 @@ export default function SterenovaComponent() {
             </motion.p>
 
             {/* Slider mobile */}
-            <div className="flex md:hidden overflow-x-auto gap-4 pb-4">
+            <div className="flex md:hidden overflow-x-auto gap-4 pb-4 snap-x snap-mandatory scrollbar-none">
                 {gallery.map((item, i) => (
-                    <div key={i} className="min-w-[200px] flex-shrink-0 h-48 rounded-2xl overflow-hidden">
+                    <div
+                        key={i}
+                        className="min-w-[200px] flex-shrink-0 h-48 rounded-2xl overflow-hidden snap-start"
+                    >
                         {item.type === "image" ? (
-                            <img
-                                src={item.src}
-                                alt={item.alt}
-                                className="w-full h-full object-cover"
-                            />
+                            <img src={item.src} alt={item.alt} className="w-full h-full object-cover" />
                         ) : (
                             <VideoHover src={item.src} />
                         )}
@@ -97,12 +96,18 @@ export default function SterenovaComponent() {
         </section>
     );
 }
-
 function VideoHover({ src }: { src: string }) {
     const videoRef = useRef<HTMLVideoElement>(null);
+    const [isPlaying, setIsPlaying] = React.useState(false);
 
-    const handleMouseEnter = () => {
-        videoRef.current?.play();
+    const handleMouseEnter = async () => {
+        try {
+            if (videoRef.current) {
+                await videoRef.current.play();
+            }
+        } catch (e) {
+            // Ignore play errors (e.g., user gesture required)
+        }
     };
 
     const handleMouseLeave = () => {
@@ -112,11 +117,45 @@ function VideoHover({ src }: { src: string }) {
         }
     };
 
+    // For mobile: play/pause on tap
+    const handleClick = async () => {
+        if (!videoRef.current) return;
+        if (videoRef.current.paused) {
+            try {
+                await videoRef.current.play();
+            } catch (e) {
+                // Ignore play errors
+                console.warn("Video play failed, likely due to user gesture requirement.");
+            }
+        } else {
+            videoRef.current.pause();
+            videoRef.current.currentTime = 0;
+        }
+    };
+
+    // Listen for play/pause events to update state
+    React.useEffect(() => {
+        const video = videoRef.current;
+        if (!video) return;
+
+        const onPlay = () => setIsPlaying(true);
+        const onPause = () => setIsPlaying(false);
+
+        video.addEventListener("play", onPlay);
+        video.addEventListener("pause", onPause);
+
+        return () => {
+            video.removeEventListener("play", onPlay);
+            video.removeEventListener("pause", onPause);
+        };
+    }, []);
+
     return (
         <div
-            className="relative w-full h-full cursor-pointer"
+            className="relative w-full h-full cursor-pointer group"
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
+            onClick={handleClick}
         >
             <video
                 ref={videoRef}
@@ -124,8 +163,15 @@ function VideoHover({ src }: { src: string }) {
                 muted
                 className="w-full h-full object-cover"
                 preload="metadata"
+                playsInline
             />
-            <div className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-100 group-hover:opacity-0 transition-opacity duration-300">
+            <div
+                className={`
+                    absolute inset-0 flex items-center justify-center bg-black/30
+                    transition-opacity duration-300
+                    ${isPlaying ? "opacity-0" : "opacity-100"}
+                `}
+            >
                 <Play className="w-12 h-12 text-white opacity-80" />
             </div>
         </div>

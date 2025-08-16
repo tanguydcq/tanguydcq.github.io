@@ -286,7 +286,8 @@ button: "Our Website"
               date: "2020-2021",
               subtitle: "Lakanal Sceaux",
               description:
-                "Spécialités suivies : mathématiques et physique-chimie Options choisies : mathématiques expertes et sport",
+                `Spécialités suivies : mathématiques et physique-chimie
+                Options choisies : mathématiques expertes et sport`,
             },
           },
         },

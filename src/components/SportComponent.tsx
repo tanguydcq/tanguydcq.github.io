@@ -18,13 +18,13 @@ export function SportComponent() {
       </h1>
 
       {/* Slider mobile */}
-      <div className="flex md:hidden overflow-x-auto gap-4 pb-4 w-full max-w-full">
+      <div className="flex md:hidden overflow-x-auto gap-4 pb-4 w-full snap-x snap-mandatory -mx-4 px-4">
         {sports
           .filter((sport) => selectedSport === "all" || selectedSport === sport)
           .map((sport, index) => (
             <div
               key={index}
-              className="relative group rounded-2xl overflow-hidden shadow-lg cursor-pointer min-w-[220px] flex-shrink-0"
+              className="relative group rounded-2xl overflow-hidden shadow-lg cursor-pointer min-w-[70%] max-w-xs flex-shrink-0 snap-start"
               onClick={() => setOpenIndex(openIndex === index ? null : index)}
             >
               {/* Image */}
