@@ -10,7 +10,7 @@ export function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["presentation", "parcours", "projects", "sterenova"];
+      const sections = ["presentation", "parcours", "projects", "sterenova", "sports"];
       let current = "presentation";
       sections.forEach((id) => {
         const el = document.getElementById(id);
@@ -34,7 +34,8 @@ export function Header() {
     { id: "presentation", label: t("header.presentation") },
     { id: "parcours", label: t("header.parcours") },
     { id: "projects", label: t("header.projects") },
-    { id: "sterenova", label: "Sterenova" }
+    { id: "sterenova", label: "Sterenova" },
+    { id: "sports", label: "Sports" },
   ];
 
   // Scroll to section by id

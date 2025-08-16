@@ -213,6 +213,34 @@ Today, we bring all of that to your events—birthdays, weddings, rally nights, 
 Basically, we make sure your night feels the way we’d want ours to be: simple, smooth, and unforgettable.`,
 button: "Our Website"
       },
+      sports: {
+        title: "My Sports",
+        gym: {
+          name: "Bodybuilding",
+          img: "/images/sports/gym_43.jpg",
+          description: "I've been weight training for a little over two years, sometimes alone, sometimes with friends. It's a great way to stay in shape and helps me stay consistent in everything I do."
+        },
+        tennis: {
+          name: "Tennis",
+          img: "/images/sports/tennis_43.jpg",
+          description: "I have been playing tennis for about 15 years, and I have risen to a ranking of 15/3 in France. I love the competitive spirit it brings and the mental work that this sport requires."
+        },
+        climbing: {
+          name: "Climbing",
+          img: "/images/sports/climbing_43.jpg",
+          description: "I started climbing in high school and even competed in the county competition during my senior year. Nowadays, I prefer climbing mountains on natural routes."
+        },
+        winterSports: {
+          name: "Winter Sports",
+          img: "/images/sports/snowboard_43.jpg",
+          description: "I started skiing at a very young age, then took up snowboarding in recent years. I love speed and doing tricks on the slopes."
+        },
+        volley: {
+          name: "Volleyball",
+          img: "/images/sports/volley_43.jpg",
+          description: "I played for two years in a club. It's a fun team sport, which is a change from the more solitary sports I usually play."
+        }
+      }
     },
   },
   fr: {
@@ -426,6 +454,34 @@ Au début, on avait juste un peu de matériel et beaucoup d’envie. Puis, de so
 Aujourd’hui, on met tout ça au service de vos événements : anniversaires, mariages, soirées rallye ou juste des moments entre proches. On s’occupe de la musique, des lumières et de toute la technique pour que vous puissiez profiter sans vous soucier de rien.
 En gros, on fait en sorte que votre soirée se passe comme on aimerait vivre les nôtres : simple, fluide et mémorable.`,
         button: "Notre site"
+      },
+      sports: {
+        title: "Mes Sports",
+        gym: {
+          name: "Musculation",
+          img: "/images/sports/gym_43.jpg",
+          description: "Je fais de la musculation depuis un peu plus de deux ans, parfois seul, parfois avec des amis. C’est un super moyen de rester en forme et ça m’aide à rester régulier dans tout ce que je fais."
+        },
+        tennis: {
+          name: "Tennis",
+          img: "/images/sports/tennis_43.jpg",
+          description: "Je joue au tennis depuis environ 15 ans, et je suis monté jusqu’au classement 15/3 en France. J’adore l’esprit de compétition que ça apporte et le travail sur le mental que ce sport demande."
+        },
+        climbing: {
+          name: "Escalade",
+          img: "/images/sports/climbing_43.jpg",
+          description: "J’ai commencé l’escalade au lycée et j’ai même participé à la compétition départementale ma dernière année. Aujourd’hui, je préfère grimper en montagne sur des voies naturelles."
+        },
+        winterSports: {
+          name: "Sport d'hiver",
+          img: "/images/sports/snowboard_43.jpg",
+          description: "J’ai commencé le ski très jeune, puis je me suis mis au snowboard ces dernières années. J'aime la vitesse et faire des figures sur les pistes."
+        },
+        volley: {
+          name: "Volleyball",
+          img: "/images/sports/volley_43.jpg",
+          description: "J’ai fait deux ans en club. C’est un sport d’équipe sympa qui change des sports plus solitaires que je pratique habituellement."
+        }
       },
     },
   },

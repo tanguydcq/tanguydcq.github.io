@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import { useRef } from "react";
 import { Play } from "lucide-react";
 
-export default function SterenovaSection() {
+export default function SterenovaComponent() {
     const { t } = useTranslation();
 
     const gallery = [
