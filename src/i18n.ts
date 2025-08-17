@@ -240,7 +240,15 @@ button: "Our Website"
           img: "/images/sports/volley_43.jpg",
           description: "I played for two years in a club. It's a fun team sport, which is a change from the more solitary sports I usually play."
         }
-      }
+      },
+      music: {
+        title: "Music",
+        guitarTitle: "The Guitar",
+        djTitle: "DJ",
+        intro: `Music has been part of my life for a long time. I started with the guitar, and today I continue this passion through my DJ projects with Sterenova. I also dabbled a bit in piano as a self-taught musician, more out of curiosity than seriousness, just to explore another instrument.`,
+        guitar: `I have been playing mainly solo for over 15 years, with a lot of improvisation. In my senior year of high school, I also had the opportunity to be the lead guitarist in a band for a year, a memorable experience that taught me how to play in a group.`,
+        dj: `At the same time, I am a DJ with Sterenova. I DJ at parties, weddings, and events, which allows me to stay close to music and share moments with the audience. I like to mix different styles to create something new from what already exists.`
+      },
     },
   },
   fr: {
@@ -483,6 +491,14 @@ En gros, on fait en sorte que votre soirée se passe comme on aimerait vivre les
           img: "/images/sports/volley_43.jpg",
           description: "J’ai fait deux ans en club. C’est un sport d’équipe sympa qui change des sports plus solitaires que je pratique habituellement."
         }
+      },
+      music: {
+        title: "Musique",
+        guitarTitle: "La Guitare",
+        djTitle: "DJ",
+        intro: `La musique fait partie de ma vie depuis longtemps. J’ai commencé avec la guitare, et aujourd’hui je continue cette passion à travers mes projets DJ avec Sterenova. J’ai aussi touché un peu au piano en autodidacte, plus par curiosité que par sérieux, histoire d’explorer un autre instrument.`,
+        guitar: `Je joue principalement en solo depuis plus de 15 ans, avec beaucoup d’improvisation. En terminale, j’ai aussi eu l’occasion d’être guitariste leader dans un groupe pendant un an, une expérience marquante qui m’a appris le jeu en collectif.`,
+        dj: `En parallèle, je suis DJ au sein de Sterenova. Je mixe lors de soirées, mariages et événements, ce qui me permet de rester proche de la musique et de partager des moments avec le public. J’aime mélanger différents styles pour créer quelque chose de nouveau à partir de ce qui existe déjà.`
       },
     },
   },

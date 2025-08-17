@@ -10,18 +10,25 @@ export function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["presentation", "parcours", "projects", "sterenova", "sports"];
+      const sections = ["presentation", "parcours", "projects", "sterenova", "sports", "music"];
       let current = "presentation";
+
+      const scrollPosition = window.scrollY + 200; // Offset for header height
+
       sections.forEach((id) => {
         const el = document.getElementById(id);
         if (el) {
-          const top = el.offsetTop - 120;
+          const top = el.offsetTop;
           const height = el.offsetHeight;
-          if (window.scrollY >= top && window.scrollY < top + height) {
+          if (scrollPosition >= top && scrollPosition < top + height) {
             current = id;
           }
         }
       });
+
+      if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 2) {
+        current = sections[sections.length - 1];
+      }
       setActiveSection(current);
     };
 
@@ -30,12 +37,14 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+
   const navLinks = [
     { id: "presentation", label: t("header.presentation") },
     { id: "parcours", label: t("header.parcours") },
     { id: "projects", label: t("header.projects") },
     { id: "sterenova", label: "Sterenova" },
     { id: "sports", label: "Sports" },
+    { id: "music", label: "Music" },
   ];
 
   // Scroll to section by id
