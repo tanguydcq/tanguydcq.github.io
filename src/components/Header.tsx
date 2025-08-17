@@ -2,9 +2,11 @@ import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import "../i18n";
+import { LanguageSwitcher } from "./utils/LanguageSwitcher";
+
 
 export function Header() {
-  const { i18n, t } = useTranslation();
+  const { t } = useTranslation();
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("presentation");
 
@@ -93,29 +95,7 @@ export function Header() {
 
         {/* Langues + Mobile Toggle */}
         <div className="flex items-center gap-2">
-          <button
-            onClick={() => i18n.changeLanguage("fr")}
-            className="hidden sm:flex px-2 py-1 border border-cyan-400 rounded hover:bg-cyan-400 hover:text-white transition items-center gap-1"
-          >
-            <img
-              src={`${import.meta.env.BASE_URL}images/fr.png`}
-              alt="FR"
-              className="w-5 h-4"
-            />
-            FR
-          </button>
-          <button
-            onClick={() => i18n.changeLanguage("en")}
-            className="hidden sm:flex px-2 py-1 border border-cyan-400 rounded hover:bg-cyan-400 hover:text-white transition items-center gap-1"
-          >
-            <img
-              src={`${import.meta.env.BASE_URL}images/en.png`}
-              alt="EN"
-              className="w-5 h-4"
-            />
-            EN
-          </button>
-
+          <LanguageSwitcher className="hidden sm:flex" />
           <button onClick={() => setMenuOpen(!menuOpen)} className="sm:hidden text-white">
             {menuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -129,36 +109,13 @@ export function Header() {
             <button
               key={id}
               onClick={() => scrollToId(id)}
-              className="text-white text-left hover:text-cyan-400"
+              className={`text-white text-left hover:text-cyan-400 transition ${activeSection === id ? "font-semibold" : ""
+                }`}
             >
               {label}
             </button>
           ))}
-
-          <div className="flex gap-2 mt-2">
-            <button
-              onClick={() => i18n.changeLanguage("fr")}
-              className="flex items-center gap-1 px-2 py-1 border border-cyan-400 rounded hover:bg-cyan-400 hover:text-white transition"
-            >
-              <img
-                src={`${import.meta.env.BASE_URL}images/fr.png`}
-                alt="FR"
-                className="w-5 h-4"
-              />
-              FR
-            </button>
-            <button
-              onClick={() => i18n.changeLanguage("en")}
-              className="flex items-center gap-1 px-2 py-1 border border-cyan-400 rounded hover:bg-cyan-400 hover:text-white transition"
-            >
-              <img
-                src={`${import.meta.env.BASE_URL}images/en.png`}
-                alt="EN"
-                className="w-5 h-4"
-              />
-              EN
-            </button>
-          </div>
+          <LanguageSwitcher className="mt-2" />
         </nav>
       )}
     </header>

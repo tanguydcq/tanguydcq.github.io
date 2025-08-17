@@ -1,7 +1,8 @@
 import { Footer } from "../components/Footer";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import i18n from "../i18n";
+import { LanguageSwitcher } from "../components/utils/LanguageSwitcher";
+
 
 export default function HomeLayout({ children }: { children: React.ReactNode }) {
   const { t } = useTranslation();
@@ -18,20 +19,7 @@ export default function HomeLayout({ children }: { children: React.ReactNode }) 
         </button>
 
         <div className="flex gap-2">
-          <button
-            onClick={() => i18n.changeLanguage("fr")}
-            className="flex items-center gap-1 px-2 py-1 border border-cyan-400 rounded hover:bg-cyan-400 hover:text-white transition"
-          >
-            <img src={`${import.meta.env.BASE_URL}images/fr.png`} alt="FR" className="w-5 h-4" />
-            FR
-          </button>
-          <button
-            onClick={() => i18n.changeLanguage("en")}
-            className="flex items-center gap-1 px-2 py-1 border border-cyan-400 rounded hover:bg-cyan-400 hover:text-white transition"
-          >
-            <img src={`${import.meta.env.BASE_URL}images/en.png`} alt="EN" className="w-5 h-4" />
-            EN
-          </button>
+          <LanguageSwitcher />
         </div>
       </header>
 
