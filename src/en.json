@@ -1,0 +1,165 @@
+{
+  "header": {
+    "presentation": "Home",
+    "parcours": "My Journey",
+    "projects": "My Projects",
+    "contact": "Contact Me",
+    "backhome": "Back to Home",
+    "persoProjects": "Enterprise & Personal Projects",
+    "courseProjects": "Course Projects",
+    "link": "Link",
+    "seeMore": "More"
+  },
+  "about": {
+    "title": "Home",
+    "description": "Hi! I'm Tanguy, a student at EPITA majoring in SCIA-G (Data Science, AI & Graphs).\nThis site is kind of my personal lab:\nI share what I learn, what I build, and what inspires me here."
+  },
+  "parcours": {
+    "title": "My Journey",
+    "academicJourney": {
+      "title": "Academic",
+      "items": {
+        "0": {
+          "title": "EPITA",
+          "date": "2023 - present",
+          "subtitle": "Paris",
+          "description": "Engineering cycle – Class of 2026\nMajor SCIA-G: Data Science, Artificial Intelligence and Graphs"
+        },
+        "1": {
+          "title": "CPGE Prep",
+          "date": "2021-2023",
+          "subtitle": "Sainte Marie Antony",
+          "description": "Field of study: MPSI/MP"
+        },
+        "2": {
+          "title": "Baccalaureate",
+          "date": "2020-2021",
+          "subtitle": "Lakanal Sceaux",
+          "description": "Specializations: mathematics and physics-chemistry\nOptions: expert mathematics and sport"
+        }
+      }
+    },
+    "professionalJourney": {
+      "title": "Professional",
+      "items": {
+        "0": {
+          "title": "Internship",
+          "date": "September 2024 - January 2025",
+          "subtitle": "DiliTrust La Défense",
+          "description": "Part of the ML team at DiliTrust\nWorking on intelligent agents and automation of document-related tasks."
+        },
+        "1": {
+          "title": "Co-founder",
+          "date": "Since April 2023",
+          "subtitle": "Sterenova",
+          "description": "Founder of Sterenova events and equipment rental event planning corporate management"
+        },
+        "2": {
+          "title": "Waiter/Bartender",
+          "date": "August 2022",
+          "subtitle": "Marius Café Pornic"
+        },
+        "3": {
+          "title": "Warehouse Worker",
+          "date": "March 2021",
+          "subtitle": "PSL France M.I.N Rungis"
+        },
+        "4": {
+          "title": "Spare Parts Warehouseman",
+          "date": "August 2020",
+          "subtitle": "Renault Retail Group Paris"
+        }
+      }
+    }
+  },
+  "projects": {
+    "sterenovaSite": {
+      "title": "Sterenova WebSite",
+      "description": "Development of the website for Sterenova",
+      "longDescription": "I built this website using React, Vite, TypeScript, and the shadcn UI library. The goal was to create a clean and modern showcase for what we do.\nWe offer sound and lighting equipment rentals, as well as full DJ services for all kinds of events: birthdays, weddings, rally parties, classic parties, and more.\nWe DJ ourselves, adapt to the vibe you're looking for, and handle the technical side to make sure everything runs smoothly.\nThe website gives an overview of our services and includes practical info to get in touch with us."
+    },
+    "agentIA": {
+      "title": "AI Agent ChatGPT",
+      "description": "Automatic generation of documentation with Slack + scraping",
+      "longDescription": "As part of my internship, I developed an automatic technical documentation generator.\nThe goal was to centralize and produce documentation by gathering content from various sources using web scraping.\nI then used the ChatGPT API to generate structured texts based on that data, by designing prompts tailored to the type of information collected.\nOnce the service was ready, I integrated it into Slack as a bot, making it accessible to the entire team.\nThis project helped save time on writing and updating internal documents, while making information easier to access for everyone."
+    },
+    "classificationContrats": {
+      "title": "Contract Classification",
+      "description": "Internal LLMs to recognize legal documents",
+      "longDescription": "During my internship, I worked on a project focused on automatic contract classification using the ChatGPT API.\nThe goal was to categorize contracts by type (service agreements, NDAs, partnership contracts, etc.) to simplify sorting and management.\n\nI designed a multi-step pipeline, relying on crafted prompts to guide the LLM through its reasoning process.\nThe first step involved extracting key elements from the raw contract content. Then, the model would determine the contract type based on legal and structural cues.\nI implemented a grouping system to organize contracts into broader categories, while handling ambiguous or conflicting cases through follow-up prompts designed to clarify context.\n\nOne of the key advantages of this approach is that it avoids the need to train a supervised model on a specific dataset.\nInstead, it generalizes much better to new types of contracts even those with different formats or structures by focusing on content rather than layout.\nThe use of targeted prompts allows the LLM to adapt to a wide variety of documents while maintaining consistent and reliable classification.\n\nThis project laid the foundation for an internal tool capable of automating a typically manual task, while keeping the logic transparent and explainable throughout the process."
+    },
+    "portfolio": {
+      "title": "My Portfolio",
+      "description": "Personal website to showcase my projects and skills",
+      "longDescription": "This portfolio website serves as a showcase for my projects and skills, highlighting my work and achievements in the field."
+    }
+  },
+  "courseProjects": {
+    "pfee": {
+      "title": "PFEE",
+      "description": "AI-based football match analysis tool with player detection, ID tracking, and statistics generation from videos for amateur clubs.",
+      "longDescription": "In this ongoing project, we are developing an AI-based tool to automatically analyze football matches from videos, with a clear goal: to provide detailed statistics to amateur clubs, which often lack advanced technological means.\nThe first phase focuses on player tracking. We are using YOLOv11, the latest version of the well-known object detection model. Player tracking is done in three main steps:\nInitial object detection (players, ball, referees) on each frame using YOLO.\nInter-frame tracking based on spatial proximity: if two detected objects in consecutive frames are close, we consider them to be the same player. This step relies on the \"classic\" tracking integrated into YOLO.\nRe-identification (Re-ID): to handle cases where a player leaves and returns to the camera view, we generate a unique embedding for each player to assign a constant ID throughout the match, even after temporary disappearance.\nWe are using the SoccerNet dataset, which provides a large number of annotated videos, allowing us to evaluate our tracking system in a supervised manner.\nIn addition to tracking, we have applied clustering techniques to:\nIdentify referees,\nDetermine which team each player belongs to.\nThese initial steps will lay the groundwork for the next phases of the project, which will aim to detect match events (passes, shots, fouls, etc.) and automatically generate statistics that can be used by coaches and clubs."
+    },
+    "musicGenerator": {
+      "title": "Music Generator",
+      "description": "Using BERT to generate music as part of a NLP course project",
+      "longDescription": "As part of an NLP project, I worked on a melody generator inspired by natural language processing concepts.\nThe idea was to treat music like a sequence of symbols, considering notes as letters or words, and predict the next note in a melody, similar to predicting the next word in a sentence.\n\nThe input consists of a chord progression (for example: G, A, D, Em). For each chord, we extract the notes of its arpeggio, which forms a coherent harmonic base.\nFrom this base, the goal is to generate a melodic line that stays musical, respecting the chord progression while allowing for some variation.\n\nTo model the sequence, I used a BERT-based model adapted to this musical representation.\nBERT is typically used to understand context within sentences; here, it is applied to understand the “harmonic context” and suggest the most relevant next note, step by step.\nThanks to this approach, we obtain melodies grounded in the given chords, while still leaving room for creative melodic continuation."
+    },
+    "imageClassification": {
+      "title": "Image Classification",
+      "description": "Using CNNs to classify images as part of an image classification course project",
+      "longDescription": "In this project, I created a convolutional neural network (CNN) to classify ten different types of galaxies based on their photos.\nI worked with a labeled image dataset, which allowed me to train the model in a supervised manner.\n\nThe CNN is well suited for this type of visual data due to its ability to automatically extract important features from images (shapes, textures, patterns) without the need for manual feature engineering.\nI designed and trained a model capable of recognizing subtle differences between galaxy types by tuning convolutional layers, pooling layers, and fully connected layers to optimize performance.\n\nThe process also included an image preprocessing phase (resizing, normalization).\nAfter several iterations and hyperparameter tuning, the model achieved good classification accuracy.\nYou can find a detailed report of this work here:"
+    },
+    "dataExploration": {
+      "title": "Data Exploration",
+      "description": "Data analysis for a data science course project",
+      "longDescription": "For this data exploration project, I chose to work with a dataset related to volleyball.\nThe goal was to explore various questions around both individual and team performance in the sport.\n\nI focused on three main questions:\nWho are the most high-performing players?\nDoes a player’s height influence their position on the court?\nWhat are the key factors that determine a team’s victory?\n\nThe work involved preparing and cleaning the data, profiling the dataset, and creating visualizations to better understand emerging patterns.\nBased on initial results, we iterated by refining the questions and digging deeper into the analysis.\n\nThis project offers a detailed look into how volleyball works from a data-driven perspective, highlighting key aspects for both players and teams.\nYou can find a full report detailing the entire analysis here:"
+    },
+    "dataScience": {
+      "title": "Road Accident Analysis and Prediction",
+      "description": "Road accident analysis and prediction using real-world data",
+      "longDescription": "As part of this project, I worked on a dataset related to road accidents, with the goal of understanding the factors that influence their severity, frequency, or location, and exploring predictive approaches using machine learning.\n\nThe project followed several key steps: data cleaning and preprocessing, exploratory analysis and visualizations, followed by modeling using both supervised and unsupervised approaches.\nOne of the initial questions explored was: can we predict the severity of an accident? Beyond that, we also investigated other angles and insights from the data.\n\nSeveral models were tested, compared, and evaluated using appropriate metrics, and the results were interpreted through clear visualizations.\n\nThis project combines skills in data processing, machine learning, and visualization to extract meaningful insights from real-world data.\nYou can find all the details of the analysis and results in the following report:"
+    }
+  },
+  "sterenova": {
+    "title": "Sterenova – Custom Events",
+    "intro": "We’re three friends with a shared passion: music, lights, and mixing.\nAt first, we only had a bit of gear and a lot of enthusiasm. But gig after gig, we upgraded our setup, learned along the way, and watched our project grow with us.\nToday, we bring all of that to your events—birthdays, weddings, rally nights, or just a get-together with friends. We handle the music, the lighting, and all the technical stuff so you can just enjoy the moment without worrying about anything.\nBasically, we make sure your night feels the way we’d want ours to be: simple, smooth, and unforgettable.",
+    "button": "Our Website"
+  },
+  "sports": {
+    "title": "My Sports",
+    "gym": {
+      "name": "Bodybuilding",
+      "img": "/images/sports/gym_43.jpg",
+      "description": "I've been weight training for a little over two years, sometimes alone, sometimes with friends. It's a great way to stay in shape and helps me stay consistent in everything I do."
+    },
+    "tennis": {
+      "name": "Tennis",
+      "img": "/images/sports/tennis_43.jpg",
+      "description": "I have been playing tennis for about 15 years, and I have risen to a ranking of 15/3 in France. I love the competitive spirit it brings and the mental work that this sport requires."
+    },
+    "climbing": {
+      "name": "Climbing",
+      "img": "/images/sports/climbing_43.jpg",
+      "description": "I started climbing in high school and even competed in the county competition during my senior year. Nowadays, I prefer climbing mountains on natural routes."
+    },
+    "winterSports": {
+      "name": "Winter Sports",
+      "img": "/images/sports/snowboard_43.jpg",
+      "description": "I started skiing at a very young age, then took up snowboarding in recent years. I love speed and doing tricks on the slopes."
+    },
+    "volley": {
+      "name": "Volleyball",
+      "img": "/images/sports/volley_43.jpg",
+      "description": "I played for two years in a club. It's a fun team sport, which is a change from the more solitary sports I usually play."
+    }
+  },
+  "music": {
+    "title": "Music",
+    "guitarTitle": "The Guitar",
+    "djTitle": "DJ",
+    "intro": "Music has been part of my life for a long time. I started with the guitar, and today I continue this passion through my DJ projects with Sterenova. I also dabbled a bit in piano as a self-taught musician, more out of curiosity than seriousness, just to explore another instrument.",
+    "guitar": "I have been playing mainly solo for over 15 years, with a lot of improvisation. In my senior year of high school, I also had the opportunity to be the lead guitarist in a band for a year, a memorable experience that taught me how to play in a group.",
+    "dj": "At the same time, I am a DJ with Sterenova. I DJ at parties, weddings, and events, which allows me to stay close to music and share moments with the audience. I like to mix different styles to create something new from what already exists."
+  }
+}
