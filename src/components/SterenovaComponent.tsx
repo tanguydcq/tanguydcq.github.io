@@ -6,6 +6,9 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import React, { useRef } from "react";
 import { Play } from "lucide-react";
+import { Link } from "react-router-dom";
+import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+
 
 export default function SterenovaComponent() {
     const { t } = useTranslation();
@@ -82,20 +85,12 @@ export default function SterenovaComponent() {
             </div>
 
             {/* Bouton */}
-            <div className="text-center mt-12">
-                <a
-                    href="https://sterenova.fr/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <Button
-                        size="lg"
-                        className="bg-gray-700 hover:bg-gray-600 text-white rounded-full px-8 py-3 text-lg"
-                    >
-                        {t('sterenova.button')}
-                    </Button>
-                </a>
-            </div>
+            <Link to={`https://sterenova.fr/`} target="_blank" rel="noopener noreferrer">
+                <Button className="bg-white text-gray-900 hover:bg-gray-500 mt-10">
+                    <OpenInNewIcon className="text-gray-900" />
+                    {t('sterenova.button')}
+                </Button>
+            </Link>
         </section>
     );
 }

@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next"
 import { useEffect } from "react"
 import { projects, courseProjects } from "../data/project"
 import ProjectLayout from "@/layout/ProjectLayout"
+import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 
 export default function ProjectDetail() {
   const { slug } = useParams()
@@ -53,16 +54,17 @@ export default function ProjectDetail() {
 
         {/* Rapport PDF s'il existe */}
         {project.link && (
-            <div className="mt-8 flex justify-center">
+          <div className="mt-8 flex justify-center">
             <a
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-cyan-400 underline hover:text-cyan-200 transition border border-cyan-400 rounded-lg px-8 py-3 bg-gray-800 min-w-52 text-center font-semibold"
+              className="text-cyan-400 hover:text-cyan-200 transition border border-cyan-400 rounded-lg px-8 py-3 bg-gray-800 min-w-52 text-center font-semibold"
             >
+              <OpenInNewIcon className="text-cyan-400 mr-3" />
               {t("header.link")}
             </a>
-            </div>
+          </div>
         )}
       </div>
     </ProjectLayout>

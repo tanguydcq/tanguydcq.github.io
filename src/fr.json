@@ -7,7 +7,7 @@
     "backhome": "Retour à l'accueil",
     "persoProjects": "Projets entreprise & personnels",
     "courseProjects": "Projets de cours",
-    "link": "Lien",
+    "link": "Rapport",
     "seeMore": "Voir plus"
   },
   "about": {
@@ -141,7 +141,7 @@
     "climbing": {
       "name": "Escalade",
       "img": "/images/sports/climbing_43.jpg",
-      "description": "J’ai commencé l’escalade au lycée et j’ai même participé à la compétition départementale ma dernière année. Aujourd’hui, je préfère grimper en montagne sur des voies naturelles."
+      "description": "J’ai commencé l’escalade au lycée et j’ai même participé à la compétition départementale lors de ma dernière année. Aujourd’hui, je préfère grimper en montagne sur des voies naturelles."
     },
     "winterSports": {
       "name": "Sport d'hiver",

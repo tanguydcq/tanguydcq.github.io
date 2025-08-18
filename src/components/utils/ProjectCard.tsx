@@ -29,9 +29,9 @@ export function ProjectCard({ slug, image, tags, translationKey }: Project) {
           </span>
         ))}
       </div>
-      <div className="flex justify-center my-3">
+      <div className="pt-6 flex justify-center my-3">
         <Link to={`/project/${slug}`}>
-          <Button variant="link" className="text-gray-400">{t(`header.seeMore`)}</Button>
+          <Button className="bg-white text-gray-900 hover:bg-gray-500">{t(`header.seeMore`)}</Button>
         </Link>
       </div>
     </div>

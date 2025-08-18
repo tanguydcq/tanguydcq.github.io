@@ -57,18 +57,18 @@ export const projects: Project[] = [
     translationKey: "projects.sterenovaSite",
     link: `https://sterenova.fr/`
   },
-  {
-    slug: slugify("Mon Portfolio"),
-    image: `${import.meta.env.BASE_URL}images/project/portfolio.webp`,
-    tags: [
-      "React",
-      "TypeScript",
-      "Vite",
-      "shadcn/ui",
-      "Web Development"
-    ],
-    translationKey: "projects.portfolio"
-  }
+  // {
+  //   slug: slugify("Mon Portfolio"),
+  //   image: `${import.meta.env.BASE_URL}images/project/portfolio.webp`,
+  //   tags: [
+  //     "React",
+  //     "TypeScript",
+  //     "Vite",
+  //     "shadcn/ui",
+  //     "Web Development"
+  //   ],
+  //   translationKey: "projects.portfolio"
+  // }
 ];
 
 export const courseProjects: Project[] = [
