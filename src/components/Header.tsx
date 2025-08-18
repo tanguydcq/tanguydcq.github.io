@@ -46,7 +46,7 @@ export function Header() {
     { id: "projects", label: t("header.projects") },
     { id: "sterenova", label: "Sterenova" },
     { id: "sports", label: "Sports" },
-    { id: "music", label: "Music" },
+    { id: "music", label: t("music.title") },
   ];
 
   // Scroll to section by id
