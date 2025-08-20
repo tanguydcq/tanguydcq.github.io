@@ -7,7 +7,7 @@ export function ProjectsSection() {
 
   return (
     <section id="projects" className="px-4 sm:px-6 md:px-10 py-8 w-full max-w-7xl mx-auto text-center">
-      <h1 className="py-10 text-3xl sm:text-4xl text-cyan-400 font-bold mb-6">
+      <h1 className="py-10 text-3xl sm:text-4xl text-emerald-600 font-bold mb-6">
         {t('header.projects')}
       </h1>
       <ProjectsCarousel />

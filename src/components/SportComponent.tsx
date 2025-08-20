@@ -13,7 +13,7 @@ export function SportComponent() {
       id="sports"
       className="mt-20 mb-10 px-4 sm:px-6 text-center flex flex-col items-center"
     >
-      <h1 className="py-10 text-3xl sm:text-4xl font-bold text-cyan-400 mb-6">
+      <h1 className="py-10 text-3xl sm:text-4xl font-bold text-emerald-600 mb-6">
         Sports
       </h1>
 
@@ -27,7 +27,7 @@ export function SportComponent() {
               className="relative group rounded-2xl overflow-hidden shadow-lg cursor-pointer min-w-[70%] max-w-xs flex-shrink-0 snap-start"
               onClick={() => setOpenIndex(openIndex === index ? null : index)}
             >
-              {/* Image */}
+              {/* Image */}``
               <img
                 src={t(`sports.${sport}.img`)}
                 alt={t(`sports.${sport}.name`)}
@@ -37,16 +37,16 @@ export function SportComponent() {
 
               {/* Overlay */}
               <div
-                className={`absolute inset-0 flex flex-col items-center justify-center bg-gray-700 bg-opacity-90 transition-opacity duration-500 px-4
+                className={`absolute inset-0 flex flex-col items-center justify-center bg-emerald-600 bg-opacity-90 transition-opacity duration-500 px-4
                 ${openIndex === index ? "opacity-100" : "opacity-0 group-hover:opacity-100"}`}
               >
-                <p className="text-gray-300 text-sm text-center">
+                <p className="text-white text-sm text-center">
                   {t(`sports.${sport}.description`)}
                 </p>
               </div>
 
               {/* Bandeau titre toujours visible */}
-              <div className="absolute bottom-0 w-full bg-gray-700 bg-opacity-40 text-white text-center py-2 text-base font-semibold">
+              <div className="absolute bottom-0 w-full bg-emerald-900 bg-opacity-40 text-white text-center py-2 text-base font-semibold">
                 {t(`sports.${sport}.name`)}
               </div>
             </div>
@@ -73,16 +73,16 @@ export function SportComponent() {
 
               {/* Overlay */}
               <div
-                className={`absolute inset-0 flex flex-col items-center justify-center bg-gray-700 bg-opacity-90 transition-opacity duration-500 px-4
+                className={`absolute inset-0 flex flex-col items-center justify-center bg-emerald-600 bg-opacity-90 transition-opacity duration-500 px-4
                 ${openIndex === index ? "opacity-100" : "opacity-0 group-hover:opacity-100"}`}
               >
-                <p className="text-gray-300 text-sm text-center">
+                <p className="text-white text-sm text-center">
                   {t(`sports.${sport}.description`)}
                 </p>
               </div>
 
               {/* Bandeau titre toujours visible */}
-              <div className="absolute bottom-0 w-full bg-gray-700 bg-opacity-40 text-white text-center py-2 text-lg font-semibold">
+              <div className="absolute bottom-0 w-full bg-emerald-900 bg-opacity-40 text-white text-center py-2 text-lg font-semibold">
                 {t(`sports.${sport}.name`)}
               </div>
             </div>

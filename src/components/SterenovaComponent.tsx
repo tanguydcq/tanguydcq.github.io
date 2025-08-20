@@ -26,7 +26,7 @@ export default function SterenovaComponent() {
 
     return (
         <section id="sterenova" className="px-4 sm:px-6 md:px-10 py-8 w-full max-w-7xl mx-auto text-center">
-            <h1 className="py-10 text-3xl sm:text-4xl text-cyan-400 font-bold mb-6">
+            <h1 className="py-10 text-3xl sm:text-4xl text-emerald-600 font-bold mb-6">
                 {t('sterenova.title')}
             </h1>
 
@@ -34,7 +34,7 @@ export default function SterenovaComponent() {
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ delay: 0.2 }}
-                className="text-lg text-center max-w-3xl mx-auto mb-12 text-gray-300 whitespace-pre-line"
+                className="text-lg text-center max-w-3xl mx-auto mb-12 text-white whitespace-pre-line"
             >
                 {t('sterenova.intro')}
             </motion.p>

@@ -73,7 +73,7 @@ export function Header() {
               className="w-12 h-12 sm:w-16 sm:h-16 rounded-full object-cover aspect-square cursor-pointer"
             />
           </a>
-          <h1 className="text-lg sm:text-2xl font-bold text-white">Tanguy Ducrocq</h1>
+          <h1 className="text-lg sm:text-2xl font-bold text-emerald-600">Tanguy Ducrocq</h1>
         </div>
 
         {/* Desktop Nav */}
@@ -82,12 +82,12 @@ export function Header() {
             <button
               key={id}
               onClick={() => scrollToId(id)}
-              className={`relative text-white hover:text-cyan-400 transition ${activeSection === id ? "text-cyan-400 font-semibold" : ""
+              className={`relative text-white hover:text-white transition ${activeSection === id ? "text-emerald-600 font-semibold" : ""
                 }`}
             >
               {label}
               {activeSection === id && (
-                <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-cyan-400 rounded"></span>
+                <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-emerald-600 rounded"></span>
               )}
             </button>
           ))}
@@ -109,7 +109,7 @@ export function Header() {
             <button
               key={id}
               onClick={() => scrollToId(id)}
-              className={`text-white text-left hover:text-cyan-400 transition ${activeSection === id ? "font-semibold" : ""
+              className={`bg-cyan-400 text-left hover:text-white transition ${activeSection === id ? "font-semibold" : ""
                 }`}
             >
               {label}

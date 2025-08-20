@@ -14,8 +14,8 @@ export function LanguageSwitcher({ className }: { className?: string }) {
           onClick={() => i18n.changeLanguage(lang.code)}
           className={`flex items-center gap-1 px-2 py-1 border rounded transition ${
             i18n.language.startsWith(lang.code)
-              ? "bg-cyan-400 text-white border-cyan-400"
-              : "border-cyan-400 hover:bg-cyan-400 hover:text-white"
+              ? "bg-emerald-600 text-white border-emerald-600"
+              : "border-emerald-600 hover:bg-emerald-600 hover:text-white"
           }`}
         >
           <img
