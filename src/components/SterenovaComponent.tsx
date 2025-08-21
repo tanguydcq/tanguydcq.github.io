@@ -86,8 +86,8 @@ export default function SterenovaComponent() {
 
             {/* Bouton */}
             <Link to={`https://sterenova.fr/`} target="_blank" rel="noopener noreferrer">
-                <Button className="bg-white text-gray-900 hover:bg-gray-500 mt-10">
-                    <OpenInNewIcon className="text-gray-900" />
+                <Button>
+                    <OpenInNewIcon className="text-emerald-900" />
                     {t('sterenova.button')}
                 </Button>
             </Link>

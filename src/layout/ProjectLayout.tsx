@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import { LanguageSwitcher } from "../components/utils/LanguageSwitcher";
 
 
-export default function HomeLayout({ children }: { children: React.ReactNode }) {
+export default function ProjectLayout({ children }: { children: React.ReactNode }) {
   const { t } = useTranslation();
   const navigate = useNavigate();
 
@@ -13,7 +13,7 @@ export default function HomeLayout({ children }: { children: React.ReactNode }) 
       <header className="sticky top-0 z-50 w-full bg-gray-800 border-b border-emerald-600 px-4 sm:px-8 py-3 flex items-center justify-between">
         <button
           onClick={() => navigate(-1)}
-          className="text-sm text-emerald-600 border border-emerald-600 px-3 py-1 rounded hover:bg-cyan-400 hover:text-white transition"
+          className="text-sm text-emerald-600 border border-emerald-600 px-3 py-1 rounded hover:bg-emerald-900 hover:text-white transition"
         >
           {t('header.backhome')}
         </button>

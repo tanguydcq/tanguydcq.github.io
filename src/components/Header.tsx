@@ -109,7 +109,7 @@ export function Header() {
             <button
               key={id}
               onClick={() => scrollToId(id)}
-              className={`bg-cyan-400 text-left hover:text-white transition ${activeSection === id ? "font-semibold" : ""
+              className={`text-left hover:text-emerald-600 transition ${activeSection === id ? "font-semibold" : ""
                 }`}
             >
               {label}

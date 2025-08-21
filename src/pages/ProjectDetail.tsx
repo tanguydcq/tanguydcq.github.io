@@ -22,7 +22,7 @@ export default function ProjectDetail() {
     <ProjectLayout>
       <div className="max-w-4xl mx-auto p-4 sm:p-8">
         {/* Titre */}
-        <h1 className="text-3xl sm:text-4xl font-bold text-cyan-400 mb-6 text-center">
+        <h1 className="text-3xl sm:text-4xl font-bold text-emerald-600 mb-6 text-center">
           {t(`${project.translationKey}.title`)}
         </h1>
 
@@ -45,7 +45,7 @@ export default function ProjectDetail() {
           {project.tags.map((tag, i) => (
             <span
               key={i}
-              className="text-xs bg-cyan-600/20 text-cyan-300 px-2 py-1 rounded-md"
+              className="text-xs bg-emerald-600/50 text-white px-2 py-1 rounded-md"
             >
               {tag}
             </span>
@@ -59,9 +59,9 @@ export default function ProjectDetail() {
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-cyan-400 hover:text-cyan-200 transition border border-cyan-400 rounded-lg px-8 py-3 bg-gray-800 min-w-52 text-center font-semibold"
+              className="text-emerald-900 hover:text-gray-200 transition border border-emerald-900 rounded-lg px-8 py-3 bg-white min-w-52 text-center font-semibold"
             >
-              <OpenInNewIcon className="text-cyan-400 mr-3" />
+              <OpenInNewIcon className="text-emerald-900 mr-3" />
               {t("header.link")}
             </a>
           </div>
