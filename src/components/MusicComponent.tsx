@@ -30,14 +30,14 @@ export function MusicComponent() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
-          className="flex flex-col items-center text-center bg-emerald-900 rounded-2xl shadow-lg p-6 hover:scale-105"
+          className="flex flex-col items-center text-center bg-gray-700 rounded-2xl shadow-lg p-6 hover:scale-105 border-b-2 border-emerald-600"
         >
           <img
             src="/images/music/guitar.png"
             alt="Guitare"
             className="rounded-xl w-full aspect-square object-cover mb-4"
           />
-          <h2 className="text-xl font-semibold text-emerald-600 mb-2">
+          <h2 className="text-xl font-semibold text-white mb-2">
             -- {t("music.guitarTitle")} --
           </h2>
           <p className="text-white">
@@ -50,14 +50,14 @@ export function MusicComponent() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
-          className="flex flex-col items-center text-center bg-emerald-900 rounded-2xl shadow-lg p-6 hover:scale-105"
+          className="flex flex-col items-center text-center bg-gray-700 rounded-2xl shadow-lg p-6 hover:scale-105 border-b-2 border-emerald-600"
         >
           <img
             src="/images/music/dj.jpg"
             alt="DJ Sterenova"
             className="rounded-xl w-full aspect-square object-cover mb-4"
           />
-          <h2 className="text-xl font-semibold text-emerald-600 mb-2">
+          <h2 className="text-xl font-semibold text-white mb-2">
             -- {t("music.djTitle")} --
           </h2>
           <p className="text-white">

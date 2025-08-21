@@ -47,13 +47,13 @@ function CarouselSection({ title, projects }: { title: string; projects: any[] }
 				</div>
 				<button
 					onClick={scrollPrev}
-					className="absolute left-[-2rem]  lg:left-[-3rem] top-1/2 -translate-y-1/2 z-10 bg-emerald-900 hover:bg-emerald-600 hover:scale-110 text-white p-2 rounded-full shadow-md"
+					className="absolute left-[-2rem]  lg:left-[-3rem] top-1/2 -translate-y-1/2 z-10 bg-gray-700 hover:bg-emerald-600 hover:scale-110 text-white p-2 rounded-full shadow-md"
 				>
 					<ChevronLeft size={20} />
 				</button>
 				<button
 					onClick={scrollNext}
-					className="absolute right-[-2rem] lg:right-[-3rem] top-1/2 -translate-y-1/2 z-10 bg-emerald-900 hover:bg-emerald-600 hover:scale-110 text-white p-2 rounded-full shadow-md"
+					className="absolute right-[-2rem] lg:right-[-3rem] top-1/2 -translate-y-1/2 z-10 bg-gray-700 hover:bg-emerald-600 hover:scale-110 text-white p-2 rounded-full shadow-md"
 				>
 					<ChevronRight size={20} />
 				</button>

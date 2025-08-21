@@ -144,6 +144,26 @@ function ParcoursProSection() {
 export function ParcoursComponent() {
   const { t } = useTranslation();
 
+  // Tabs triggers extracted for reuse above and below
+  const tabsTriggers = (
+    <div className="flex justify-center w-full mt-6 mb-2">
+      <TabsList className="grid w-96 grid-cols-2 gap-2">
+        <TabsTrigger
+          value="academique"
+          className="px-2 py-1 text-sm data-[state=active]:bg-gray-600 data-[state=active]:text-white data-[state=active]:shadow-lg"
+        >
+          {t("parcours.academicJourney.title")}
+        </TabsTrigger>
+        <TabsTrigger
+          value="pro"
+          className="px-2 py-1 text-sm data-[state=active]:bg-gray-600 data-[state=active]:text-white data-[state=active]:shadow-lg"
+        >
+          {t("parcours.professionalJourney.title")}
+        </TabsTrigger>
+      </TabsList>
+    </div>
+  );
+
   return (
     <div
       id="parcours"
@@ -154,29 +174,14 @@ export function ParcoursComponent() {
       </h1>
 
       <Tabs defaultValue="academique" className="w-full">
+        {tabsTriggers}
         <TabsContent value="academique">
           <ParcoursAcademiqueSection />
         </TabsContent>
         <TabsContent value="pro">
           <ParcoursProSection />
         </TabsContent>
-
-        <div className="flex justify-center w-full mt-6">
-          <TabsList className="grid w-96 grid-cols-2 gap-2">
-            <TabsTrigger
-              value="academique"
-              className="px-2 py-1 text-sm data-[state=active]:bg-gray-600 data-[state=active]:text-white data-[state=active]:shadow-lg"
-            >
-              {t("parcours.academicJourney.title")}
-            </TabsTrigger>
-            <TabsTrigger
-              value="pro"
-              className="px-2 py-1 text-sm data-[state=active]:bg-gray-600 data-[state=active]:text-white data-[state=active]:shadow-lg"
-            >
-              {t("parcours.professionalJourney.title")}
-            </TabsTrigger>
-          </TabsList>
-        </div>
+        {tabsTriggers}
       </Tabs>
     </div>
   );
