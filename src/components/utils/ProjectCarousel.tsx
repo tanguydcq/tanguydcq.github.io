@@ -39,7 +39,7 @@ function CarouselSection({ title, projects }: { title: string; projects: any[] }
 							animate={{ opacity: 1, scale: 1 }}
 							transition={{ duration: 0.4, delay: i * 0.1 }}
 						>
-							<div className="w-full max-w-xs sm:max-w-sm md:max-w-md h-full">
+							<div className="w-full mx-2 max-w-xs sm:max-w-sm md:max-w-md h-full">
 								<ProjectCard {...proj} />
 							</div>
 						</motion.div>
