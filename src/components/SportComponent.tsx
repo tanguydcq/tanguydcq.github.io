@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import "../i18n";
+import { motion } from "framer-motion"
 
 export function SportComponent() {
   const { t } = useTranslation();
@@ -22,12 +23,12 @@ export function SportComponent() {
         {sports
           .filter((sport) => selectedSport === "all" || selectedSport === sport)
           .map((sport, index) => (
-            <div
+            <motion.div
               key={index}
               className="relative group rounded-2xl overflow-hidden shadow-lg cursor-pointer min-w-[70%] max-w-xs flex-shrink-0 snap-start"
               onClick={() => setOpenIndex(openIndex === index ? null : index)}
             >
-              {/* Image */}``
+              {/* Image */}
               <img
                 src={t(`sports.${sport}.img`)}
                 alt={t(`sports.${sport}.name`)}
@@ -37,7 +38,7 @@ export function SportComponent() {
 
               {/* Overlay */}
               <div
-                className={`absolute inset-0 flex flex-col items-center justify-center bg-emerald-600 bg-opacity-90 transition-opacity duration-500 px-4
+                className={`absolute inset-0 flex flex-col items-center justify-center bg-emerald-900 bg-opacity-90 transition-opacity duration-500 px-4
                 ${openIndex === index ? "opacity-100" : "opacity-0 group-hover:opacity-100"}`}
               >
                 <p className="text-white text-sm text-center">
@@ -49,7 +50,7 @@ export function SportComponent() {
               <div className="absolute bottom-0 w-full bg-emerald-900 bg-opacity-40 text-white text-center py-2 text-base font-semibold">
                 {t(`sports.${sport}.name`)}
               </div>
-            </div>
+            </motion.div>
           ))}
       </div>
 
@@ -58,9 +59,9 @@ export function SportComponent() {
         {sports
           .filter((sport) => selectedSport === "all" || selectedSport === sport)
           .map((sport, index) => (
-            <div
+            <motion.div
               key={index}
-              className="relative group rounded-2xl overflow-hidden shadow-lg cursor-pointer"
+              className="relative group rounded-2xl overflow-hidden shadow-lg cursor-pointer hover:scale-105"
               onClick={() => setOpenIndex(openIndex === index ? null : index)}
             >
               {/* Image */}
@@ -73,7 +74,7 @@ export function SportComponent() {
 
               {/* Overlay */}
               <div
-                className={`absolute inset-0 flex flex-col items-center justify-center bg-emerald-600 bg-opacity-90 transition-opacity duration-500 px-4
+                className={`absolute inset-0 flex flex-col items-center justify-center bg-emerald-900 bg-opacity-90 transition-opacity duration-500 px-4
                 ${openIndex === index ? "opacity-100" : "opacity-0 group-hover:opacity-100"}`}
               >
                 <p className="text-white text-sm text-center">
@@ -85,7 +86,7 @@ export function SportComponent() {
               <div className="absolute bottom-0 w-full bg-emerald-900 bg-opacity-40 text-white text-center py-2 text-lg font-semibold">
                 {t(`sports.${sport}.name`)}
               </div>
-            </div>
+            </motion.div>
           ))}
       </div>
     </section>

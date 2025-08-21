@@ -36,7 +36,7 @@ const buttonVariants = cva(
 )
 
 function Button({
-  className="bg-white border border-emerald-900 text-emerald-900 hover:bg-gray-500 mt-10",
+  className="bg-white border border-emerald-900 text-emerald-900 hover:scale-110 hover:bg-white",
   variant,
   size,
   asChild = false,

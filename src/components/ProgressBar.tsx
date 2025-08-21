@@ -19,7 +19,7 @@ export default function ScrollProgressBar() {
   return (
     <div className="fixed top-0 left-0 w-full h-1 z-[999] bg-transparent">
       <div
-        className="h-full bg-white transition-all duration-150 ease-out"
+        className="h-full bg-emerald-600 transition-all duration-150 ease-out"
         style={{ width: `${scroll}%` }}
       />
     </div>

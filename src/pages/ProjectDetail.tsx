@@ -59,7 +59,7 @@ export default function ProjectDetail() {
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-emerald-900 hover:text-gray-200 transition border border-emerald-900 rounded-lg px-8 py-3 bg-white min-w-52 text-center font-semibold"
+              className="text-emerald-900 hover:scale-110 transition border border-emerald-900 rounded-lg px-8 py-3 bg-white min-w-52 text-center font-semibold"
             >
               <OpenInNewIcon className="text-emerald-900 mr-3" />
               {t("header.link")}

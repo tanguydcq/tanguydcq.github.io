@@ -67,7 +67,7 @@ export default function SterenovaComponent() {
                         whileInView={{ opacity: 1, scale: 1 }}
                         transition={{ delay: i * 0.1 }}
                     >
-                        <Card className="overflow-hidden rounded-2xl shadow-lg bg-gray-900 relative group p-0">
+                        <Card className="overflow-hidden rounded-2xl shadow-lg bg-gray-900 relative group p-0 hover:scale-105">
                             <CardContent className="p-0 relative h-64">
                                 {item.type === "image" ? (
                                     <img
@@ -86,7 +86,7 @@ export default function SterenovaComponent() {
 
             {/* Bouton */}
             <Link to={`https://sterenova.fr/`} target="_blank" rel="noopener noreferrer">
-                <Button>
+                <Button className="bg-white border border-emerald-900 text-emerald-900 hover:scale-110 hover:bg-white mt-10">
                     <OpenInNewIcon className="text-emerald-900" />
                     {t('sterenova.button')}
                 </Button>

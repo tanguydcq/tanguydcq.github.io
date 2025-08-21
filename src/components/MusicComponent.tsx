@@ -10,9 +10,9 @@ export function MusicComponent() {
       id="music"
       className="mt-20 mb-10 px-4 sm:px-6 text-center flex flex-col items-center"
     >
-      <h1 className="py-10 text-3xl sm:text-4xl font-bold text-emerald-600 mb-4">
+      <motion.h1 className="py-10 text-3xl sm:text-4xl font-bold text-emerald-600 mb-4">
         {t("music.title")}
-      </h1>
+      </motion.h1>
 
       {/* Introduction */}
       <motion.p
@@ -30,7 +30,7 @@ export function MusicComponent() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
-          className="flex flex-col items-center text-center bg-emerald-900 rounded-2xl shadow-lg p-6"
+          className="flex flex-col items-center text-center bg-emerald-900 rounded-2xl shadow-lg p-6 hover:scale-105"
         >
           <img
             src="/images/music/guitar.png"
@@ -50,7 +50,7 @@ export function MusicComponent() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
-          className="flex flex-col items-center text-center bg-emerald-900 rounded-2xl shadow-lg p-6"
+          className="flex flex-col items-center text-center bg-emerald-900 rounded-2xl shadow-lg p-6 hover:scale-105"
         >
           <img
             src="/images/music/dj.jpg"

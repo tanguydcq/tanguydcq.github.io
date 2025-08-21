@@ -2,13 +2,13 @@ import { Link } from "react-router-dom"
 import { Button } from "@/components/ui/button"
 import { useTranslation } from "react-i18next"
 import type { Project } from "@/data/project"
-
+import { motion } from "framer-motion"
 
 export function ProjectCard({ slug, image, tags, translationKey }: Project) {
   const { t } = useTranslation()
 
   return (
-    <div className="bg-emerald-900 rounded-xl p-4 shadow-md min-h-[340px] flex flex-col justify-between w-full h-full">
+    <motion.div className="bg-emerald-900 rounded-xl p-4 shadow-md min-h-[340px] flex flex-col justify-between w-full h-full">
       <div className="w-full mb-4 rounded-md overflow-hidden relative aspect-[16/9]">
         <img
           src={image}
@@ -31,9 +31,9 @@ export function ProjectCard({ slug, image, tags, translationKey }: Project) {
       </div>
       <div className="pt-6 flex justify-center my-3">
         <Link to={`/project/${slug}`}>
-          <Button className="bg-white text-gray-900 hover:bg-gray-700">{t(`header.seeMore`)}</Button>
+          <Button>{t(`header.seeMore`)}</Button>
         </Link>
       </div>
-    </div>
+    </motion.div>
   )
 }

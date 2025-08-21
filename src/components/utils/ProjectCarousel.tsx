@@ -28,7 +28,7 @@ function CarouselSection({ title, projects }: { title: string; projects: any[] }
 
 	return (
 		<div className="mb-12">
-			<h3 className="text-xl sm:text-2xl font-bold mb-10 text-emerald-600">--- {title} ---</h3>
+			<motion.h1 className="py-10 text-3xl sm:text-4xl text-emerald-600 font-bold mb-6">{title}</motion.h1>
 			<div className="relative">
 				<div ref={sliderRef} className="keen-slider w-full">
 					{projects.map((proj, i) => (
@@ -47,13 +47,13 @@ function CarouselSection({ title, projects }: { title: string; projects: any[] }
 				</div>
 				<button
 					onClick={scrollPrev}
-					className="absolute left-[-2rem]  lg:left-[-3rem] top-1/2 -translate-y-1/2 z-10 bg-emerald-900 hover:bg-emerald-600 text-white p-2 rounded-full shadow-md"
+					className="absolute left-[-2rem]  lg:left-[-3rem] top-1/2 -translate-y-1/2 z-10 bg-emerald-900 hover:bg-emerald-600 hover:scale-110 text-white p-2 rounded-full shadow-md"
 				>
 					<ChevronLeft size={20} />
 				</button>
 				<button
 					onClick={scrollNext}
-					className="absolute right-[-2rem] lg:right-[-3rem] top-1/2 -translate-y-1/2 z-10 bg-emerald-900 hover:bg-emerald-600 text-white p-2 rounded-full shadow-md"
+					className="absolute right-[-2rem] lg:right-[-3rem] top-1/2 -translate-y-1/2 z-10 bg-emerald-900 hover:bg-emerald-600 hover:scale-110 text-white p-2 rounded-full shadow-md"
 				>
 					<ChevronRight size={20} />
 				</button>
