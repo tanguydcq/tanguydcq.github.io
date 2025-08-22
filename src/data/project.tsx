@@ -54,8 +54,7 @@ export const projects: Project[] = [
       "shadcn/ui",
       "Web Development"
     ],
-    translationKey: "projects.sterenovaSite",
-    link: `https://sterenova.fr/`
+    translationKey: "projects.sterenovaSite"
   },
   // {
   //   slug: slugify("Mon Portfolio"),

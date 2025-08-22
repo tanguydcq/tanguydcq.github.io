@@ -1,27 +1,27 @@
 {
   "header": {
     "presentation": "Accueil",
-    "parcours": "Mon parcours",
-    "projects": "Mes projets",
+    "parcours": "Parcours",
+    "projects": "Projets",
     "contact": "Me contacter",
     "backhome": "Retour à l'accueil",
-    "persoProjects": "Projets entreprise & personnels",
-    "courseProjects": "Projets de cours",
+    "persoProjects": "Projets professionels réalisés",
+    "courseProjects": "Projets universitaires réalisés",
     "link": "Rapport",
     "seeMore": "Voir plus"
   },
   "about": {
     "title": "Acceuil",
-    "description": "Bonjour! Moi c’est Tanguy, étudiant à EPITA en majeure SCIA-G (Data Science, IA & Graphes).\nCe site, c’est un peu mon labo perso :\nJ’y partage ce que j’apprends, ce que je construis, et ce qui m’inspire."
+    "description": "Etudiant à EPITA en majeure SCIA-G (Data Science, IA & Graphes).\nCe site, c’est un peu mon labo perso :\nIci je partage ce que j’apprends, ce que je construis, et ce qui m’inspire."
   },
   "parcours": {
-    "title": "Mon parcours",
+    "title": "Parcours",
     "academicJourney": {
       "title": "Académique",
       "items": {
         "0": {
           "title": "EPITA",
-          "date": "2023 - présent",
+          "date": "2023 - Actuellement",
           "subtitle": "Paris",
           "description": "Cycle ingénieur – Promotion 2026\nMajeure SCIA-G : Data Science, Intelligence Artificielle et Graphes"
         },
@@ -52,7 +52,7 @@
           "date": "Depuis avril 2023",
           "title": "Co-créateur Sterenova",
           "subtitle": "Paris",
-          "description": "Fondateur de Sterenova évènementiel et location de matériel planification d'évènement gestion d'entreprise"
+          "description": "Fondateur de Sterenova:\névènementiel et location de matériel, planification d'évènement, gestion d'entreprise"
         },
         "2": {
           "date": "Août 2022",
@@ -76,17 +76,17 @@
     "sterenovaSite": {
       "title": "Site Internet Sterenova",
       "description": "Développement du site web pour Sterenova",
-      "longDescription": "J’ai créé ce site avec React, TypeScript et la librairie UI shadcn. L’idée, c’était d’avoir une vitrine claire et moderne pour présenter notre activité.\nOn propose de la location de matériel son et lumière, mais aussi des prestations complètes pour animer différents types d’événements : anniversaires, mariages, soirées rallye, soirées classiques, etc.\nOn mixe en tant que DJ, on s’adapte à l’ambiance souhaitée et on s’occupe de la partie technique pour que tout se passe au mieux.\nLe site est là pour donner un aperçu de ce qu’on fait, avec quelques infos pratiques pour nous contacter."
+      "longDescription": "J’ai créé ce site avec React, TypeScript et la librairie UI shadcn. L’idée était d’avoir une vitrine claire et moderne pour présenter notre activité.\nOn propose de la location de matériel son et lumière, mais aussi des prestations complètes pour animer différents types d’évènements : anniversaires, mariages, soirées rallye, soirées classiques, etc.\nOn mixe en tant que DJ, on s’adapte à l’ambiance souhaitée et on s’occupe de la partie technique pour que tout se passe au mieux.\nLe site est là pour donner un aperçu de ce qu’on fait, avec quelques informations pratiques pour nous contacter."
     },
     "agentIA": {
       "title": "Agent IA ChatGPT",
       "description": "Génération automatique de documentation avec Slack + scraping",
-      "longDescription": "Dans le cadre de mon stage, j’ai développé un générateur de documentation technique.\nL’objectif était de centraliser et produire automatiquement de la documentation à partir de différentes sources, en utilisant du scrapping pour récupérer les contenus.\nJ’ai ensuite utilisé l’API de ChatGPT pour générer des textes structurés à partir de ces données, en construisant des prompts adaptés selon le type d’information récupérée.\nUne fois le service en place, je l’ai intégré à Slack sous forme de bot, accessible à tous les membres de l’équipe.\nCe projet a permis de gagner du temps sur la rédaction et la mise à jour des documents internes, tout en rendant l’accès à l’info plus simple pour tout le monde."
+      "longDescription": "Dans le cadre de mon stage, j’ai développé un générateur de documentation technique.\nL’objectif était de centraliser et produire automatiquement de la documentation à partir de différentes sources, en utilisant du scrapping pour récupérer les contenus.\nJ’ai ensuite utilisé l’API de ChatGPT pour générer des textes structurés à partir de ces données, en construisant des prompts adaptés selon le type d’information récupérée.\nUne fois le service en place, je l’ai intégré à Slack sous forme de bot, accessible à tous les membres de l’équipe.\nCe projet a permis de gagner du temps sur la rédaction et la mise à jour des documents internes, tout en rendant l’accès à l’information plus simple pour tout le monde."
     },
     "classificationContrats": {
       "title": "Classification de Contrats",
       "description": "LLM internes pour reconnaître des documents juridiques",
-      "longDescription": "Pendant mon stage, j’ai travaillé sur un projet de classification automatique de contrats à l’aide de l’API de ChatGPT.\nL’objectif était de catégoriser des contrats selon leur type (prestations, confidentialité, partenariats, etc.), afin de faciliter leur tri et leur gestion.\n\nJ’ai conçu un pipeline en plusieurs étapes, en m’appuyant sur des prompts définis pour guider le LLM dans son raisonnement.\nLa première étape consistait à extraire les éléments clés du contrat à partir de son contenu brut. Ensuite, le modèle évaluait le type de contrat en se basant sur des critères juridiques ou structurels.\nJ’ai mis en place un système de regroupement par familles de contrats, tout en gérant les cas ambigus ou conflictuels via des relances ciblées ou des prompts supplémentaires permettant de préciser le contexte.\n\nUn des avantages de cette approche est qu’elle ne nécessite pas d’entraîner un modèle supervisé sur un jeu de données spécifique.\nCela permet de s’adapter beaucoup plus facilement à de nouveaux contrats ayant une structure ou une mise en forme différente, tout en maintenant une classification cohérente.\nL’utilisation de prompts bien construits permet au LLM de s’appuyer sur le fond plutôt que sur la forme, ce qui améliore la capacité de généralisation du système.\n\nCe projet a permis de poser les bases d’un outil interne capable d’automatiser une tâche normalement très manuelle, tout en gardant une logique transparente et explicable dans le traitement des documents."
+      "longDescription": "Pendant mon stage, j’ai travaillé sur un projet de classification automatique de contrats à l’aide d'un LLM interne.\nL’objectif était de catégoriser des contrats selon leur type (prestations, confidentialité, partenariats, etc.), afin de faciliter leur tri et leur gestion.\n\nJ’ai conçu un pipeline en plusieurs étapes, en m’appuyant sur des prompts définis pour guider le LLM dans son raisonnement.\nLa première étape consistait à extraire les éléments clés du contrat à partir de son contenu brut. Ensuite, le modèle évaluait le type de contrat en se basant sur des critères juridiques ou structurels.\nJ’ai mis en place un système de regroupement par familles de contrats, tout en gérant les cas ambigus ou conflictuels via des relances ciblées ou des prompts supplémentaires permettant de préciser le contexte.\n\nUn des avantages de cette approche est qu’elle ne nécessite pas d’entraîner un modèle supervisé sur un jeu de données spécifique.\nCela permet de s’adapter beaucoup plus facilement à de nouveaux contrats ayant une structure ou une mise en forme différente, tout en maintenant une classification cohérente.\nL’utilisation de prompts bien construits permet au LLM de s’appuyer sur le fond plutôt que sur la forme, ce qui améliore la capacité de généralisation du système.\n\nCe projet a permis de poser les bases d’un outil interne capable d’automatiser une tâche habituellement très manuelle, tout en gardant une logique transparente et explicable dans le traitement des documents."
     },
     "portfolio": {
       "title": "Mon Portfolio",
@@ -98,7 +98,7 @@
     "pfee": {
       "title": "PFEE",
       "description": "Outil d’analyse automatique de matchs de football basé sur l’IA, avec détection des joueurs, suivi par ID et génération de statistiques à partir de vidéos, destiné aux clubs amateurs.",
-      "longDescription": "Dans ce projet toujours en cours, nous développons un outil basé sur l’intelligence artificielle pour analyser automatiquement les matchs de football à partir de vidéos, avec un objectif clair : fournir des statistiques détaillées aux clubs amateurs, souvent dépourvus de moyens technologiques avancés.\nLa première phase du projet se concentre sur le tracking des joueurs. Pour cela, nous utilisons YOLOv11, la dernière version du célèbre modèle de détection d’objets. Le suivi des joueurs se fait en trois étapes principales :\nDétection initiale des objets (joueurs, ballon, arbitres) sur chaque frame grâce à YOLO.\nTracking inter-frames basé sur la proximité spatiale : si deux objets détectés sur des images consécutives sont proches, on considère qu’il s’agit du même joueur. Cette étape repose sur le tracking \"classique\" intégré à YOLO.\nRe-identification (Re-ID) : pour gérer les cas où un joueur quitte et revient dans le champ de la caméra, nous générons un embedding unique pour chaque joueur afin de lui attribuer un ID constant tout au long du match, même après disparition temporaire.\n\nNous utilisons le dataset SoccerNet, qui propose un grand nombre de vidéos annotées, ce qui nous permet d’évaluer notre système de tracking de façon supervisée.\nEn complément du tracking, nous avons appliqué des techniques de clustering pour :\nIdentifier les arbitres,\nDéterminer à quelle équipe appartient chaque joueur.\nCes premières étapes poseront les bases pour les phases suivantes du projet, qui viseront à détecter des événements de match (passes, tirs, fautes, etc.) et à générer automatiquement des statistiques exploitables pour les entraîneurs et clubs."
+      "longDescription": "Dans ce projet toujours en cours, nous développons un outil basé sur l’intelligence artificielle pour analyser automatiquement les matchs de football à partir de vidéos, avec un objectif clair : fournir des statistiques détaillées aux clubs amateurs, souvent dépourvus de moyens technologiques avancés.\nLa première phase du projet se concentre sur le tracking des joueurs. Pour cela, nous utilisons YOLOv11, la dernière version du célèbre modèle de détection d’objets. Le suivi des joueurs se fait en trois étapes principales :\nDétection initiale des objets (joueurs, ballon, arbitres) sur chaque frame grâce à YOLO.\nTracking inter-frames basé sur la proximité spatiale : si deux objets détectés sur des images consécutives sont proches, on considère qu’il s’agit du même joueur. Cette étape repose sur le tracking \"classique\" intégré à YOLO.\nRe-identification (Re-ID) : pour gérer les cas où un joueur quitte et revient dans le champ de la caméra, nous générons un embedding unique pour chaque joueur afin de lui attribuer un ID constant tout au long du match, même après disparition temporaire.\n\nNous utilisons le dataset SoccerNet, qui propose un grand nombre de vidéos annotées, ce qui nous permet d’évaluer notre système de tracking de façon supervisée.\nEn complément du tracking, nous avons appliqué des techniques de clustering pour identifier les arbitres et déterminer à quelle équipe appartient chaque joueur.\nCes premières étapes poseront les bases pour les phases suivantes du projet, qui viseront à détecter des événements de match (passes, tirs, fautes, etc.) et à générer automatiquement des statistiques exploitables pour les entraîneurs et clubs."
     },
     "musicGenerator": {
       "title": "Générateur de musique",
@@ -108,7 +108,7 @@
     "imageClassification": {
       "title": "Classification d'images",
       "description": "Utilisation de CNN pour classifier des images dans le cadre d'un projet de cours de classification d'images",
-      "longDescription": "Lors de ce projet, j’ai creer un réseau de neurones convolutifs (CNN) pour classifier dix types différents de galaxies à partir de leur photos.\nJ’ai travaillé avec un dataset d’images labellisées, ce qui m’a permis d’entraîner le modèle en supervision.\n\nLe CNN est adapté à ce type de données visuelles, grâce à sa capacité à extraire des caractéristiques importantes dans les images (formes, textures, motifs) sans besoin de feature engineering manuel.\nJ’ai conçu et entraîné un modèle capable de reconnaître les différences subtiles entre les types de galaxies, en ajustant les couches convolutionnelles, de pooling et les couches fully connected pour optimiser les performances.\n\nLe processus comprenait aussi une phase de prétraitement des images (redimensionnement, normalisation).\nAprès plusieurs itérations et ajustements d’hyperparamètres, le modèle a atteint une bonne précision de classification.\nVous pouvez retrouver un rapport détaillé de ce travail ici :"
+      "longDescription": "Lors de ce projet, j’ai creé un réseau de neurones convolutifs (CNN) pour classifier dix types différents de galaxies à partir de leur photos.\nJ’ai travaillé avec un dataset d’images labellisées, ce qui m’a permis d’entraîner le modèle en supervision.\n\nLe CNN est adapté à ce type de données visuelles, grâce à sa capacité à extraire des caractéristiques importantes dans les images (formes, textures, motifs) sans besoin de feature engineering manuel.\nJ’ai conçu et entraîné un modèle capable de reconnaître les différences subtiles entre les types de galaxies, en ajustant les couches convolutionnelles, de pooling et les couches fully connected pour optimiser les performances.\n\nLe processus comprenait aussi une phase de prétraitement des images (redimensionnement, normalisation).\nAprès plusieurs itérations et ajustements d’hyperparamètres, le modèle a atteint une bonne précision de classification.\nVous pouvez retrouver un rapport détaillé de ce travail ici :"
     },
     "dataExploration": {
       "title": "Exploration de données",
@@ -122,8 +122,8 @@
     }
   },
   "sterenova": {
-    "title": "Sterenova – Événements sur mesure",
-    "intro": "On est trois amis avec une passion commune : le son, les lumières et les platines.\nAu début, on avait juste un peu de matériel et beaucoup d’envie. Puis, de soirée en soirée, on s’est équipés, on a appris, et on a vu notre projet grandir avec nous.\nAujourd’hui, on met tout ça au service de vos événements : anniversaires, mariages, soirées rallye ou juste des moments entre proches. On s’occupe de la musique, des lumières et de toute la technique pour que vous puissiez profiter sans vous soucier de rien.\nEn gros, on fait en sorte que votre soirée se passe comme on aimerait vivre les nôtres : simple, fluide et mémorable.",
+    "title": "Sterenova – Évènements sur mesure",
+    "intro": "On est trois amis avec une passion commune : le son, les lumières et les platines.\nAu début, on avait juste un peu de matériel et beaucoup d’envie. Puis, de soirée en soirée, on s’est équipés, on a appris, et on a vu notre projet grandir.\nAujourd’hui, on met notre équipement au service de vos évènements : anniversaires, mariages, soirées rallye ou juste des moments entre proches. On s’occupe de la musique, des lumières et de toute la technique pour que vous puissiez profiter sans vous soucier de rien.\nFinalement, on fait en sorte que votre soirée soit comme on aimerait vivre les nôtres : simple, fluide et mémorable.",
     "button": "Notre site"
   },
   "sports": {
@@ -131,17 +131,17 @@
     "gym": {
       "name": "Musculation",
       "img": "/images/sports/gym_43.jpg",
-      "description": "Je fais de la musculation depuis un peu plus de deux ans, parfois seul, parfois avec des amis. C’est un super moyen de rester en forme et ça m’aide à rester régulier dans tout ce que je fais."
+      "description": "Je fais de la musculation depuis un peu plus de deux ans, parfois seul, parfois avec des amis. C’est un bon moyen d'etre en forme et ça m’aide à rester régulier dans tout ce que je fais."
     },
     "tennis": {
       "name": "Tennis",
       "img": "/images/sports/tennis_43.jpg",
-      "description": "Je joue au tennis depuis environ 15 ans, et je suis monté jusqu’au classement 15/3 en France. J’adore l’esprit de compétition que ça apporte et le travail sur le mental que ce sport demande."
+      "description": "Sport que je pratique depuis le plus longtemps. J’ai pu jouer aussi bien en simple qu’en équipe. Les matchs par équipe sont un bon souvenir, car le jeu collectif rend plus fort. Ce sport me pousse surtout à progresser un peu plus à chaque fois, autant sur le plan technique que mental."
     },
     "climbing": {
       "name": "Escalade",
       "img": "/images/sports/climbing_43.jpg",
-      "description": "J’ai commencé l’escalade au lycée et j’ai même participé à la compétition départementale lors de ma dernière année. Aujourd’hui, je préfère grimper en montagne sur des voies naturelles."
+      "description": "J’ai commencé l’escalade au lycée, et aujourd’hui je préfère grimper en montagne sur des voies naturelles, un sport qui demande concentration et force, et où la confiance est mutuelle entre celui qui grimpe et celui qui assure."
     },
     "winterSports": {
       "name": "Sport d'hiver",
@@ -151,15 +151,19 @@
     "volley": {
       "name": "Volleyball",
       "img": "/images/sports/volley_43.jpg",
-      "description": "J’ai fait deux ans en club. C’est un sport d’équipe sympa qui change des sports plus solitaires que je pratique habituellement."
+      "description": "Sport d’équipe qui demande coordination et communication. En joueant sur la plage cela permet rencontrer de nouvelles personnes et de partager de bons moments."
     }
   },
   "music": {
     "title": "Musique",
     "guitarTitle": "La Guitare",
     "djTitle": "DJ",
-    "intro": "La musique fait partie de ma vie depuis longtemps. J’ai commencé avec la guitare, et aujourd’hui je continue cette passion à travers mes projets DJ avec Sterenova. J’ai aussi fait un peu de piano en autodidacte, plus par curiosité que par sérieux, histoire d’explorer un autre instrument.",
-    "guitar": "Je joue principalement en solo depuis plus de 15 ans, avec beaucoup d’improvisation. En terminale, j’ai aussi eu l’occasion d’être guitariste leader dans un groupe pendant un an, une expérience marquante qui m’a appris le jeu en collectif.",
-    "dj": "En parallèle, je suis DJ au sein de Sterenova. Je mixe lors de soirées, mariages et événements, ce qui me permet de rester proche de la musique et de partager des moments avec le public. J’aime mélanger différents styles pour créer quelque chose de nouveau à partir de ce qui existe déjà."
+    "intro": "La musique fait partie de ma vie depuis longtemps. J’ai commencé avec la guitare, et aujourd’hui je continue cette passion à travers mes projets DJ avec Sterenova. J’ai aussi fait un peu de piano en autodidacte, plus par curiosité que par sérieux, afin d’explorer un autre instrument.",
+    "guitar": "Je pratique la guitare depuis plus de 15 ans, avec une grande place laissée à l’improvisation. En terminale, j’ai été guitariste leader dans un groupe pendant un an, une expérience marquante qui a enrichi ma pratique et renforcé le plaisir de jouer en collectif.",
+    "dj": "Je mixe lors de soirées, mariages et évènements, ce qui me permet de rester proche de la musique et de partager des moments avec le public. J’aime mélanger différents styles pour créer quelque chose de nouveau à partir de ce qui existe déjà."
+  },
+  "contact": {
+    "title" : "Me contacter",
+    "description": "N’hésitez pas à me contacter ou à télécharger mon CV."
   }
 }

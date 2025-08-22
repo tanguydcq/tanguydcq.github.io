@@ -12,7 +12,7 @@ export function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["presentation", "parcours", "projects", "sterenova", "sports", "music"];
+      const sections = ["presentation", "parcours", "projects", "sterenova", "sports", "music", "contact"];
       let current = "presentation";
 
       const scrollPosition = window.scrollY + 200; // Offset for header height
@@ -47,6 +47,7 @@ export function Header() {
     { id: "sterenova", label: "Sterenova" },
     { id: "sports", label: "Sports" },
     { id: "music", label: t("music.title") },
+    { id: "contact", label: t("contact.title") }
   ];
 
   // Scroll to section by id

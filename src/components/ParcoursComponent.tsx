@@ -150,16 +150,24 @@ export function ParcoursComponent() {
       <TabsList className="grid w-96 grid-cols-2 gap-2">
         <TabsTrigger
           value="academique"
-          className="px-2 py-1 text-sm data-[state=active]:bg-gray-600 data-[state=active]:text-white data-[state=active]:shadow-lg"
+          className="px-2 py-1 text-sm rounded-lg transition-all duration-200
+             hover:bg-emerald-600/80 hover:text-white hover:shadow-md
+             focus:ring-2 focus:ring-gray-400 focus:outline-none
+             data-[state=active]:bg-gray-600 data-[state=active]:text-white data-[state=active]:shadow-lg"
         >
           {t("parcours.academicJourney.title")}
         </TabsTrigger>
+
         <TabsTrigger
           value="pro"
-          className="px-2 py-1 text-sm data-[state=active]:bg-gray-600 data-[state=active]:text-white data-[state=active]:shadow-lg"
+          className="px-2 py-1 text-sm rounded-lg transition-all duration-200
+             hover:bg-emerald-600/80 hover:text-white hover:shadow-md
+             focus:ring-2 focus:ring-gray-400 focus:outline-none
+             data-[state=active]:bg-gray-600 data-[state=active]:text-white data-[state=active]:shadow-lg"
         >
           {t("parcours.professionalJourney.title")}
         </TabsTrigger>
+
       </TabsList>
     </div>
   );
