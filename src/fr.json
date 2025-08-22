@@ -131,12 +131,12 @@
     "gym": {
       "name": "Musculation",
       "img": "/images/sports/gym_43.jpg",
-      "description": "Je fais de la musculation depuis un peu plus de deux ans, parfois seul, parfois avec des amis. C’est un bon moyen d'etre en forme et ça m’aide à rester régulier dans tout ce que je fais."
+      "description": "Je fais de la musculation depuis un peu plus de deux ans, parfois seul, parfois avec des amis. C’est un bon moyen d'etre en forme et m’aide à rester régulier dans tout ce que je fais."
     },
     "tennis": {
       "name": "Tennis",
       "img": "/images/sports/tennis_43.jpg",
-      "description": "Sport que je pratique depuis le plus longtemps. J’ai pu jouer aussi bien en simple qu’en équipe. Les matchs par équipe sont un bon souvenir, car le jeu collectif rend plus fort. Ce sport me pousse surtout à progresser un peu plus à chaque fois, autant sur le plan technique que mental."
+      "description": "Sport que je pratique depuis le plus longtemps. Je joue aussi bien en simple qu’en équipe. Il me pousse surtout à progresser un peu plus à chaque fois, autant sur le plan technique que mental."
     },
     "climbing": {
       "name": "Escalade",
