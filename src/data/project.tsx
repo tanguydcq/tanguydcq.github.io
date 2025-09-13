@@ -99,6 +99,19 @@ export const courseProjects: Project[] = [
     link: `${import.meta.env.BASE_URL}images/reports/CNN_report.pdf`
   },
   {
+    slug: slugify("Detection d'anomalies"),
+    image: `${import.meta.env.BASE_URL}images/project/anomaly_detection.png`,
+    tags: [
+      "Anomaly Detection",
+      "Unsupervised/Supervised Learning",
+      "Data Preprocessing",
+      "Scikit-learn",
+      "Visualization"
+    ],
+    translationKey: "courseProjects.anomalyDetection",
+    link: `${import.meta.env.BASE_URL}images/reports/anomaly_detection_report.pdf`
+  },
+  {
     slug: slugify("Exploration de données"),
     image: `${import.meta.env.BASE_URL}images/project/exploration_data.jpeg`,
     tags: [

@@ -100,6 +100,11 @@
       "description": "AI-based automatic football match analysis tool, with player detection, ID tracking, and statistics generation from videos, aimed at amateur clubs.",
       "longDescription": "In this ongoing project, we are developing an AI-based tool to automatically analyze football matches from videos, with a clear goal: to provide detailed statistics to amateur clubs, often lacking advanced technological means.\nThe first phase focuses on player tracking. For this, we use YOLOv11, the latest version of the well-known object detection model. The tracking is done in three main steps:\nInitial object detection (players, ball, referees) on each frame with YOLO.\nInter-frame tracking based on spatial proximity: if two detected objects across consecutive frames are close, they are considered the same player. This step uses YOLO’s built-in tracking.\nRe-identification (Re-ID): to handle cases where a player leaves and re-enters the camera view, we generate a unique embedding for each player to assign them a constant ID throughout the match.\n\nWe use the SoccerNet dataset, which provides many annotated videos, allowing us to evaluate our tracking system in a supervised manner.\nAlongside tracking, we applied clustering techniques to identify referees and determine which team each player belongs to.\nThese first steps will lay the groundwork for later phases, aiming to detect match events (passes, shots, fouls, etc.) and automatically generate useful statistics for coaches and clubs."
     },
+    "anomalyDetection": {
+      "title": "Anomaly detection",
+      "description": "Anomaly detection project on the SWaT dataset, applied to an industrial water treatment system",
+      "longDescription": "This project was carried out as part of MLSecu module, with the objective of implementing different machine learning techniques to detect abnormal behaviors in an industrial system. The dataset used, SWaT (Secure Water Treatment), comes from an experimental water treatment plant that reproduces, on a small scale, a real purification process. This dataset includes both normal operation periods and simulated attacks targeting sensors and actuators, providing a rich ground for anomaly detection.\n\nThe first step of the project consisted in data preprocessing: removing missing and irrelevant values, normalizing variables, and visualizing correlations through a matrix. These steps ensured the quality and relevance of the data before training different models.\n\nTwo main families of approaches were explored:\n\nUnsupervised methods (Isolation Forest, Local Outlier Factor, One-Class SVM), which can operate without labeled data but require careful tuning of the contamination rate. The comparative study showed that a majority-vote ensemble between models offered a good trade-off between recall and precision.\n\nSupervised methods (Random Forest, SVM, Logistic Regression), which leverage the labels available in the dataset. Random Forest achieved the best overall performance, closely followed by SVM.\n\nFinally, a hybrid approach was discussed, combining the flexibility of unsupervised methods with the precision of supervised ones, in order to build a robust strategy adapted to dynamic industrial environments."
+    },
     "musicGenerator": {
       "title": "Music Generator",
       "description": "Using BERT to generate music for an NLP course project",
@@ -129,7 +134,7 @@
   "sports": {
     "title": "My Sports",
     "gym": {
-      "name": "Weight Training",
+      "name": "Gym",
       "img": "/images/sports/gym_43.jpg",
       "description": "I have been doing weight training for a little over two years, sometimes alone, sometimes with friends. It’s a good way to stay fit and helps me stay consistent in everything I do."
     },
@@ -162,8 +167,8 @@
     "guitar": "I have been playing guitar for over 15 years, with a lot of focus on improvisation. In high school, I was the lead guitarist in a band for a year, a remarkable experience that enriched my practice and reinforced the joy of playing in a group.",
     "dj": "I DJ at parties, weddings, and events, which allows me to stay close to music and share moments with the audience. I enjoy mixing different styles to create something new from what already exists."
   },
-    "contact": {
-    "title" : "Contact me",
+  "contact": {
+    "title": "Contact me",
     "description": "Feel free to contact me or download my resume."
   }
 }

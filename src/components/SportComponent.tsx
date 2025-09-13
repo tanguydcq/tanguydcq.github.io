@@ -7,7 +7,7 @@ import { useState } from "react"
 
 export function SportComponent() {
   const { t } = useTranslation()
-  const sports = ["volley", "tennis", "climbing", "winterSports", "gym"]
+  const sports = ["tennis", "gym", "winterSports", "volley", "climbing"]
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
