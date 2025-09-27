@@ -68,22 +68,23 @@ export function ContactComponent() {
       {/* Téléchargement CV */}
       <div className="flex gap-6">
         <a
-          href="/images/cv/cv_fr.pdf"
-          download
+          href="/images/cv/CV_2025-09-27_Tanguy_DUCROCQ.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
           className="flex items-center gap-2 bg-emerald-600 hover:bg-emerald-900 text-white px-6 py-3 rounded-full shadow-lg transition"
         >
           <FileDown className="w-5 h-5" />
-          CV
+          Resume
         </a>
 
-        <a
+        {/* <a
           href="/images/cv/cv_en.pdf"
           download
           className="flex items-center gap-2 bg-emerald-600 hover:bg-emerald-900 text-white px-6 py-3 rounded-full shadow-lg transition"
         >
           <FileDown className="w-5 h-5" />
           Resume
-        </a>
+        </a> */}
       </div>
     </section>
   );
