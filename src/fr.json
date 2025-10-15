@@ -43,28 +43,34 @@
       "title": "Professionnel",
       "items": {
         "0": {
+          "date": "Septembre 2025",
+          "title": "Développeur commercial IT",
+          "subtitle": "JECT EPITA",
+          "description": "J'identifie les besoins des entreprises, rédige des propositions commerciales et assure un suivi complet des projets IT entre les clients et les parties prenantes."
+        },
+        "1": {
           "date": "Septembre 2024 - janvier 2025",
           "title": "Stage mi- étude",
           "subtitle": "DiliTrust La Défense",
           "description": "Membre de l’équipe ML chez DiliTrust, impliqué dans le développement d’agents intelligents et l’automatisation de tâches liées au traitement de documents."
         },
-        "1": {
+        "2": {
           "date": "Depuis avril 2023",
           "title": "Co-créateur Sterenova",
           "subtitle": "Paris",
           "description": "Fondateur de Sterenova:\névènementiel et location de matériel, planification d'évènement, gestion d'entreprise"
         },
-        "2": {
+        "3": {
           "date": "Août 2022",
           "title": "Serveur/Barman",
           "subtitle": "Marius Café Pornic"
         },
-        "3": {
+        "4": {
           "date": "Mars 2021",
           "title": "Manutentionnaire",
           "subtitle": "PSL France M.I.N Rungis"
         },
-        "4": {
+        "5": {
           "date": "Août 2020",
           "title": "Magasinier au service Pièces de Rechange",
           "subtitle": "Renault Retail Group Paris"

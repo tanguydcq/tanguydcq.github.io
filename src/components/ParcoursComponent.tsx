@@ -131,6 +131,14 @@ function ParcoursProSection() {
           subtitle={t('parcours.professionalJourney.items.4.subtitle')}
           bgColor="rgb(5, 150, 105)"
         />
+        <TimelineItem
+          date={t('parcours.professionalJourney.items.5.date')}
+          icon={<WorkIcon />}
+          title={t('parcours.professionalJourney.items.5.title')}
+          subtitle={t('parcours.professionalJourney.items.5.subtitle')}
+          description={t('parcours.professionalJourney.items.5.description')}
+          bgColor="rgb(5, 150, 105)"
+        />
         <VerticalTimelineElement
           iconStyle={{ background: 'rgb(5, 150, 105)', color: '#fff' }}
           icon={<FlagIcon />}

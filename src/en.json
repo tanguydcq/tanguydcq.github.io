@@ -43,28 +43,34 @@
       "title": "Professional",
       "items": {
         "0": {
+          "date": "September 2025",
+          "title": "Business Developer",
+          "subtitle": "JECT EPITA",
+          "description": "I identify companies' needs, draft commercial proposals, and provide comprehensive follow-up on IT projects between clients and stakeholders."
+        },
+        "1": {
           "date": "September 2024 - January 2025",
           "title": "Mid-term Internship",
           "subtitle": "DiliTrust La Défense",
           "description": "Member of the ML team at DiliTrust, involved in developing intelligent agents and automating tasks related to document processing."
         },
-        "1": {
+        "2": {
           "date": "Since April 2023",
           "title": "Co-founder Sterenova",
           "subtitle": "Paris",
           "description": "Founder of Sterenova:\nEvent planning and equipment rental, event organization, business management"
         },
-        "2": {
+        "3": {
           "date": "August 2022",
           "title": "Waiter/Bartender",
           "subtitle": "Marius Café Pornic"
         },
-        "3": {
+        "4": {
           "date": "March 2021",
           "title": "Warehouse Worker",
           "subtitle": "PSL France M.I.N Rungis"
         },
-        "4": {
+        "5": {
           "date": "August 2020",
           "title": "Parts Department Storekeeper",
           "subtitle": "Renault Retail Group Paris"

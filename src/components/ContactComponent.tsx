@@ -68,7 +68,7 @@ export function ContactComponent() {
       {/* Téléchargement CV */}
       <div className="flex gap-6">
         <a
-          href="/images/cv/CV_2025-09-27_Tanguy_DUCROCQ.pdf"
+          href="/images/cv/CV_2025-10-15_Tanguy_DUCROCQ.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-2 bg-emerald-600 hover:bg-emerald-900 text-white px-6 py-3 rounded-full shadow-lg transition"
