@@ -1,23 +1,24 @@
 import HomeLayout from "../layout/HomeLayout";
-import { AboutComponent } from "../components/AboutComponent"; 
-import { ParcoursComponent } from "../components/ParcoursComponent";
-import { ProjectsSection } from "../components/ProjectComponent";
-import SterenovaComponent from "../components/SterenovaComponent";
-import { SportComponent } from "../components/SportComponent";
-import { MusicComponent } from "../components/MusicComponent";
-import { ContactComponent } from "../components/ContactComponent"
-
+import { HeroSection } from "../components/modern/HeroSection";
+import { AboutSection } from "../components/modern/AboutSection";
+import { SkillsSection } from "../components/modern/SkillsSection";
+import { ProjectGrid } from "../components/modern/ProjectGrid";
+import { ContactSection } from "../components/modern/ContactSection";
+import { SterenovaSection } from "../components/modern/SterenovaSection";
+import { SportSection } from "../components/modern/SportSection";
 
 export default function LandingPage() {
   return (
     <HomeLayout>
-      <AboutComponent />
-      <ParcoursComponent />
-      <ProjectsSection />
-      <SterenovaComponent />
-      <SportComponent />
-      <MusicComponent />
-      <ContactComponent />
+      <div id="hero">
+        <HeroSection />
+      </div>
+      <AboutSection />
+      <SkillsSection />
+      <ProjectGrid />
+      <SterenovaSection />
+      <SportSection />
+      <ContactSection />
     </HomeLayout>
   )
 }

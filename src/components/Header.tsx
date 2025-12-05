@@ -1,21 +1,26 @@
-import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import "../i18n";
 import { LanguageSwitcher } from "./utils/LanguageSwitcher";
+import { Button } from "./ui/button";
+import { cn } from "@/lib/utils";
 
+import { useTranslation } from "react-i18next";
 
 export function Header() {
   const { t } = useTranslation();
   const [menuOpen, setMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState("presentation");
+  const [activeSection, setActiveSection] = useState("hero");
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["presentation", "parcours", "projects", "sterenova", "sports", "music", "contact"];
-      let current = "presentation";
+      setScrolled(window.scrollY > 50);
 
-      const scrollPosition = window.scrollY + 200; // Offset for header height
+      const sections = ["hero", "about", "skills", "projects", "sterenova", "sports", "contact"];
+      let current = "hero";
+
+      const scrollPosition = window.scrollY + 100;
 
       sections.forEach((id) => {
         const el = document.getElementById(id);
@@ -28,9 +33,6 @@ export function Header() {
         }
       });
 
-      if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 2) {
-        current = sections[sections.length - 1];
-      }
       setActiveSection(current);
     };
 
@@ -39,85 +41,97 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-
+  /* eslint-disable react-hooks/exhaustive-deps */
   const navLinks = [
-    { id: "presentation", label: t("header.presentation") },
-    { id: "parcours", label: t("header.parcours") },
+    { id: "hero", label: t("header.presentation") },
+    { id: "about", label: t("header.parcours") },
+    { id: "skills", label: t("header.skills") },
     { id: "projects", label: t("header.projects") },
-    { id: "sterenova", label: "Sterenova" },
-    { id: "sports", label: "Sports" },
-    { id: "music", label: t("music.title") },
-    { id: "contact", label: t("contact.title") }
+    { id: "sterenova", label: t("header.sterenova") },
+    { id: "sports", label: t("header.sports") },
+    { id: "contact", label: t("header.contact") }
   ];
 
-  // Scroll to section by id
   function scrollToId(id: string) {
     const el = document.getElementById(id);
     if (el) {
+      const headerOffset = 80;
+      const elementPosition = el.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
       window.scrollTo({
-        top: el.offsetTop - 100,
+        top: offsetPosition,
         behavior: "smooth",
       });
       setMenuOpen(false);
+    } else {
+      // Fallback for top
+      if (id === 'hero') window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   }
 
   return (
-    <header className="fixed top-0 left-0 w-full bg-gray-900 bg-opacity-60 backdrop-blur-md z-50 border-b border-gray-700">
-      <div className="mx-4 p-4 flex justify-between items-center">
-        {/* Profile */}
-        <div className="flex items-center space-x-4">
-          <a href="/">
-            <img
-              src={`${import.meta.env.BASE_URL}images/identite.jpg`}
-              alt="Identité"
-              className="w-12 h-12 sm:w-16 sm:h-16 rounded-full object-cover aspect-square cursor-pointer"
-            />
-          </a>
-          <h1 className="text-lg sm:text-2xl font-bold text-emerald-600">Tanguy Ducrocq</h1>
+    <header
+      className={cn(
+        "fixed top-0 left-0 w-full z-50 transition-all duration-300 border-b border-transparent",
+        scrolled ? "bg-background/80 backdrop-blur-md border-border py-2" : "bg-transparent py-4"
+      )}
+    >
+      <div className="container px-4 mx-auto flex justify-between items-center">
+        {/* Logo */}
+        <div className="flex items-center gap-2 cursor-pointer" onClick={() => scrollToId('hero')}>
+          <span className="text-xl font-bold tracking-tight">TD.</span>
         </div>
 
         {/* Desktop Nav */}
-        <nav className="hidden sm:flex space-x-6">
+        <nav className="hidden md:flex items-center space-x-1">
           {navLinks.map(({ id, label }) => (
-            <button
+            <Button
               key={id}
+              variant="ghost"
+              size="sm"
               onClick={() => scrollToId(id)}
-              className={`relative text-white hover:text-white transition ${activeSection === id ? "text-emerald-600 font-semibold" : ""
-                }`}
+              className={cn(
+                "rounded-full text-muted-foreground hover:text-foreground relative",
+                activeSection === id && "text-foreground font-medium"
+              )}
             >
               {label}
               {activeSection === id && (
-                <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-emerald-600 rounded"></span>
+                <span className="absolute inset-0 bg-secondary/50 rounded-full -z-10" />
               )}
-            </button>
+            </Button>
           ))}
+          <div className="ml-4 pl-4 border-l border-border">
+            <LanguageSwitcher />
+          </div>
         </nav>
 
-        {/* Langues + Mobile Toggle */}
-        <div className="flex items-center gap-2">
-          <LanguageSwitcher className="hidden sm:flex" />
-          <button onClick={() => setMenuOpen(!menuOpen)} className="sm:hidden text-white">
-            {menuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+        {/* Mobile Toggle */}
+        <div className="flex items-center gap-2 md:hidden">
+          <LanguageSwitcher />
+          <Button variant="ghost" size="icon" onClick={() => setMenuOpen(!menuOpen)}>
+            {menuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          </Button>
         </div>
       </div>
 
       {/* Mobile Nav */}
       {menuOpen && (
-        <nav className="sm:hidden flex flex-col bg-gray-900 bg-opacity-90 backdrop-blur-md px-4 pb-4 space-y-2">
-          {navLinks.map(({ id, label }) => (
-            <button
-              key={id}
-              onClick={() => scrollToId(id)}
-              className={`text-left hover:text-emerald-600 transition ${activeSection === id ? "font-semibold" : ""
-                }`}
-            >
-              {label}
-            </button>
-          ))}
-          <LanguageSwitcher className="mt-2" />
-        </nav>
+        <div className="md:hidden absolute top-full left-0 w-full bg-background border-b border-border p-4 shadow-lg animate-in slide-in-from-top-5">
+          <nav className="flex flex-col space-y-2">
+            {navLinks.map(({ id, label }) => (
+              <Button
+                key={id}
+                variant={activeSection === id ? "secondary" : "ghost"}
+                className="justify-start w-full"
+                onClick={() => scrollToId(id)}
+              >
+                {label}
+              </Button>
+            ))}
+          </nav>
+        </div>
       )}
     </header>
   );

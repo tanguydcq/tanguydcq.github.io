@@ -26,7 +26,7 @@ export function AboutComponent() {
         </div>
         <div className="flex items-center gap-2">
           <Linkedin size={18} />
-          <a href="https://www.linkedin.com/in/tanguy-ducrocq-4b580728a/" target="_blank" className="hover:text-white transition-colors">
+          <a href="https://www.linkedin.com/in/tanguy-ducrocq/" target="_blank" className="hover:text-white transition-colors">
             LinkedIn
           </a>
         </div>

@@ -3,12 +3,33 @@
     "presentation": "Home",
     "parcours": "Journey",
     "projects": "Projects",
+    "skills": "Skills",
     "contact": "Contact Me",
     "backhome": "Back to Home",
     "persoProjects": "Professional Projects Completed",
     "courseProjects": "University Projects Completed",
     "link": "Report",
-    "seeMore": "See More"
+    "seeMore": "See More",
+    "sterenova": "Sterenova",
+    "sports": "Sport"
+  },
+  "skills": {
+    "title": "Technical Skills",
+    "description": "A comprehensive overview of my technical expertise and tools I work with.",
+    "categories": {
+        "data": "Data Science & AI",
+        "software": "Software & Web Engineering",
+        "devops": "DevOps & Cloud",
+        "softSkills": "Management & Soft Skills",
+        "languages": "Languages"
+    }
+  },
+  "hero": {
+    "status": "Available for new opportunities",
+    "subtitle": "Student engineer specialized in Data Science and Artificial Intelligence.",
+    "ctaProject": "View My Work",
+    "ctaContact": "Contact Me",
+    "scroll": "Scroll"
   },
   "about": {
     "title": "Home",
@@ -43,35 +64,35 @@
       "title": "Professional",
       "items": {
         "0": {
-          "date": "September 2025",
+          "date": "Sept 2025",
           "title": "Business Developer",
           "subtitle": "JECT EPITA",
           "description": "I identify companies' needs, draft commercial proposals, and provide comprehensive follow-up on IT projects between clients and stakeholders."
         },
         "1": {
-          "date": "September 2024 - January 2025",
+          "date": "Sept 2024 - Jan 2025",
           "title": "Mid-term Internship",
           "subtitle": "DiliTrust La Défense",
           "description": "Member of the ML team at DiliTrust, involved in developing intelligent agents and automating tasks related to document processing."
         },
         "2": {
-          "date": "Since April 2023",
+          "date": "Since Apr 2023",
           "title": "Co-founder Sterenova",
           "subtitle": "Paris",
           "description": "Founder of Sterenova:\nEvent planning and equipment rental, event organization, business management"
         },
         "3": {
-          "date": "August 2022",
+          "date": "Aug 2022",
           "title": "Waiter/Bartender",
           "subtitle": "Marius Café Pornic"
         },
         "4": {
-          "date": "March 2021",
+          "date": "Mar 2021",
           "title": "Warehouse Worker",
           "subtitle": "PSL France M.I.N Rungis"
         },
         "5": {
-          "date": "August 2020",
+          "date": "Aug 2020",
           "title": "Parts Department Storekeeper",
           "subtitle": "Renault Retail Group Paris"
         }
@@ -79,6 +100,9 @@
     }
   },
   "projects": {
+    "personalDescription": "My personal projects exploring new technologies.",
+    "academicDescription": "Academic work and research projects.",
+    "viewProject": "View Project",
     "sterenovaSite": {
       "title": "Sterenova Website",
       "description": "Website development for Sterenova",
@@ -174,7 +198,10 @@
     "dj": "I DJ at parties, weddings, and events, which allows me to stay close to music and share moments with the audience. I enjoy mixing different styles to create something new from what already exists."
   },
   "contact": {
-    "title": "Contact me",
-    "description": "Feel free to contact me or download my resume."
+    "title": "Contact Me",
+    "cta": "Let's Work Together",
+    "text": "Currently a student passionate about Artificial Intelligence and Data Science, I am always looking to deepen my knowledge and take on new challenges.\nWhether you have an innovative technical project or just want to discuss these topics, feel free to reach out!",
+    "emailBtn": "Send me an email",
+    "cvBtn": "See my resume"
   }
 }

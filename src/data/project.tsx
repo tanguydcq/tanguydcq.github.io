@@ -1,3 +1,5 @@
+import { FileText, Bot, Globe, Video, Image, AlertTriangle, BarChart3, Music, Car } from "lucide-react";
+
 export interface Project {
   slug: string;
   image: string;
@@ -6,6 +8,7 @@ export interface Project {
   link?: string;
   translationKey: string;
   readonly reportUrl?: string;
+  icon: React.ElementType;
 }
 
 function slugify(str: string) {
@@ -28,7 +31,8 @@ export const projects: Project[] = [
       "ChatGPT API",
       "Legal Tech"
     ],
-    translationKey: "projects.classificationContrats"
+    translationKey: "projects.classificationContrats",
+    icon: FileText
   },
   {
     slug: slugify("Agent IA ChatGPT"),
@@ -42,7 +46,8 @@ export const projects: Project[] = [
       "Automation"
     ],
     translationKey: "projects.agentIA",
-    link: `${import.meta.env.BASE_URL}images/reports/agentia_doc.pdf`
+    link: `${import.meta.env.BASE_URL}images/reports/agentia_doc.pdf`,
+    icon: Bot
   },
   {
     slug: slugify("Site Sterenova"),
@@ -54,20 +59,9 @@ export const projects: Project[] = [
       "shadcn/ui",
       "Web Development"
     ],
-    translationKey: "projects.sterenovaSite"
+    translationKey: "projects.sterenovaSite",
+    icon: Globe
   },
-  // {
-  //   slug: slugify("Mon Portfolio"),
-  //   image: `${import.meta.env.BASE_URL}images/project/portfolio.webp`,
-  //   tags: [
-  //     "React",
-  //     "TypeScript",
-  //     "Vite",
-  //     "shadcn/ui",
-  //     "Web Development"
-  //   ],
-  //   translationKey: "projects.portfolio"
-  // }
 ];
 
 export const courseProjects: Project[] = [
@@ -82,7 +76,8 @@ export const courseProjects: Project[] = [
       "Sports Analytics",
       "SoccerNet"
     ],
-    translationKey: "courseProjects.pfee"
+    translationKey: "courseProjects.pfee",
+    icon: Video
   },
   {
     slug: slugify("Classification d'images"),
@@ -96,7 +91,8 @@ export const courseProjects: Project[] = [
       "Computer Vision"
     ],
     translationKey: "courseProjects.imageClassification",
-    link: `${import.meta.env.BASE_URL}images/reports/CNN_report.pdf`
+    link: `${import.meta.env.BASE_URL}images/reports/CNN_report.pdf`,
+    icon: Image
   },
   {
     slug: slugify("Detection d'anomalies"),
@@ -109,7 +105,8 @@ export const courseProjects: Project[] = [
       "Visualization"
     ],
     translationKey: "courseProjects.anomalyDetection",
-    link: `${import.meta.env.BASE_URL}images/reports/anomaly_detection_report.pdf`
+    link: `${import.meta.env.BASE_URL}images/reports/anomaly_detection_report.pdf`,
+    icon: AlertTriangle
   },
   {
     slug: slugify("Exploration de données"),
@@ -123,7 +120,8 @@ export const courseProjects: Project[] = [
       "Exploratory Data Analysis (EDA)"
     ],
     translationKey: "courseProjects.dataExploration",
-    link: `${import.meta.env.BASE_URL}images/reports/dataviz_volley.pdf`
+    link: `${import.meta.env.BASE_URL}images/reports/dataviz_volley.pdf`,
+    icon: BarChart3
   },
   {
     slug: slugify("Generateur de musique"),
@@ -136,7 +134,8 @@ export const courseProjects: Project[] = [
       "Deep Learning",
       "Creative AI"
     ],
-    translationKey: "courseProjects.musicGenerator"
+    translationKey: "courseProjects.musicGenerator",
+    icon: Music
   },
   {
     slug: slugify("Analyse et prédiction des accidents de la route"),
@@ -150,6 +149,7 @@ export const courseProjects: Project[] = [
       "Road Safety"
     ],
     translationKey: "courseProjects.dataScience",
-    link: `${import.meta.env.BASE_URL}images/reports/accident_report.pdf`
+    link: `${import.meta.env.BASE_URL}images/reports/accident_report.pdf`,
+    icon: Car
   }
 ];

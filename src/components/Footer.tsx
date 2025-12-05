@@ -1,8 +1,8 @@
 export function Footer() {
   return (
-    <footer className="m-4 bg-gray-800 text-gray-400 text-sm text-center py-4 rounded-2xl">
-      <div className="text-gray-400">
-        © {new Date().getFullYear()} - Tanguy Ducrocq - Tous droits réservés
+    <footer className="py-6 mt-8 text-sm text-center border-t bg-background/50 backdrop-blur-sm border-border text-muted-foreground">
+      <div className="container mx-auto">
+        © {new Date().getFullYear()} - Tanguy Ducrocq - All rights reserved
       </div>
     </footer>
   );

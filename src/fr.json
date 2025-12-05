@@ -3,12 +3,33 @@
     "presentation": "Accueil",
     "parcours": "Parcours",
     "projects": "Projets",
+    "skills": "Compétences",
     "contact": "Me contacter",
     "backhome": "Retour à l'accueil",
     "persoProjects": "Projets professionels réalisés",
     "courseProjects": "Projets universitaires réalisés",
     "link": "Rapport",
-    "seeMore": "Voir plus"
+    "seeMore": "Voir plus",
+    "sterenova": "Sterenova",
+    "sports": "Sport"
+  },
+  "skills": {
+    "title": "Compétences Techniques",
+    "description": "Un aperçu complet de mon expertise technique et des outils avec lesquels je travaille.",
+    "categories": {
+        "data": "Data Science & Intelligence Artificielle",
+        "software": "Ingénierie Logicielle & Web",
+        "devops": "DevOps & Cloud",
+        "softSkills": "Management & Soft Skills",
+        "languages": "Langues"
+    }
+  },
+  "hero": {
+    "status": "Disponible pour de nouvelles opportunités",
+    "subtitle": "Ingénieur étudiant spécialisé en Data Science et Intelligence Artificielle",
+    "ctaProject": "Voir mes projets",
+    "ctaContact": "Me contacter",
+    "scroll": "Défiler"
   },
   "about": {
     "title": "Acceuil",
@@ -43,13 +64,13 @@
       "title": "Professionnel",
       "items": {
         "0": {
-          "date": "Septembre 2025",
+          "date": "Sept 2025",
           "title": "Développeur commercial IT",
           "subtitle": "JECT EPITA",
           "description": "J'identifie les besoins des entreprises, rédige des propositions commerciales et assure un suivi complet des projets IT entre les clients et les parties prenantes."
         },
         "1": {
-          "date": "Septembre 2024 - janvier 2025",
+          "date": "Sept 2024 - jan 2025",
           "title": "Stage mi- étude",
           "subtitle": "DiliTrust La Défense",
           "description": "Membre de l’équipe ML chez DiliTrust, impliqué dans le développement d’agents intelligents et l’automatisation de tâches liées au traitement de documents."
@@ -79,6 +100,9 @@
     }
   },
   "projects": {
+    "personalDescription": "Mes projets personnels explorant de nouvelles technologies.",
+    "academicDescription": "Travaux académiques et projets de recherche.",
+    "viewProject": "Voir le projet",
     "sterenovaSite": {
       "title": "Site Internet Sterenova",
       "description": "Développement du site web pour Sterenova",
@@ -175,6 +199,9 @@
   },
   "contact": {
     "title": "Me contacter",
-    "description": "N’hésitez pas à me contacter ou à télécharger mon CV."
+    "cta": "Travaillons ensemble",
+    "text": "Actuellement étudiant et passionné d'Intelligence Artificielle et de Data Science, je cherche toujours à approfondir mes connaissances et relever de nouveaux défis.\nQue vous ayez un projet technique innovant ou simplement envie d'échanger sur ces sujets, n'hésitez pas à me contacter !",
+    "emailBtn": "M'envoyer un email",
+    "cvBtn": "Voir mon CV"
   }
 }

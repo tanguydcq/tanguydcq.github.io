@@ -4,10 +4,10 @@ import ScrollProgressBar from "../components/ProgressBar";
 
 export default function HomeLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="bg-gray-900 min-h-screen text-gray-100 flex flex-col">
+    <div className="flex flex-col min-h-screen bg-background text-foreground">
       <ScrollProgressBar />
       <Header />
-      <main className="flex-1 w-full px-4 sm:px-8 lg:px-24 py-8">{children}</main>
+      <main className="flex-1 w-full">{children}</main>
       <Footer />
     </div>
   );

@@ -12,11 +12,10 @@ export function LanguageSwitcher({ className }: { className?: string }) {
         <button
           key={lang.code}
           onClick={() => i18n.changeLanguage(lang.code)}
-          className={`flex items-center gap-1 px-2 py-1 border rounded transition ${
-            i18n.language.startsWith(lang.code)
-              ? "bg-emerald-600 text-white border-emerald-600"
-              : "border-emerald-600 hover:bg-emerald-600 hover:text-white"
-          }`}
+          className={`flex items-center gap-1 px-2 py-1 border rounded transition ${i18n.language.startsWith(lang.code)
+              ? "bg-primary text-primary-foreground border-primary"
+              : "border-primary hover:bg-primary hover:text-primary-foreground"
+            }`}
         >
           <img
             src={`${import.meta.env.BASE_URL}images/${lang.flag}`}

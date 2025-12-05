@@ -46,7 +46,7 @@ export function ContactComponent() {
         </motion.a>
 
         <motion.a
-          href="https://www.linkedin.com/in/tanguy-ducrocq-4b580728a/"
+          href="https://www.linkedin.com/in/tanguy-ducrocq/"
           target="_blank"
           rel="noopener noreferrer"
           whileHover={{ scale: 1.05 }}
