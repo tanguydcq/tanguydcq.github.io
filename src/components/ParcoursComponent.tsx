@@ -1,10 +1,9 @@
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-import WorkIcon from '@mui/icons-material/Work';
-import SchoolIcon from '@mui/icons-material/School';
+import { Briefcase, GraduationCap, Flag } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
 import React from 'react';
-import FlagIcon from '@mui/icons-material/Flag';
+
 import { useTranslation } from "react-i18next";
 import "../i18n";
 
@@ -57,7 +56,7 @@ function ParcoursAcademiqueSection() {
       <VerticalTimeline>
         <TimelineItem
           date={t('parcours.academicJourney.items.0.date')}
-          icon={<SchoolIcon sx={{ fontSize: 40, width: '100%', height: '100%' }} />}
+          icon={<GraduationCap size={40} />}
           title={t('parcours.academicJourney.items.0.title')}
           subtitle={t('parcours.academicJourney.items.0.subtitle')}
           description={t('parcours.academicJourney.items.0.description')}
@@ -65,7 +64,7 @@ function ParcoursAcademiqueSection() {
         />
         <TimelineItem
           date={t('parcours.academicJourney.items.1.date')}
-          icon={<SchoolIcon sx={{ fontSize: 40, width: '100%', height: '100%' }} />}
+          icon={<GraduationCap size={40} />}
           title={t('parcours.academicJourney.items.1.title')}
           subtitle={t('parcours.academicJourney.items.1.subtitle')}
           description={t('parcours.academicJourney.items.1.description')}
@@ -73,7 +72,7 @@ function ParcoursAcademiqueSection() {
         />
         <TimelineItem
           date={t('parcours.academicJourney.items.2.date')}
-          icon={<SchoolIcon sx={{ fontSize: 40, width: '100%', height: '100%' }} />}
+          icon={<GraduationCap size={40} />}
           title={t('parcours.academicJourney.items.2.title')}
           subtitle={t('parcours.academicJourney.items.2.subtitle')}
           description={t('parcours.academicJourney.items.2.description')}
@@ -81,7 +80,7 @@ function ParcoursAcademiqueSection() {
         />
         <VerticalTimelineElement
           iconStyle={{ background: 'rgb(5, 150, 105)', color: '#fff' }}
-          icon={<FlagIcon />}
+          icon={<Flag />}
         />
       </VerticalTimeline>
     </section>
@@ -96,7 +95,7 @@ function ParcoursProSection() {
       <VerticalTimeline>
         <TimelineItem
           date={t('parcours.professionalJourney.items.0.date')}
-          icon={<SchoolIcon />}
+          icon={<GraduationCap />}
           title={t('parcours.professionalJourney.items.0.title')}
           subtitle={t('parcours.professionalJourney.items.0.subtitle')}
           description={t('parcours.professionalJourney.items.0.description')}
@@ -104,7 +103,7 @@ function ParcoursProSection() {
         />
         <TimelineItem
           date={t('parcours.professionalJourney.items.1.date')}
-          icon={<WorkIcon />}
+          icon={<Briefcase />}
           title={t('parcours.professionalJourney.items.1.title')}
           subtitle={t('parcours.professionalJourney.items.1.subtitle')}
           description={t('parcours.professionalJourney.items.1.description')}
@@ -112,28 +111,28 @@ function ParcoursProSection() {
         />
         <TimelineItem
           date={t('parcours.professionalJourney.items.2.date')}
-          icon={<WorkIcon />}
+          icon={<Briefcase />}
           title={t('parcours.professionalJourney.items.2.title')}
           subtitle={t('parcours.professionalJourney.items.2.subtitle')}
           bgColor="rgb(5, 150, 105)"
         />
         <TimelineItem
           date={t('parcours.professionalJourney.items.3.date')}
-          icon={<WorkIcon />}
+          icon={<Briefcase />}
           title={t('parcours.professionalJourney.items.3.title')}
           subtitle={t('parcours.professionalJourney.items.3.subtitle')}
           bgColor="rgb(5, 150, 105)"
         />
         <TimelineItem
           date={t('parcours.professionalJourney.items.4.date')}
-          icon={<WorkIcon />}
+          icon={<Briefcase />}
           title={t('parcours.professionalJourney.items.4.title')}
           subtitle={t('parcours.professionalJourney.items.4.subtitle')}
           bgColor="rgb(5, 150, 105)"
         />
         <TimelineItem
           date={t('parcours.professionalJourney.items.5.date')}
-          icon={<WorkIcon />}
+          icon={<Briefcase />}
           title={t('parcours.professionalJourney.items.5.title')}
           subtitle={t('parcours.professionalJourney.items.5.subtitle')}
           description={t('parcours.professionalJourney.items.5.description')}
@@ -141,7 +140,7 @@ function ParcoursProSection() {
         />
         <VerticalTimelineElement
           iconStyle={{ background: 'rgb(5, 150, 105)', color: '#fff' }}
-          icon={<FlagIcon />}
+          icon={<Flag />}
         />
       </VerticalTimeline>
     </section>

@@ -1,0 +1,30 @@
+name: Build and Deploy to tanguydcq.github.io
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install and Build
+        run: |
+          npm ci
+          npm run build
+
+      - name: Deploy to external repository
+        uses: cpina/github-action-push-to-another-repository@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        with:
+          source-directory: 'dist'
+          destination-github-username: 'tanguydcq'
+          destination-repository-name: 'tanguydcq.github.io'
+          user-email: tanguyducrocq92@gmail.com
+          target-branch: main
+          target-directory: ''   # Puts content directly in root of target repo

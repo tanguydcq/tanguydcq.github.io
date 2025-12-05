@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import React, { useRef } from "react";
 import { Play } from "lucide-react";
 import { Link } from "react-router-dom";
-import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+import { ExternalLink } from "lucide-react";
 
 
 export default function SterenovaComponent() {
@@ -87,7 +87,7 @@ export default function SterenovaComponent() {
             {/* Bouton */}
             <Link to={`https://sterenova.fr/`} target="_blank" rel="noopener noreferrer">
                 <Button className="bg-white border border-emerald-900 text-emerald-900 hover:scale-110 hover:bg-white mt-10">
-                    <OpenInNewIcon className="text-emerald-900" />
+                    <ExternalLink className="text-emerald-900 mr-2 w-5 h-5" />
                     {t('sterenova.button')}
                 </Button>
             </Link>
