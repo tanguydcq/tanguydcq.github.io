@@ -37,28 +37,28 @@ jobs:
 
       - name: Deploy to main
         run: |
-          # Configure git
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           
-          # Fetch and checkout main branch, or create it if it doesn't exist
+          # 1. Backup build artifacts to a temporary location outside the workspace
+          # This ensures they are safe when we wipe the workspace
+          mkdir -p /tmp/portfolio-build
+          cp -r dist/* /tmp/portfolio-build/
+          
+          # 2. Fetch and checkout main
           git fetch origin main:main || git checkout --orphan main
           git checkout main
           
-          # Clean the workspace to prepare for new artifacts
-          # Remove all tracked files
+          # 3. Completely wipe the workspace
+          # 'git rm -rf .' removes all files tracked by git in main
           git rm -rf . || true
-          # Clean untracked files, excluding 'dist' which holds our build
-          git clean -fdx -e dist
+          # 'git clean -fdx' removes ALL untracked files (node_modules, dist, etc.)
+          git clean -fdx
           
-          # Move build artifacts from dist to root
-          # We use rsync or cp. cp -r dist/* . is standard.
-          # First, ensure we don't have a dist folder in the final commit if possible, 
-          # but we need to move contents OUT of dist.
-          cp -r dist/* .
-          rm -rf dist
+          # 4. Restore the build artifacts from temporary location
+          cp -r /tmp/portfolio-build/* .
           
-          # Commit and Push
+          # 5. Commit and push
           git add .
           git commit -m "Deploy from source@${{ github.sha }}" || echo "No changes to commit"
           git push origin main
