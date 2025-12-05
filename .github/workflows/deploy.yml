@@ -5,63 +5,60 @@ on:
     branches:
       - source
 
+permissions:
+  contents: write
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    
-    permissions:
-      contents: write
     
     steps:
       - name: Checkout source
         uses: actions/checkout@v4
         with:
           ref: source
-      
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: 'npm'
-      
+
       - name: Install dependencies
         run: npm ci
-      
+
       - name: Build
         run: |
           npm run build
+          # Create .nojekyll to prevent GitHub Pages from ignoring files starting with _
           touch dist/.nojekyll
+          # Copy index.html to 404.html for client-side routing support
           cp dist/index.html dist/404.html
-      
+
       - name: Deploy to main
         run: |
+          # Configure git
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           
-          # Checkout main branch
+          # Fetch and checkout main branch, or create it if it doesn't exist
           git fetch origin main:main || git checkout --orphan main
           git checkout main
           
-          # Debug: list dist content
-          echo "Listing dist content:"
-          ls -R dist
-          
-          # Clean workspace (remove untracked files like node_modules)
-          # We preserve 'dist' because it contains our build artifacts
+          # Clean the workspace to prepare for new artifacts
+          # Remove all tracked files
+          git rm -rf . || true
+          # Clean untracked files, excluding 'dist' which holds our build
           git clean -fdx -e dist
           
-          # Remove all tracked files in main
-          git rm -rf . || true
-          
-          # Copy build files
+          # Move build artifacts from dist to root
+          # We use rsync or cp. cp -r dist/* . is standard.
+          # First, ensure we don't have a dist folder in the final commit if possible, 
+          # but we need to move contents OUT of dist.
           cp -r dist/* .
-          
-          # Remove dist folder to avoid confusion
           rm -rf dist
           
-          # Add and commit
+          # Commit and Push
           git add .
           git commit -m "Deploy from source@${{ github.sha }}" || echo "No changes to commit"
-          
-          # Push to main
           git push origin main
