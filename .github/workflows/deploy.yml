@@ -42,11 +42,22 @@ jobs:
           git fetch origin main:main || git checkout --orphan main
           git checkout main
           
-          # Remove all files except .git
+          # Debug: list dist content
+          echo "Listing dist content:"
+          ls -R dist
+          
+          # Clean workspace (remove untracked files like node_modules)
+          # We preserve 'dist' because it contains our build artifacts
+          git clean -fdx -e dist
+          
+          # Remove all tracked files in main
           git rm -rf . || true
           
           # Copy build files
           cp -r dist/* .
+          
+          # Remove dist folder to avoid confusion
+          rm -rf dist
           
           # Add and commit
           git add .
