@@ -13,7 +13,7 @@ export function SkillsSection() {
             skills: [
                 "Machine Learning", "Deep Learning", "LLM", "Generative AI",
                 "Computer Vision", "NLP", "MLOps", "Recommender Systems",
-                "TensorFlow", "PyTorch", "Scikit-learn", "Pandas"
+                "PyTorch", "Scikit-learn", "Pandas"
             ]
         },
         {
@@ -27,7 +27,7 @@ export function SkillsSection() {
         {
             title: t("skills.categories.devops"),
             icon: Server,
-            skills: ["Git", "Docker", "Linux", "CI/CD", "Azure", "VS Code"]
+            skills: ["Git", "Docker", "Linux", "CI/CD", "VS Code"]
         },
         {
             title: t("skills.categories.softSkills"),
