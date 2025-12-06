@@ -9,14 +9,14 @@ export function SterenovaSection() {
     const { t } = useTranslation();
 
     const gallery = [
-        { type: "image", src: "/images/sterenova/adam_tanguy.jpeg", alt: "Adam/Tanguy" },
-        { type: "video", src: "/images/sterenova/soiree_paul.mp4", alt: "Visuel en soiree" },
-        { type: "image", src: "/images/sterenova/tanguy.jpg", alt: "Montage solo" },
-        { type: "video", src: "/images/sterenova/montage_pont.mp4", alt: "Montage du pont" },
         { type: "image", src: "/images/sterenova/tanguy_bis.jpeg", alt: "Montage solo bis" },
-        { type: "image", src: "/images/sterenova/thomas_tanguy.jpeg", alt: "Thomas/Tanguy" },
-        { type: "video", src: "/images/sterenova/bal_promo.mp4", alt: "Bal de promo" },
-        { type: "image", src: "/images/sterenova/stuff.jpg", alt: "Stuff" }
+        { type: "image", src: "/images/sterenova/adam_tanguy.jpeg", alt: "Adam/Tanguy" },
+        { type: "video", src: "/images/sterenova/montage_pont.mp4", alt: "Montage du pont" },
+        { type: "image", src: "/images/sterenova/tanguy.jpg", alt: "Montage solo" },
+        // { type: "video", src: "/images/sterenova/soiree_paul.mp4", alt: "Visuel en soiree" },
+        // { type: "image", src: "/images/sterenova/thomas_tanguy.jpeg", alt: "Thomas/Tanguy" },
+        // { type: "video", src: "/images/sterenova/bal_promo.mp4", alt: "Bal de promo" },
+        // { type: "image", src: "/images/sterenova/stuff.jpg", alt: "Stuff" }
     ];
 
     return (
