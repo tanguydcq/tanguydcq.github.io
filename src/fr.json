@@ -65,7 +65,7 @@
       "items": {
         "0": {
           "date": "Sept 2025",
-          "title": "Développeur commercial IT",
+          "title": "Développement commercial IT",
           "subtitle": "JECT EPITA",
           "description": "J'identifie les besoins des entreprises, rédige des propositions commerciales et assure un suivi complet des projets IT entre les clients et les parties prenantes."
         },
@@ -122,6 +122,11 @@
       "title": "Mon Portfolio",
       "description": "Site web personnel pour présenter mes projets et compétences",
       "longDescription": "Ce site web portfolio sert de vitrine pour mes projets et compétences, mettant en avant mon travail et mes réalisations dans le domaine."
+    },
+    "blacksholes" : {
+      "title": "Modélisation d’Actifs et Simulation Black-Scholes",
+      "description": "Implémentation complète du modèle de Black-Scholes appliquée aux données réelles de marché afin d’évaluer sa précision à court et long terme.",
+      "longDescription": "Ce projet explore la dynamique des prix d’actifs financiers en mettant en œuvre le modèle de Black-Scholes-Merton depuis sa base mathématique jusqu’à sa simulation numérique. Le travail inclut la dérivation analytique via le calcul stochastique, l’estimation des paramètres à partir de données historiques (drift et volatilité) grâce à une fenêtre glissante, puis la réalisation de simulations Monte Carlo. L’étude est appliquée aux données de NVIDIA afin d’évaluer la capacité du modèle à suivre le marché à court terme et ses limites pour les projections longues en raison de la volatilité non constante et des changements de régimes de marché."
     }
   },
   "courseProjects": {

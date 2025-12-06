@@ -122,6 +122,11 @@
       "title": "My Portfolio",
       "description": "Personal website to showcase my projects and skills",
       "longDescription": "This portfolio website serves as a showcase for my projects and skills, highlighting my work and achievements in the field."
+    },
+    "blacksholes": {
+      "title": "Asset Price Modeling and Black-Scholes Simulation",
+      "description": "Full implementation of the Black-Scholes model applied to real market data to assess short- and long-term forecasting accuracy.",
+      "longDescription": "This project investigates financial asset dynamics by implementing the Black-Scholes-Merton model from mathematical foundations to numerical simulation. It covers the analytical derivation using stochastic calculus, parameter estimation from historical data (drift and volatility) through a rolling-window method, and Monte Carlo forecasting. The approach is applied to NVIDIA stock data to examine how well the model tracks short-term price movements and to highlight its limitations for long-term forecasting due to non-constant volatility and shifting market regimes."
     }
   },
   "courseProjects": {

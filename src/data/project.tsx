@@ -1,4 +1,4 @@
-import { FileText, Bot, Globe, Video, Image, AlertTriangle, BarChart3, Music, Car } from "lucide-react";
+import { FileText, Bot, Globe, Video, Image, AlertTriangle, BarChart3, Music, Car, ChartCandlestick } from "lucide-react";
 
 export interface Project {
   slug: string;
@@ -20,6 +20,21 @@ function slugify(str: string) {
 }
 
 export const projects: Project[] = [
+  {
+    slug: slugify("Black-Scholes"),
+    image: `${import.meta.env.BASE_URL}images/project/blacksholes.png`,
+    tags: [
+      "Python",
+      "Black-Scholes",
+      "Monte Carlo",
+      "Machine Learning",
+      "Data Analysis",
+      "Data Visualization"
+    ],
+    translationKey: "projects.blacksholes",
+    link: `${import.meta.env.BASE_URL}images/reports/Black_Scholes_v2.pdf`,
+    icon: ChartCandlestick
+  },
   {
     slug: slugify("Classification de Contrats"),
     image: `${import.meta.env.BASE_URL}images/project/classification_doc.png`,
