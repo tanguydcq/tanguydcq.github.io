@@ -127,6 +127,11 @@
       "title": "Asset Price Modeling and Black-Scholes Simulation",
       "description": "Full implementation of the Black-Scholes model applied to real market data to assess short- and long-term forecasting accuracy.",
       "longDescription": "This project investigates financial asset dynamics by implementing the Black-Scholes-Merton model from mathematical foundations to numerical simulation. It covers the analytical derivation using stochastic calculus, parameter estimation from historical data (drift and volatility) through a rolling-window method, and Monte Carlo forecasting. The approach is applied to NVIDIA stock data to examine how well the model tracks short-term price movements and to highlight its limitations for long-term forecasting due to non-constant volatility and shifting market regimes."
+    },
+    "ases" : {
+      "title": "Stanford Bootcamp ASES x HEC Hackathon",
+      "description": "Participation in an intensive hackathon bringing together students from Stanford, HEC and ASES to tackle real-world challenges through innovation and entrepreneurship.",
+      "longDescription": "This hackathon, part of the Stanford Bootcamp hosted by ASES and HEC, brought together participants from diverse backgrounds to work on concrete projects. With my international team, we focused on Equival, a solution aimed at helping investment teams identify promising companies more efficiently. Over several days, we defined the core problem, built an early version of the tool, and presented a prototype to a jury. The event mixed a startup mindset with structured teamwork, allowing us to strengthen our skills in leadership, product thinking, and fast execution while developing Equival."
     }
   },
   "courseProjects": {

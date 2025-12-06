@@ -1,4 +1,4 @@
-import { FileText, Bot, Globe, Video, Image, AlertTriangle, BarChart3, Music, Car, ChartCandlestick } from "lucide-react";
+import { FileText, Bot, Globe, Video, Image, AlertTriangle, BarChart3, Music, Car, ChartCandlestick, Presentation } from "lucide-react";
 
 export interface Project {
   slug: string;
@@ -20,6 +20,20 @@ function slugify(str: string) {
 }
 
 export const projects: Project[] = [
+  {
+    slug: slugify("ASES"),
+    image: `${import.meta.env.BASE_URL}images/project/ases.png`,
+    tags: [
+      "Pitch Deck",
+      "Hackathon",
+      "Stanford Bootcamp",
+      "ASES",
+      "HEC"
+    ],
+    translationKey: "projects.ases",
+    link: `${import.meta.env.BASE_URL}images/reports/ases.pdf`,
+    icon: Presentation
+  },
   {
     slug: slugify("Black-Scholes"),
     image: `${import.meta.env.BASE_URL}images/project/blacksholes.png`,

@@ -127,6 +127,11 @@
       "title": "Modélisation d’Actifs et Simulation Black-Scholes",
       "description": "Implémentation complète du modèle de Black-Scholes appliquée aux données réelles de marché afin d’évaluer sa précision à court et long terme.",
       "longDescription": "Ce projet explore la dynamique des prix d’actifs financiers en mettant en œuvre le modèle de Black-Scholes-Merton depuis sa base mathématique jusqu’à sa simulation numérique. Le travail inclut la dérivation analytique via le calcul stochastique, l’estimation des paramètres à partir de données historiques (drift et volatilité) grâce à une fenêtre glissante, puis la réalisation de simulations Monte Carlo. L’étude est appliquée aux données de NVIDIA afin d’évaluer la capacité du modèle à suivre le marché à court terme et ses limites pour les projections longues en raison de la volatilité non constante et des changements de régimes de marché."
+    },
+    "ases" : {
+      "title": "Hackathon Stanford Bootcamp ASES x HEC",
+      "description": "Participation à un hackathon intensif réunissant étudiants de Stanford, HEC et ASES autour de l’innovation, de l’entrepreneuriat et de la résolution de défis concrets.",
+      "longDescription": "Ce hackathon, organisé dans le cadre du Stanford Bootcamp par ASES et HEC, réunissait des participants de profils variés pour travailler sur des projets concrets. Avec mon équipe internationale, nous avons choisi de concentrer notre travail sur Equival, une solution destinée à aider les équipes d’investissement à identifier plus facilement des entreprises prometteuses. Pendant plusieurs jours, nous avons défini le problème, construit une première version de l’outil et présenté un prototype devant un jury. L’événement mêlait approche startup et travail structuré, ce qui nous a permis de renforcer nos compétences en leadership, conception produit et exécution rapide autour d’Equival."
     }
   },
   "courseProjects": {
