@@ -32,7 +32,7 @@ export function ContactSection() {
                                 </Button>
                                 <Button size="lg" variant="secondary" className="w-full sm:w-auto gap-2" asChild>
                                     <a
-                                        href={`${import.meta.env.BASE_URL}images/cv/cv_${i18n.language === 'en' ? 'en' : 'fr'}.pdf`}
+                                        href={`${import.meta.env.BASE_URL}images/cv/resume.pdf`}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
