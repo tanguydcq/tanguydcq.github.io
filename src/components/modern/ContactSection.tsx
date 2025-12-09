@@ -6,7 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { useTranslation } from "react-i18next";
 
 export function ContactSection() {
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
     return (
         <section id="contact" className="py-20">
             <div className="container px-4 mx-auto">
