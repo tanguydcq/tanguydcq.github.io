@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next"
 import { useEffect } from "react"
 import { projects, courseProjects } from "../data/project"
 import ProjectLayout from "@/layout/ProjectLayout"
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, Github } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
@@ -58,8 +58,8 @@ export default function ProjectDetail() {
             </p>
 
             {/* Link Button */}
-            {project.link && (
-              <div className="flex justify-center pt-8">
+            <div className="flex flex-wrap gap-4 justify-center pt-8">
+              {project.link && (
                 <Button size="lg" asChild className="group">
                   <a
                     href={project.link}
@@ -70,8 +70,21 @@ export default function ProjectDetail() {
                     <ExternalLink className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
                   </a>
                 </Button>
-              </div>
-            )}
+              )}
+
+              {project.repoUrl && (
+                <Button size="lg" variant="outline" asChild className="group border-primary/20 hover:border-primary/50 hover:bg-primary/5">
+                  <a
+                    href={project.repoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Github className="mr-2 w-4 h-4 transition-transform group-hover:scale-110" />
+                    Code
+                  </a>
+                </Button>
+              )}
+            </div>
           </div>
         </motion.div>
       </div>

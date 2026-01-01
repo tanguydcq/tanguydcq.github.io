@@ -1,11 +1,11 @@
-import { FileText, Bot, Globe, Video, Image, AlertTriangle, BarChart3, Music, Car, ChartCandlestick, Presentation } from "lucide-react";
+import { FileText, Bot, Globe, Video, Image, AlertTriangle, BarChart3, Music, Car, ChartCandlestick, Presentation, Truck, Sparkles } from "lucide-react";
 
 export interface Project {
   slug: string;
-  image: string;
   tags: string[];
   date?: string;
   link?: string;
+  repoUrl?: string;
   translationKey: string;
   readonly reportUrl?: string;
   icon: React.ElementType;
@@ -22,7 +22,6 @@ function slugify(str: string) {
 export const projects: Project[] = [
   {
     slug: slugify("ASES"),
-    image: `${import.meta.env.BASE_URL}images/project/ases.png`,
     tags: [
       "Pitch Deck",
       "Hackathon",
@@ -36,7 +35,6 @@ export const projects: Project[] = [
   },
   {
     slug: slugify("Black-Scholes"),
-    image: `${import.meta.env.BASE_URL}images/project/blacksholes.png`,
     tags: [
       "Python",
       "Black-Scholes",
@@ -47,11 +45,11 @@ export const projects: Project[] = [
     ],
     translationKey: "projects.blacksholes",
     link: `${import.meta.env.BASE_URL}images/reports/Black_Scholes_v2.pdf`,
-    icon: ChartCandlestick
+    icon: ChartCandlestick,
+    repoUrl: "https://github.com/tanguydcq/Black-Scholes"
   },
   {
     slug: slugify("Classification de Contrats"),
-    image: `${import.meta.env.BASE_URL}images/project/classification_doc.png`,
     tags: [
       "NLP",
       "LLM",
@@ -65,7 +63,6 @@ export const projects: Project[] = [
   },
   {
     slug: slugify("Agent IA ChatGPT"),
-    image: `${import.meta.env.BASE_URL}images/project/generateur_doc.png`,
     tags: [
       "Python",
       "LLM",
@@ -80,7 +77,6 @@ export const projects: Project[] = [
   },
   {
     slug: slugify("Site Sterenova"),
-    image: `${import.meta.env.BASE_URL}images/project/sterenova_site.png`,
     tags: [
       "React",
       "TypeScript",
@@ -95,8 +91,35 @@ export const projects: Project[] = [
 
 export const courseProjects: Project[] = [
   {
+    slug: slugify("Diffusion Model DDPM"),
+    tags: [
+      "Deep Learning",
+      "Diffusion Models",
+      "DDPM",
+      "Generative Models",
+      "PyTorch"
+    ],
+    date: "2024",
+    repoUrl: "https://github.com/tanguydcq/Diffusion",
+    translationKey: "courseProjects.diffusion",
+    icon: Sparkles
+  },
+  {
+    slug: slugify("RPC Logistics Optimization"),
+    tags: [
+      "Optimization",
+      "3D Bin Packing",
+      "Operations Research",
+      "Greedy Algorithms",
+      "Logistics",
+      "Python"
+    ],
+    repoUrl: "https://github.com/tanguydcq/RPC",
+    translationKey: "courseProjects.rpc",
+    icon: Truck
+  },
+  {
     slug: slugify("PFEE"),
-    image: `${import.meta.env.BASE_URL}images/project/pfee.jpeg`,
     tags: [
       "Computer Vision",
       "YOLOv11",
@@ -110,7 +133,6 @@ export const courseProjects: Project[] = [
   },
   {
     slug: slugify("Classification d'images"),
-    image: `${import.meta.env.BASE_URL}images/project/cnn.jpg`,
     tags: [
       "CNN",
       "Image Classification",
@@ -125,7 +147,6 @@ export const courseProjects: Project[] = [
   },
   {
     slug: slugify("Detection d'anomalies"),
-    image: `${import.meta.env.BASE_URL}images/project/anomaly_detection.png`,
     tags: [
       "Anomaly Detection",
       "Unsupervised/Supervised Learning",
@@ -139,7 +160,6 @@ export const courseProjects: Project[] = [
   },
   {
     slug: slugify("Exploration de données"),
-    image: `${import.meta.env.BASE_URL}images/project/exploration_data.jpeg`,
     tags: [
       "Data Analysis",
       "Python",
@@ -154,7 +174,6 @@ export const courseProjects: Project[] = [
   },
   {
     slug: slugify("Generateur de musique"),
-    image: `${import.meta.env.BASE_URL}images/project/generateur_music.jpeg`,
     tags: [
       "NLP",
       "BERT",
@@ -168,7 +187,6 @@ export const courseProjects: Project[] = [
   },
   {
     slug: slugify("Analyse et prédiction des accidents de la route"),
-    image: `${import.meta.env.BASE_URL}images/project/exploration_analyse.png`,
     tags: [
       "Machine Learning",
       "Data Cleaning",
@@ -179,6 +197,7 @@ export const courseProjects: Project[] = [
     ],
     translationKey: "courseProjects.dataScience",
     link: `${import.meta.env.BASE_URL}images/reports/accident_report.pdf`,
+    repoUrl: "https://github.com/tanguydcq/bda-mach-dataviz",
     icon: Car
   }
 ];

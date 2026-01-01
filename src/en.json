@@ -6,8 +6,8 @@
     "skills": "Skills",
     "contact": "Contact Me",
     "backhome": "Back to Home",
-    "persoProjects": "Professional Projects Completed",
-    "courseProjects": "University Projects Completed",
+    "persoProjects": "Professional Projects",
+    "courseProjects": "University Projects",
     "link": "Report",
     "seeMore": "See More",
     "sterenova": "Sterenova",
@@ -17,11 +17,15 @@
     "title": "Technical Skills",
     "description": "A comprehensive overview of my technical expertise and tools I work with.",
     "categories": {
-        "data": "Data Science & AI",
-        "software": "Software & Web Engineering",
-        "devops": "DevOps & Cloud",
-        "softSkills": "Management & Soft Skills",
-        "languages": "Languages"
+      "data": "Data Science & AI",
+      "software": "Software & Web Engineering",
+      "devops": "DevOps & Cloud",
+      "softSkills": "Management & Soft Skills",
+      "languages": "Languages"
+    },
+    "languageList": {
+      "french": "French (Native)",
+      "english": "English (Fluent)"
     }
   },
   "hero": {
@@ -128,13 +132,23 @@
       "description": "Full implementation of the Black-Scholes model applied to real market data to assess short- and long-term forecasting accuracy.",
       "longDescription": "This project investigates financial asset dynamics by implementing the Black-Scholes-Merton model from mathematical foundations to numerical simulation. It covers the analytical derivation using stochastic calculus, parameter estimation from historical data (drift and volatility) through a rolling-window method, and Monte Carlo forecasting. The approach is applied to NVIDIA stock data to examine how well the model tracks short-term price movements and to highlight its limitations for long-term forecasting due to non-constant volatility and shifting market regimes."
     },
-    "ases" : {
+    "ases": {
       "title": "Stanford Bootcamp ASES x HEC Hackathon",
       "description": "Participation in an intensive hackathon bringing together students from Stanford, HEC and ASES to tackle real-world challenges through innovation and entrepreneurship.",
       "longDescription": "This hackathon, part of the Stanford Bootcamp hosted by ASES and HEC, brought together participants from diverse backgrounds to work on concrete projects. With my international team, we focused on Equival, a solution aimed at helping investment teams identify promising companies more efficiently. Over several days, we defined the core problem, built an early version of the tool, and presented a prototype to a jury. The event mixed a startup mindset with structured teamwork, allowing us to strengthen our skills in leadership, product thinking, and fast execution while developing Equival."
     }
   },
   "courseProjects": {
+    "diffusion": {
+      "title": "Diffusion Model – DDPM",
+      "description": "PyTorch implementation of a diffusion model (DDPM) for image generation on MNIST and CryptoPunks.",
+      "longDescription": "This project provides a full PyTorch implementation of Denoising Diffusion Probabilistic Models (DDPM), aiming to generate images from pure noise through an iterative denoising process.\n\nTwo different architectures are implemented depending on dataset complexity. For MNIST, a lightweight SimpleUNet is used to generate grayscale digit images. For CryptoPunks, a more advanced UNet architecture with self-attention mechanisms is employed to capture richer spatial dependencies in color images.\n\nThe project covers the entire experimental pipeline: diffusion and denoising processes, multiple training configurations, training and inference scripts, and visualization tools. GIFs are generated to illustrate both the forward noising process and the reverse sampling procedure.\n\nTraining is monitored using TensorBoard, tracking key metrics such as MSE loss, gradient norms, learning rate, and generated samples across epochs. A Streamlit web interface is also provided to launch training sessions, explore checkpoints, and generate images interactively.\n\nThis project demonstrates a strong understanding of diffusion-based generative models, modern UNet architectures with attention, and the implementation of reproducible deep learning workflows."
+    },
+    "rpc": {
+      "title": "RPC Project – Logistics Optimization",
+      "description": "Solving a 3D bin packing problem with logistical constraints, aiming to minimize the number of vehicles while respecting loading capacities.",
+      "longDescription": "This project addresses the RPC problem, a realistic logistics optimization scenario inspired by national-scale transportation of goods using specialized vehicles. The objective is to efficiently pack a set of 3D objects with varying dimensions into trucks, minimizing the total number of vehicles while respecting their physical constraints.\n\nThe problem is modeled as a variant of the 3D bin packing problem, with an additional delivery order constraint (LIFO). The project is structured around several core components: a configurable data generator (Bronze, Silver, and Gold leagues), a solution visualizer, and an ad-hoc solver.\n\nThe implemented solver relies on a greedy First Fit Decreasing strategy, where objects are sorted by decreasing volume prior to placement. For each object, all possible rotations are evaluated to increase placement feasibility. Objects are then positioned using a heuristic that favors the lowest, leftmost, and deepest available coordinates to reduce space fragmentation.\n\nWhile the solver performs well on small to medium-sized instances, it struggles with larger and more constrained cases. LIFO constraints are not yet implemented, leaving room for future improvements such as local search methods or meta-heuristics including simulated annealing or genetic algorithms."
+    },
     "pfee": {
       "title": "PFEE",
       "description": "AI-based automatic football match analysis tool, with player detection, ID tracking, and statistics generation from videos, aimed at amateur clubs.",

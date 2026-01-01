@@ -4,7 +4,7 @@ import { projects, courseProjects, type Project } from "@/data/project";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowRight, ChevronLeft, ChevronRight, Github } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { useState } from "react";
@@ -41,12 +41,25 @@ function ProjectCard({ project }: ProjectCardProps) {
                     ))}
                 </div>
             </CardContent>
-            <CardFooter className="pt-2">
+            <CardFooter className="pt-2 gap-2">
                 <Button asChild className="w-fit h-8 text-xs group/btn px-3" variant="outline" size="sm">
                     <Link to={`/project/${project.slug}`}>
                         {t('projects.viewProject')} <ArrowRight className="w-3 h-3 ml-2 transition-transform group-hover/btn:translate-x-1" />
                     </Link>
                 </Button>
+                {project.repoUrl && (
+                    <Button asChild className="w-fit h-8 text-xs group/btn px-3" variant="outline" size="sm">
+                        <a
+                            href={project.repoUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="View Source Code"
+                        >
+                            <Github className="w-3 h-3 mr-2" />
+                            Code
+                        </a>
+                    </Button>
+                )}
             </CardFooter>
         </Card>
     );

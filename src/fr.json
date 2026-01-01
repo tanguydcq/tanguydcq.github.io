@@ -6,8 +6,8 @@
     "skills": "Compétences",
     "contact": "Me contacter",
     "backhome": "Retour à l'accueil",
-    "persoProjects": "Projets professionels réalisés",
-    "courseProjects": "Projets universitaires réalisés",
+    "persoProjects": "Projets professionels",
+    "courseProjects": "Projets universitaires",
     "link": "Rapport",
     "seeMore": "Voir plus",
     "sterenova": "Sterenova",
@@ -17,11 +17,15 @@
     "title": "Compétences Techniques",
     "description": "Un aperçu complet de mon expertise technique et des outils avec lesquels je travaille.",
     "categories": {
-        "data": "Data Science & Intelligence Artificielle",
-        "software": "Ingénierie Logicielle & Web",
-        "devops": "DevOps & Cloud",
-        "softSkills": "Management & Soft Skills",
-        "languages": "Langues"
+      "data": "Data Science & Intelligence Artificielle",
+      "software": "Ingénierie Logicielle & Web",
+      "devops": "DevOps & Cloud",
+      "softSkills": "Management & Soft Skills",
+      "languages": "Langues"
+    },
+    "languageList": {
+      "french": "Français (Natif)",
+      "english": "Anglais (Courant)"
     }
   },
   "hero": {
@@ -123,18 +127,28 @@
       "description": "Site web personnel pour présenter mes projets et compétences",
       "longDescription": "Ce site web portfolio sert de vitrine pour mes projets et compétences, mettant en avant mon travail et mes réalisations dans le domaine."
     },
-    "blacksholes" : {
+    "blacksholes": {
       "title": "Modélisation d’Actifs et Simulation Black-Scholes",
       "description": "Implémentation complète du modèle de Black-Scholes appliquée aux données réelles de marché afin d’évaluer sa précision à court et long terme.",
       "longDescription": "Ce projet explore la dynamique des prix d’actifs financiers en mettant en œuvre le modèle de Black-Scholes-Merton depuis sa base mathématique jusqu’à sa simulation numérique. Le travail inclut la dérivation analytique via le calcul stochastique, l’estimation des paramètres à partir de données historiques (drift et volatilité) grâce à une fenêtre glissante, puis la réalisation de simulations Monte Carlo. L’étude est appliquée aux données de NVIDIA afin d’évaluer la capacité du modèle à suivre le marché à court terme et ses limites pour les projections longues en raison de la volatilité non constante et des changements de régimes de marché."
     },
-    "ases" : {
+    "ases": {
       "title": "Hackathon Stanford Bootcamp ASES x HEC",
       "description": "Participation à un hackathon intensif réunissant étudiants de Stanford, HEC et ASES autour de l’innovation, de l’entrepreneuriat et de la résolution de défis concrets.",
       "longDescription": "Ce hackathon, organisé dans le cadre du Stanford Bootcamp par ASES et HEC, réunissait des participants de profils variés pour travailler sur des projets concrets. Avec mon équipe internationale, nous avons choisi de concentrer notre travail sur Equival, une solution destinée à aider les équipes d’investissement à identifier plus facilement des entreprises prometteuses. Pendant plusieurs jours, nous avons défini le problème, construit une première version de l’outil et présenté un prototype devant un jury. L’événement mêlait approche startup et travail structuré, ce qui nous a permis de renforcer nos compétences en leadership, conception produit et exécution rapide autour d’Equival."
     }
   },
   "courseProjects": {
+    "diffusion": {
+      "title": "Diffusion Model – DDPM",
+      "description": "Implémentation en PyTorch d’un modèle de diffusion (DDPM) pour la génération d’images sur MNIST et CryptoPunks.",
+      "longDescription": "Ce projet propose une implémentation complète des Denoising Diffusion Probabilistic Models (DDPM) en PyTorch, avec pour objectif la génération d’images à partir de bruit aléatoire.\n\nDeux architectures distinctes sont mises en œuvre selon la complexité du dataset. Pour MNIST, un SimpleUNet léger est utilisé afin de générer des chiffres en niveaux de gris. Pour CryptoPunks, une architecture UNet plus avancée intégrant des mécanismes de self-attention permet de modéliser des dépendances spatiales plus complexes sur des images couleur.\n\nLe projet inclut l’ensemble de la chaîne expérimentale : définition du processus de diffusion et de débruitage, configurations d’entraînement multiples, scripts de training et d’inférence, ainsi que des outils de visualisation. Des GIFs sont générés pour illustrer le processus progressif d’ajout de bruit et d’échantillonnage inverse.\n\nL’entraînement est monitoré via TensorBoard, avec le suivi de métriques clés telles que la loss MSE, les gradients et les images générées au fil des époques. Une interface Streamlit permet également de lancer des entraînements, visualiser les checkpoints et générer des images de manière interactive.\n\nCe projet met en avant une compréhension approfondie des modèles génératifs par diffusion, ainsi qu’une capacité à implémenter des architectures modernes et des pipelines d’entraînement reproductibles."
+    },
+    "rpc": {
+      "title": "Projet RPC – Optimisation Logistique",
+      "description": "Résolution d’un problème de bin packing 3D avec contraintes logistiques, visant à minimiser le nombre de véhicules utilisés tout en respectant les capacités de chargement.",
+      "longDescription": "Ce projet s’inscrit dans le cadre du problème RPC, un cas réaliste d’optimisation logistique inspiré du transport national d’articles par véhicules spécialisés. L’objectif est de répartir un ensemble de colis de dimensions variées dans des camions 3D, en minimisant le nombre de véhicules utilisés tout en respectant leurs capacités physiques.\n\nNous avons modélisé le problème comme une variante du bin packing 3D, avec une contrainte supplémentaire liée à l’ordre de livraison (LIFO). Le projet est structuré autour de plusieurs composants clés : un générateur de données paramétrable (leagues Bronze, Silver et Gold), un visualisateur de solutions, et un solveur ad-hoc.\n\nLe solveur implémenté repose sur une stratégie gloutonne de type First Fit Decreasing, où les objets sont triés par volume décroissant avant d’être placés. Pour chaque objet, toutes les rotations possibles sont testées afin de maximiser les chances de placement. Les objets sont ensuite positionnés de manière optimisée, en privilégiant les coordonnées les plus basses possibles pour limiter la fragmentation de l’espace.\n\nBien que performant sur les instances de petite et moyenne taille, le solveur montre ses limites sur les cas les plus complexes. Les contraintes LIFO ne sont pas encore intégrées, ce qui ouvre la voie à de futures améliorations, notamment via des méthodes de recherche locale ou des méta-heuristiques comme le recuit simulé ou les algorithmes génétiques."
+    },
     "pfee": {
       "title": "PFEE",
       "description": "Outil d’analyse automatique de matchs de football basé sur l’IA, avec détection des joueurs, suivi par ID et génération de statistiques à partir de vidéos, destiné aux clubs amateurs.",

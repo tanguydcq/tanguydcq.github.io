@@ -40,7 +40,7 @@ export function SkillsSection() {
         {
             title: t("skills.categories.languages"),
             icon: Globe,
-            skills: ["Français (Natif)", "Anglais (Courant)"]
+            skills: [t("skills.languageList.french"), t("skills.languageList.english")]
         }
     ];
 
