@@ -4,35 +4,34 @@ import { useTranslation } from "react-i18next"
 import type { Project } from "@/data/project"
 import { motion } from "framer-motion"
 
-export function ProjectCard({ slug, image, tags, translationKey }: Project) {
+export function ProjectCard({ slug, tags, translationKey }: Project) {
   const { t } = useTranslation()
 
   return (
     <motion.div className="bg-gray-700 rounded-xl p-4 shadow-md min-h-[340px] flex flex-col justify-between w-full h-full border-b-2 border-emerald-600">
       <div className="w-full mb-4 rounded-md overflow-hidden relative aspect-[16/9]">
-      <img
-        src={image}
-        alt={t(`${translationKey}.title`)}
-        className="w-full h-full object-cover"
-        loading="lazy"
-      />
+        <img
+          alt={t(`${translationKey}.title`)}
+          className="w-full h-full object-cover"
+          loading="lazy"
+        />
       </div>
       <h3 className="text-xl font-semibold text-white">{t(`${translationKey}.title`)}</h3>
       <p className="text-white italic text-sm mt-2 flex-1">{t(`${translationKey}.description`)}</p>
       <div className="flex flex-wrap gap-2 mt-4">
-      {tags.map((tag, i) => (
-        <span
-        key={i}
-        className="text-xs bg-emerald-600/50 text-white px-2 py-1 rounded-md"
-        >
-        {tag}
-        </span>
-      ))}
+        {tags.map((tag, i) => (
+          <span
+            key={i}
+            className="text-xs bg-emerald-600/50 text-white px-2 py-1 rounded-md"
+          >
+            {tag}
+          </span>
+        ))}
       </div>
       <div className="pt-6 flex justify-center my-3">
-      <Link to={`/project/${slug}`}>
-        <Button>{t(`header.seeMore`)}</Button>
-      </Link>
+        <Link to={`/project/${slug}`}>
+          <Button>{t(`header.seeMore`)}</Button>
+        </Link>
       </div>
     </motion.div>
   )
