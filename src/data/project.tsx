@@ -170,7 +170,8 @@ export const courseProjects: Project[] = [
     ],
     translationKey: "courseProjects.dataExploration",
     link: `${import.meta.env.BASE_URL}images/reports/dataviz_volley.pdf`,
-    icon: BarChart3
+    icon: BarChart3,
+    repoUrl: "https://github.com/tanguydcq/dataviz_project"
   },
   {
     slug: slugify("Generateur de musique"),
